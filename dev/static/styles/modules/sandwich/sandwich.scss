@@ -9,6 +9,7 @@
   justify-content: center;
   position: relative;
   padding: 0;
+  transition: all ease-out .7s;
   width: 50px;
   z-index: 25;
   &._active {

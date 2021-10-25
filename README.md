@@ -1,8 +1,4 @@
-# Стартовый шаблон Олега Цыганова
-Используется связка `Gulp` + `Pug` + `SCSS` + `BrowserSync` + `Linters`
+# Верстка сайта fun-city
 
 ## Установка
 Склонировать репозиторий и выполнить npm install
-
-## Каналы связи
-- [Telegram](https://tlgg.ru/redsmoke_smr)

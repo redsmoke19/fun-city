@@ -1,0 +1,12 @@
+mixin nav-links(name,page,link)
+	li.nav__item
+		a.nav__link(href=pageClass===page ? false : link)=name
+
+ul.nav__list
+	+nav-links('Ресторан', 'restaurant-page', 'restaurant.html')
+	+nav-links('Праздники', 'holidays-page', 'holidays.html')
+	+nav-links('Цены', 'prices-page', 'prices.html')
+	+nav-links('Фотогалерея', 'photo-gallery-page', 'photo-gallery.html')
+	+nav-links('Франчайзинг', 'franchising-page', 'franchising.html')
+	+nav-links('Акции', 'stock-page', 'stock.html')
+	+nav-links('Контакты', 'contacts-page', 'contacts.html')

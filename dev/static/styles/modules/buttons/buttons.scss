@@ -1,0 +1,47 @@
+.button {
+  align-items: center;
+  background-color: $purple-color;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+  color: $white;
+  display: flex;
+  font-family: $second-font;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  justify-content: center;
+  outline: none;
+  padding: 16px 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-out .15s;
+  width: auto;
+  &--transparent {
+    background-color: $white;
+    box-shadow: none;
+    color: $purple-color;
+    padding: 16px 0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    &:hover {
+      box-shadow: none;
+      color: rgba($white, .8);
+    }
+    &:active {
+      background-color: $white;
+      box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+      color: $purple-color;
+      transform: translateY(5px);
+    }
+    &--transparent {
+      &:hover {
+        box-shadow: none;
+        color: rgba($purple-color, .8);
+      }
+    }
+  }
+}

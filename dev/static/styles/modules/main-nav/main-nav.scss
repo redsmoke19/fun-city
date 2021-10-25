@@ -1,0 +1,35 @@
+.nav {
+  background-color: $white;
+  clip-path: circle(2% at 88% -2%);
+  height: calc(var(--vh) * 100 - 80px);
+  left: 0;
+  padding: 10px 20px 0;
+  position: fixed;
+  pointer-events: none;
+  top: 80px;
+  transition: all ease-out .7s;
+  width: 100%;
+  &._active {
+    clip-path: circle(90% at 50% 0%);
+    pointer-events: all;
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+  &__link {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
