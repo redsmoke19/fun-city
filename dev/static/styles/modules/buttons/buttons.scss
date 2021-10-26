@@ -17,8 +17,11 @@
   text-transform: uppercase;
   transition: all ease-out .15s;
   width: auto;
+  @media screen and (min-width: $large-size) {
+    font-size: 14px;
+  }
   &--transparent {
-    background-color: $white;
+    background-color: transparent;
     box-shadow: none;
     color: $purple-color;
     padding: 16px 0;

@@ -1,35 +1,87 @@
 .nav {
   background-color: $white;
-  clip-path: circle(2% at 88% -2%);
+  clip-path: circle(0% at 93% -2%);
   height: calc(var(--vh) * 100 - 80px);
   left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 10px 20px 0;
   position: fixed;
   pointer-events: none;
-  top: 80px;
+  top: 79px;
   transition: all ease-out .7s;
   width: 100%;
+  z-index: -1;
+  @media screen and (min-width: $tablet-size) {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    clip-path: unset;
+    height: auto;
+    left: unset;
+    overflow: unset;
+    padding: 10px 0 20px;
+    position: relative;
+    pointer-events: auto;
+    top: unset;
+    z-index: unset;
+  }
   &._active {
-    clip-path: circle(90% at 50% 0%);
+    clip-path: circle(90% at 50% 10%);
     pointer-events: all;
+    z-index: 50;
+    @media screen and (min-width: $tablet-size) {
+      clip-path: circle(60% at 95% 22%);
+    }
   }
   &__list {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 0 0 80px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      margin: 0 0 0 auto;
+      padding: 0 0 40px 0;
+      width: 30%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+      padding: 0 0 0 30px;
+      width: 100%;
+    }
+    @media screen and (min-width: $large-size) {
+      justify-content: center;
+      padding: 0;
+    }
   }
   &__item {
     &:not(:last-child) {
       margin: 0 0 20px 0;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 40px 0 0;
+      }
     }
   }
   &__link {
     color: $text-color;
+    display: flex;
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
     pointer-events: all;
     text-decoration: none;
     text-transform: uppercase;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @media screen and (min-width: $desktop-size) {
+
+    }
   }
 }

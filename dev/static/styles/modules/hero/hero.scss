@@ -1,0 +1,37 @@
+.hero {
+  &__description {
+    background: url("../images/common/hero-description-mobile-path.svg") no-repeat center;
+    background-size: 100% 100%;
+    padding: 30px 20px 72px;
+    width: 100%;
+  }
+  &__title {
+    font-family: $decor-font;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 20px 0;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 20px 0;
+    &--decor {
+      font-family: $decor-font;
+    }
+  }
+  &__link {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    &--button {
+      border-radius: 50%;
+      height: 50px;
+      margin: 0 0 0 15px;
+      width: 50px;
+    }
+    &--icon {
+      flex: 0 0 auto;
+      fill: $white;
+    }
+  }
+}

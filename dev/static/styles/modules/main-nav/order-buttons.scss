@@ -3,4 +3,20 @@
   display: flex;
   justify-content: space-between;
   margin: 0 0 30px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 20px 0 auto;
+    a:last-child {
+      margin: 0 20px 0 0;
+    }
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin: 0;
+  }
+  &__button {
+    @media screen and (min-width: $tablet-size) {
+      &:nth-child(1) {
+        order: 2;
+      }
+    }
+  }
 }

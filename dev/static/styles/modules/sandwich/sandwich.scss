@@ -12,6 +12,9 @@
   transition: all ease-out .7s;
   width: 50px;
   z-index: 25;
+  @media screen and (min-width: $desktop-size) {
+    display: none;
+  }
   &._active {
     background-color: $white;
     .sandwich__line {
