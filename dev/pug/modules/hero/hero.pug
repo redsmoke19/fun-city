@@ -8,8 +8,12 @@ section.hero
 						p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
 						+button-link('#').hero__link
 					.hero__images
+						.hero__only-label
+							span.hero__only-text Только в ресторане Fun Day
+						.hero__plate-img
+							+icon('hero-tablet-plate', 'hero__plate-svg', '133', '124')
 						picture.hero__picture
 							source(media="(min-width: 1440px)" srcset="")
 							source(media="(min-width: 1024px)" srcset="")
-							source(media="(min-width: 768px)" srcset="")
+							source(media="(min-width: 768px)" srcset="static/images/content/hero-1-tablet.jpg")
 							img.hero__img(src="static/images/content/hero-1-mobile.jpg" alt="Картинка банкетного меню" width="360" height="330")

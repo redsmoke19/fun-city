@@ -2,7 +2,7 @@
   &__item {
     position: relative;
     &::after {
-      background: url(../images/common/hero-block-mobile-bg.svg) no-repeat center;
+      background: url("../images/common/hero-block-mobile-bg.svg") no-repeat center;
       background-size: 100% 100%;
       content: "";
       height: 100%;
@@ -12,10 +12,32 @@
       width: 100%;
       z-index: -1;
     }
+    @media screen and (min-width: $tablet-size) {
+      &::after {
+        background: url("../images/common/hero-block-tablet-bg.svg") no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      &::after {
+        background: url("../images/common/hero-block-desktop-bg.svg") no-repeat center bottom;
+        background-size: 100% auto;
+        top: 10px;
+      }
+    }
   }
   &__wrapper {
     @media screen and (min-width: $tablet-size) {
+      clip-path: circle(150% at 50% -97%);
       display: flex;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      //clip-path: circle(200% at 50% -196%);
+      clip-path: circle(1289px at 50% -731px);
+    }
+    @media screen and (min-width: 1365px) {
+      clip-path: circle(1889px at 50% -1341px);
     }
   }
   &__description {
@@ -25,17 +47,43 @@
     position: relative;
     width: 100%;
     z-index: 10;
+    @media screen and (min-width: $tablet-size) {
+      background: url("../images/common/hero-description-tablet-path.svg") no-repeat right;
+      background-size: auto 100%;
+      height: 100%;
+      left: 0;
+      padding: 50px 60px 230px 40px;
+      position: absolute;
+      top: 0;
+      width: 57%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url("../images/common/hero-description-desktop-path.svg") no-repeat left;
+      background-size: 100% 100%;
+      padding: 50px 90px 50px 50px;
+      width: 46%;
+    }
   }
   &__title {
     font-family: $decor-font;
     font-size: 24px;
     line-height: 32px;
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 0 0 30px 0;
+    }
   }
   &__text {
     font-size: 16px;
     line-height: 22px;
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0 0 30px 0;
+    }
     &--decor {
       font-family: $decor-font;
     }
@@ -45,7 +93,7 @@
     overflow: hidden;
     position: relative;
     &::before {
-      background: url(../images/common/mmm.png) no-repeat center;
+      background: url("../images/common/hero-decor-mobile-circle.png") no-repeat center;
       background-size: 100% 100%;
       content: "";
       height: 70px;
@@ -55,17 +103,100 @@
       width: 70px;
       z-index: 5;
     }
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+      &::before {
+        background: url("../images/common/hero-decor-tablet-circle.png") no-repeat center;
+        background-size: 100% 100%;
+        height: 120px;
+        right: 0;
+        top: 0;
+        width: 120px;
+        z-index: 5;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 100%;
+    }
+  }
+  &__only-label {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      background-image: url("../images/common/hero-cloud.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
+      bottom: 22%;
+      display: block;
+      left: 28.5%;
+      padding: 38px 13px;
+      position: absolute;
+      transform: rotate(-21deg);
+      z-index: 11;
+    }
+    @media screen and (min-width: $desktop-size) {
+      bottom: 25%;
+      left: 25%;
+      padding: 51px 15px;
+    }
+  }
+  &__only-text {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      color: $purple-color;
+      display: block;
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 15px;
+      text-transform: uppercase;
+      transform: rotate(4deg);
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15.5px;
+      line-height: 21px;
+    }
+  }
+  &__plate-img {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      bottom: 0;
+      display: block;
+      left: 31%;
+      position: absolute;
+      z-index: 12;
+    }
+    @media screen and (min-width: $desktop-size) {
+      bottom: -10px;
+      left: 24%;
+    }
+  }
+  &__plate-svg {
+    @media screen and (min-width: $desktop-size) {
+      height: 166px;
+      width: 177px;
+    }
   }
   &__picture {
     clip-path: circle(185% at 50% -95%);
     display: block;
+    @media screen and (min-width: $tablet-size) {
+      clip-path: unset;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 561px;
+    }
   }
   &__img {
-    // clip-path: circle(185% at 50% -95%);
     height: auto;
     object-fit: cover;
     object-position: top;
-    // max-height: 400px;
     width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 0 auto;
+      width: 93%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 100%;
+    }
   }
 }
