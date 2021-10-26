@@ -5,3 +5,9 @@ mixin icon(name,mod,width,height)
 	else
 		svg(class="svg-sprite-icon icon-" + name)
 			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+
+mixin button-link(href)
+	a.button-link(href=href)&attributes(attributes)
+		span.button-link.button-link--text Подробнее
+		span.button-link.button-link--icon
+			+icon('icon-arrow-right', 'hero__link--icon', '13', '13')

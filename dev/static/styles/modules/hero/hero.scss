@@ -1,9 +1,30 @@
 .hero {
+  &__item {
+    position: relative;
+    &::after {
+      background: url(../images/common/hero-block-mobile-bg.svg) no-repeat center;
+      background-size: 100% 100%;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 8px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+    }
+  }
   &__description {
     background: url("../images/common/hero-description-mobile-path.svg") no-repeat center;
     background-size: 100% 100%;
     padding: 30px 20px 72px;
+    position: relative;
     width: 100%;
+    z-index: 10;
   }
   &__title {
     font-family: $decor-font;
@@ -19,19 +40,32 @@
       font-family: $decor-font;
     }
   }
-  &__link {
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-    &--button {
-      border-radius: 50%;
-      height: 50px;
-      margin: 0 0 0 15px;
-      width: 50px;
+  &__images {
+    margin: -55px 0 0 0;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      background: url(../images/common/mmm.png) no-repeat center;
+      background-size: 100% 100%;
+      content: "";
+      height: 70px;
+      position: absolute;
+      right: -15px;
+      top: -5px;
+      width: 70px;
+      z-index: 5;
     }
-    &--icon {
-      flex: 0 0 auto;
-      fill: $white;
-    }
+  }
+  &__picture {
+    clip-path: circle(185% at 50% -95%);
+    display: block;
+  }
+  &__img {
+    // clip-path: circle(185% at 50% -95%);
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    // max-height: 400px;
+    width: 100%;
   }
 }

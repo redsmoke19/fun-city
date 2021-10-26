@@ -2,10 +2,14 @@ section.hero
 	.hero__slider
 		ul.hero__list
 			li.hero__item
-				.hero__description
-					h2.hero__title Банкетное предложение
-					p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
-					a.hero__link(href="#")
-						span.hero__link--transparent.button.button--transparent Подробнее
-						span.hero__link--button.button
-							+icon('icon-arrow-right', 'hero__link--icon', '13', '13')
+				.hero__wrapper
+					.hero__description
+						h2.hero__title Банкетное предложение
+						p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
+						+button-link('#').hero__link
+					.hero__images
+						picture.hero__picture
+							source(media="(min-width: 1440px)" srcset="")
+							source(media="(min-width: 1024px)" srcset="")
+							source(media="(min-width: 768px)" srcset="")
+							img.hero__img(src="static/images/content/hero-1-mobile.jpg" alt="Картинка банкетного меню" width="360" height="330")
