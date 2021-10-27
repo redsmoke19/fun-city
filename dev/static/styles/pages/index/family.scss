@@ -1,0 +1,148 @@
+.index-family {
+  overflow: hidden;
+  padding: 130px 0 40px;
+  @media screen and (min-width: $tablet-size) {
+    display: flex;
+    padding: 175px 0 330px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 244px 0 100px;
+  }
+  &__content {
+    flex: 0 0 100%;
+    margin: 0 0 36px 0;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 48.2%;
+      margin: 0 30px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 41%;
+      margin: 0 40px 0 0;
+    }
+    .container {
+      @media screen and (min-width: $tablet-size) {
+        padding: 0 0 0 40px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        padding: 0 0 0 50px;
+      }
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      width: 48%;
+    }
+    @media screen and (min-width: $tablet-size) {
+      width: 100%;
+    }
+  }
+  &__decor-flag {
+    position: absolute;
+    top: 0;
+    &--small {
+      left: 22px;
+      top: 52px;
+      transform: rotate(-30deg);
+      @media screen and (min-width: $tablet-size) {
+        left: 127px;
+        top: 72px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 50px;
+        left: 130px;
+        top: 90px;
+        width: 139px;
+      }
+    }
+    &--big {
+      right: -27px;
+      top: 90px;
+      transform: rotate(49deg);
+      @media screen and (min-width: $tablet-size) {
+        left: 43%;
+        top: 83px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 75px;
+        left: 33%;
+        top: 145px;
+        width: 210px;
+      }
+    }
+  }
+  &__paragraph {
+    margin: 0 0 30px 0;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    &:not(:last-of-type) {
+      margin: 0 0 10px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+  &__images {
+    padding: 200px 0;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 540px;
+      height: 540px;
+      padding: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 800px;
+      margin: -184px 0 0 0;
+      height: 800px;
+    }
+    &::after {
+      background-color: rgba($purple-color, .5);
+      border-radius: 50%;
+      content: "";
+      height: 400px;
+      left: 20px;
+      top: 10px;
+      position: absolute;
+      width: 400px;
+      z-index: 4;
+      @media screen and (min-width: 440px) {
+        left: unset;
+        right: 20px;
+      }
+      @media screen and (min-width: $tablet-size) {
+        height: 540px;
+        right: 0;
+        top: 15px;
+        width: 540px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 800px;
+        width: 800px;
+      }
+    }
+  }
+  &__picture {
+    left: 20px;
+    position: absolute;
+    top: 0;
+    width: 400px;
+    z-index: 5;
+    @media screen and (min-width: 440px) {
+      left: unset;
+      right: 20px;
+    }
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      right: 0;
+      width: auto;
+    }
+  }
+  &__img {
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

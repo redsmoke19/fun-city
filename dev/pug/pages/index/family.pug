@@ -1,0 +1,18 @@
+section.index-family
+	.index-family__content
+		.container
+			.index-family__inner
+				+icon('icon-family-flag', 'index-family__decor-flag index-family__decor-flag--small', '99', '35')
+				+icon('icon-family-flag', 'index-family__decor-flag index-family__decor-flag--big', '136', '49')
+				h2.index-family__title.section__title Семейный ресторан
+				.index-family__paragraph
+					p.index-family__text FUN CITY – это уникальное пространство для развлечений всей семьей! Тысячи квадратных метров впечатлений!
+					p.index-family__text Гостей ждет уютный ресторан с лаунж-зонами и видом на игровые площадки, европейское и паназиатское меню, барная карта и специальные предложения.
+					p.index-family__text По соседству с рестораном огромная площадь с игровыми зонами для детей. Многоуровневые лабиринты, радужные сети, бассейн с шариками, замки с батальной зоной, корабль, батуты, специальный микромир для малышей и многое другое.
+				+button-link('#').index-family__button
+	.index-family__images
+		picture.index-family__picture
+			//source(media="(min-width: 1440px)" srcset="static/images/content/hero-1-large.jpg")
+			source(media="(min-width: 1024px)" srcset="static/images/content/index-family-desktop.png")
+			source(media="(min-width: 768px)" srcset="static/images/content/index-family-tablet.png")
+			img.index-family__img(src="static/images/content/index-family-mobile.png" alt="Картинка Ресторана" width="400" height="400")

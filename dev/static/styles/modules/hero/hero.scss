@@ -34,10 +34,12 @@
     }
     @media screen and (min-width: $desktop-size) {
       //clip-path: circle(200% at 50% -196%);
-      clip-path: circle(1289px at 50% -731px);
+      clip-path: circle(160% at 50% -136%);
+
+      //clip-path: circle(1289px at 50% -731px);
     }
     @media screen and (min-width: 1365px) {
-      clip-path: circle(1889px at 50% -1341px);
+      //clip-path: circle(1889px at 50% -1341px);
     }
   }
   &__description {
@@ -183,7 +185,7 @@
       clip-path: unset;
     }
     @media screen and (min-width: $desktop-size) {
-      height: 561px;
+      //height: 561px;
     }
   }
   &__img {
