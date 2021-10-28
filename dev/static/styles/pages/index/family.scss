@@ -8,6 +8,9 @@
   @media screen and (min-width: $desktop-size) {
     padding: 244px 0 100px;
   }
+  @media screen and (min-width: $large-size) {
+    padding: 400px 0 425px;
+  }
   &__content {
     flex: 0 0 100%;
     margin: 0 0 36px 0;
@@ -16,16 +19,24 @@
       margin: 0 30px 0 0;
     }
     @media screen and (min-width: $desktop-size) {
-      flex: 0 0 41%;
-      margin: 0 40px 0 0;
+      flex: 0 0 100%;
     }
     .container {
       @media screen and (min-width: $tablet-size) {
         padding: 0 0 0 40px;
       }
       @media screen and (min-width: $desktop-size) {
-        padding: 0 0 0 50px;
+        padding: 0 50px;
       }
+      @media screen and (min-width: $large-size) {
+        padding: 0 80px;
+      }
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      position: relative;
     }
   }
   &__inner {
@@ -33,7 +44,13 @@
       width: 48%;
     }
     @media screen and (min-width: $tablet-size) {
+      flex: 0 0 40%;
+      margin: 0 40px 0 0;
       width: 100%;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 39.9%;
+      margin: 0 60px 0 0;
     }
   }
   &__decor-flag {
@@ -49,9 +66,13 @@
       }
       @media screen and (min-width: $desktop-size) {
         height: 50px;
-        left: 130px;
-        top: 90px;
+        left: 80px;
+        top: -155px;
         width: 139px;
+      }
+      @media screen and (min-width: $large-size) {
+        left: 130px;
+        top: -160px;
       }
     }
     &--big {
@@ -64,8 +85,8 @@
       }
       @media screen and (min-width: $desktop-size) {
         height: 75px;
-        left: 33%;
-        top: 145px;
+        left: 31%;
+        top: -96px;
         width: 210px;
       }
     }
@@ -76,6 +97,10 @@
   &__text {
     font-size: 16px;
     line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     &:not(:last-of-type) {
       margin: 0 0 10px 0;
       @media screen and (min-width: $tablet-size) {
@@ -95,6 +120,10 @@
       flex: 0 0 800px;
       margin: -184px 0 0 0;
       height: 800px;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 1000px;
+      height: 1000px;
     }
     &::after {
       background-color: rgba($purple-color, .5);
@@ -119,6 +148,10 @@
       @media screen and (min-width: $desktop-size) {
         height: 800px;
         width: 800px;
+      }
+      @media screen and (min-width: $large-size) {
+        height: 1000px;
+        width: 1000px;
       }
     }
   }
