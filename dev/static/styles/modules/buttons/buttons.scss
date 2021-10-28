@@ -19,6 +19,7 @@
   width: auto;
   @media screen and (min-width: $large-size) {
     font-size: 14px;
+    padding: 21px 22px;
   }
   &--transparent {
     background-color: transparent;
@@ -90,6 +91,10 @@
     justify-content: center;
     height: 50px;
     width: 50px;
+    @media screen and (min-width: $large-size) {
+      height: 60px;
+      width: 60px;
+    }
     svg {
       flex: 0 0 auto;
       fill: $white;

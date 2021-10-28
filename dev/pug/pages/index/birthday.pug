@@ -1,0 +1,30 @@
+section.index-birthday
+	.container
+		.index-birthday__content
+			.index-birthday__images
+				picture.index-birthday__picture
+					//source(media="(min-width: 1440px)" srcset="static/images/content/index-family-large.png")
+					//source(media="(min-width: 1024px)" srcset="static/images/content/index-family-desktop.png")
+					//source(media="(min-width: 768px)" srcset="static/images/content/index-family-tablet.png")
+					img.index-family__img(src="static/images/content/index/birthday-mobile.png" alt="Картинка Девочки в круге" width="300" height="300")
+			.index-birthday__inner
+				h2.index-birthday__title.section__title День рождения в Fun City
+				.index-birthday__paragraph
+					p.index-birthday__text Описание дней рождений в рамках калькулятора и пакета “Собери сам”.
+					p.index-birthday__text Здесь надо сказать о состовляющих праздника в калькуляторе, то есть о возможности выбрать зал на определнное количество гостей, какие блюда из ресторана можно добавить в предзаказ, о том что можно выбрать развлекательную программу и дополнительные услуги.
+				.index-birthday__buttons
+					a.index-birthday__button.button(href="#") Заказать праздник
+					+button-link("#", "Подробнее").index-birthday__link-button
+				ul.index-birthday__decor-list
+					li.index-birthday__decor-item
+						+icon("icon-ribbon", "index-birthday__decor-icon", "64", "64")
+						h3.index-birthday__decor-title Стилистическое оформление праздника
+						p.index-birthday__decor-text Описание дополнительных услуг в парках Fun City
+					li.index-birthday__decor-item
+						+icon("icon-birthday-food", "index-birthday__decor-icon", "64", "64")
+						h3.index-birthday__decor-title Кулинарные мастер-классы
+						p.index-birthday__decor-text Описание дополнительных услуг в парках Fun City
+					li.index-birthday__decor-item
+						+icon("icon-birthday-camera", "index-birthday__decor-icon", "64", "64")
+						h3.index-birthday__decor-title Фотограф для вашего праздника
+						p.index-birthday__decor-text Описание дополнительных услуг в парках Fun City

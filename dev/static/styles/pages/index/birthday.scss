@@ -1,0 +1,94 @@
+.index-birthday {
+  background-color: $blue-color;
+  padding: 235px 0 80px 0;
+  position: relative;
+  &::before {
+    //background: url("../images/common/blue-clouds.svg") no-repeat center;
+    background: url("../images/common/blue-clouds.svg") no-repeat bottom;
+    background-size: 100% auto;
+    //background-size: 100% 100%;
+    bottom: 100%;
+    content: "";
+    //height: 68px;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+  }
+  &::after {
+    background: url("../images/common/curved-blue-decor.svg") no-repeat center;
+    background-size: 100% 100%;
+    bottom: 0;
+    height: 40px;
+    content: "";
+    margin: 0 0 -1px 0;
+    position: absolute;
+    width: 100%;
+  }
+  &__images {
+    height: 300px;
+    position: absolute;
+    right: 90px;
+    top: -130px;
+    width: 300px;
+    @media screen and (min-width: 410px) {
+      left: 20px;
+      right: unset;
+    }
+  }
+  &__picture {
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__paragraph {
+    margin: 0 0 30px 0;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 80px 0;
+  }
+  &__button {
+    padding: 16px;
+    @media screen and (min-width: $large-size) {
+      padding: 21px 16px;
+    }
+  }
+  &__decor-list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__decor-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__decor-icon {
+    margin: 0 0 20px 0;
+  }
+  &__decor-title {
+    font-family: $decor-font;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
+  &__decor-text {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
