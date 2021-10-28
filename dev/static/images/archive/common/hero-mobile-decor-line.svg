@@ -1,0 +1,16 @@
+<svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_885:5658" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="51" height="51">
+<circle r="25" transform="matrix(-0.707107 0.707107 0.707107 0.707107 35.3555 35.3553)" fill="#B03797"/>
+</mask>
+<g mask="url(#mask0_885:5658)">
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 39.9521 4.59619)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 35.709 0.353516)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 44.1943 8.83887)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 48.437 13.0815)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 52.6797 17.3242)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 56.9229 21.5669)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 61.165 25.8093)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 65.4077 30.052)" fill="#B03797"/>
+<rect width="75" height="1.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 69.6504 34.2947)" fill="#B03797"/>
+</g>
+</svg>

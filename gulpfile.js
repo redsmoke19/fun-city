@@ -18,9 +18,9 @@ const dev = gulp.parallel(
   vendors,
   styles,
   imageMinify,
-  webP,
+  // webP,
   spriteSVG,
-  spritePNG,
+  // spritePNG,
   fonts,
 );
 

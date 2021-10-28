@@ -1,19 +1,43 @@
 section.hero
-	.hero__slider
-		ul.hero__list
-			li.hero__item
+	.hero__slider.swiper
+		ul.hero__list.swiper-wrapper
+			li.hero__item.swiper-slide
 				.hero__wrapper
 					.hero__description
-						h2.hero__title Банкетное предложение
-						p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
-						+button-link('#').hero__link
+						.container
+							.hero__inner
+								h2.hero__title Банкетное предложение
+								p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
+								+button-link('#').hero__link
 					.hero__images
-						.hero__only-label
-							span.hero__only-text Только в ресторане Fun Day
-						.hero__plate-img
-							+icon('hero-tablet-plate', 'hero__plate-svg', '133', '124')
 						picture.hero__picture
-							source(media="(min-width: 1440px)" srcset="static/images/content/hero-1-large.jpg")
-							source(media="(min-width: 1024px)" srcset="static/images/content/hero-1-desktop.jpg")
-							source(media="(min-width: 768px)" srcset="static/images/content/hero-1-tablet.jpg")
-							img.hero__img(src="static/images/content/hero-1-mobile.jpg" alt="Картинка банкетного меню" width="360" height="330")
+							source(media="(min-width: 1024px)" srcset="static/images/content/hero-1-desktop.png")
+							source(media="(min-width: 768px)" srcset="static/images/content/hero-1-tablet.png")
+							img.hero__img(src="static/images/content/hero-1-mobile.png" alt="Картинка банкетного меню" width="360" height="550")
+			li.hero__item.swiper-slide
+				.hero__wrapper
+					.hero__description
+						.container
+							.hero__inner
+								h2.hero__title Банкетное предложение
+								p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
+								+button-link('#').hero__link
+					.hero__images
+						picture.hero__picture
+							source(media="(min-width: 1024px)" srcset="static/images/content/hero-1-desktop.png")
+							source(media="(min-width: 768px)" srcset="static/images/content/hero-1-tablet.png")
+							img.hero__img(src="static/images/content/hero-1-mobile.png" alt="Картинка банкетного меню" width="360" height="550")
+			li.hero__item.swiper-slide
+				.hero__wrapper
+					.hero__description
+						.container
+							.hero__inner
+								h2.hero__title Банкетное предложение
+								p.hero__text Попробуйте наше новое #[span.hero__text--decor банкетное предложение] для вашего праздника!
+								+button-link('#').hero__link
+					.hero__images
+						picture.hero__picture
+							source(media="(min-width: 1024px)" srcset="static/images/content/hero-1-desktop.png")
+							source(media="(min-width: 768px)" srcset="static/images/content/hero-1-tablet.png")
+							img.hero__img(src="static/images/content/hero-1-mobile.png" alt="Картинка банкетного меню" width="360" height="550")
+		.hero__bullets
