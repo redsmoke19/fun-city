@@ -2,17 +2,39 @@
   background-color: $blue-color;
   padding: 235px 0 80px 0;
   position: relative;
+  @media screen and (min-width: $tablet-size) {
+    padding: 433px 0 144px 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 7px 0 162px;
+  }
+  @media screen and (min-width: $large-size) {
+    padding: 0 0 290px;
+  }
   &::before {
-    //background: url("../images/common/blue-clouds.svg") no-repeat center;
     background: url("../images/common/blue-clouds.svg") no-repeat bottom;
     background-size: 100% auto;
-    //background-size: 100% 100%;
     bottom: 100%;
     content: "";
-    //height: 68px;
     height: 150px;
     position: absolute;
     width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      background: url("../images/common/blue-clouds-tablet.svg") no-repeat bottom;
+      background-size: 100% 100%;
+      height: 142px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url("../images/common/blue-clouds-desktop.svg") no-repeat bottom;
+      background-size: 100% 100%;
+      height: 191px;
+    }
+    @media screen and (min-width: $large-size) {
+      background: url("../images/common/blue-clouds-large.svg") no-repeat bottom;
+      background-size: 100% 100%;
+      height: 268px;
+      margin: 0 0 -1px 0;
+    }
   }
   &::after {
     background: url("../images/common/curved-blue-decor.svg") no-repeat center;
@@ -23,6 +45,28 @@
     margin: 0 0 -1px 0;
     position: absolute;
     width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 84px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 112px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 158px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 210px;
+    }
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 55px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 100px 0;
+    }
   }
   &__images {
     height: 300px;
@@ -30,26 +74,150 @@
     right: 90px;
     top: -130px;
     width: 300px;
+    z-index: 5;
     @media screen and (min-width: 410px) {
       left: 20px;
       right: unset;
     }
-  }
-  &__picture {
+    @media screen and (min-width: $tablet-size) {
+      height: 500px;
+      left: unset;
+      top: -147px;
+      right: 310px;
+      width: 500px;
+    }
+    @media screen and (min-width: 850px) {
+      left: 40px;
+      right: unset;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 600px;
+      height: 600px;
+      //left: -100px;
+      left: unset;
+      margin: -165px 0 0 0;
+      //position: relative;
+      position: relative;
+      right: unset;
+      //top: -165px;
+      top: unset;
+      width: 600px;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 800px;
+      height: 800px;
+      margin: -266px 0 0 0;
+      width: 800px;
+    }
+    &::after {
+      background-color: rgba($light-blue-color, .5);
+      border-radius: 50%;
+      content: "";
+      height: 300px;
+      left: 0;
+      top: 20px;
+      position: absolute;
+      width: 300px;
+      z-index: -1;
+      @media screen and (min-width: $tablet-size) {
+        height: 500px;
+        width: 500px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 600px;
+        width: 600px;
+      }
+      @media screen and (min-width: $large-size) {
+        height: 800px;
+        width: 800px;
+      }
+    }
   }
   &__img {
     height: 100%;
     object-fit: cover;
     width: 100%;
   }
+  &__inner {
+    position: relative;
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 48.7%;
+      margin: 0 0 0 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: -46px 0 0 60px;
+    }
+  }
+  &__balloon-purple {
+    position: absolute;
+    transform: rotate(15deg);
+    right: 30px;
+    top: -300px;
+    z-index: 5;
+    @media screen and (min-width: $tablet-size) {
+      height: 131px;
+      right: 38px;
+      transform: rotate(30deg);
+      top: -424px;
+      width: 50px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 117px;
+      right: 69%;
+      top: -155px;
+      transform: rotate(25deg);
+      width: 45px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 131px;
+      right: 62%;
+      top: -245px;
+      width: 50px;
+    }
+  }
+  &__balloon-yellow {
+    position: absolute;
+    transform: rotate(-15deg);
+    right: 40px;
+    top: -200px;
+    z-index: 5;
+    @media screen and (min-width: $tablet-size) {
+      height: 263px;
+      right: 92px;
+      top: -264px;
+      width: 117px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 170px;
+      right: 110%;
+      transform: rotate(-10deg);
+      width: 75px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 242px;
+      right: 96%;
+      top: -355px;
+      width: 108px;
+    }
+  }
   &__paragraph {
     margin: 0 0 30px 0;
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 40px 0;
+    }
   }
   &__text {
     font-size: 16px;
     line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     &:not(:last-child) {
       margin: 0 0 10px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 20px 0;
+      }
     }
   }
   &__buttons {
@@ -57,27 +225,68 @@
     display: flex;
     justify-content: space-between;
     margin: 0 0 80px 0;
+    @media screen and (min-width: $tablet-size) {
+      justify-content: flex-start;
+      margin: 0 0 100px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+    }
   }
   &__button {
     padding: 16px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 30px 0 0;
+    }
     @media screen and (min-width: $large-size) {
-      padding: 21px 16px;
+      margin: 0 40px 0 0;
+      padding: 21px 30px;
     }
   }
   &__decor-list {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    @media screen and (min-width: $tablet-size) {
+      flex-direction: row;
+      margin: -30px -15px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      justify-content: center;
+      margin: -40px -40px 0;
+    }
   }
   &__decor-item {
     align-items: center;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 33.33%;
+      padding: 30px 15px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      max-width: 370px;
+      padding: 40px 40px 0;
+    }
     &:not(:last-child) {
       margin: 0 0 40px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0;
+      }
     }
   }
   &__decor-icon {
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 80px;
+      width: 80px;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 40px 0;
+    }
   }
   &__decor-title {
     font-family: $decor-font;
@@ -85,10 +294,23 @@
     line-height: 24px;
     margin: 0 0 15px 0;
     text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0 25px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
   &__decor-text {
     font-size: 12px;
     line-height: 16px;
     text-align: center;
+    @media screen and (min-width: $large-size) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }

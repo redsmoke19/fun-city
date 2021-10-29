@@ -3,10 +3,10 @@
   padding: 130px 0 170px;
   @media screen and (min-width: $tablet-size) {
     display: flex;
-    padding: 175px 0 330px;
+    padding: 212px 0 227px;
   }
   @media screen and (min-width: $desktop-size) {
-    padding: 244px 0 100px;
+    padding: 244px 0 270px;
   }
   @media screen and (min-width: $large-size) {
     padding: 400px 0 425px;
@@ -62,7 +62,7 @@
       transform: rotate(-30deg);
       @media screen and (min-width: $tablet-size) {
         left: 127px;
-        top: 72px;
+        top: 112px;
       }
       @media screen and (min-width: $desktop-size) {
         height: 50px;
@@ -81,7 +81,7 @@
       transform: rotate(49deg);
       @media screen and (min-width: $tablet-size) {
         left: 43%;
-        top: 83px;
+        top: 116px;
       }
       @media screen and (min-width: $desktop-size) {
         height: 75px;
@@ -114,6 +114,7 @@
     @media screen and (min-width: $tablet-size) {
       flex: 0 0 540px;
       height: 540px;
+      margin: -84px 0 0 0;
       padding: 0;
     }
     @media screen and (min-width: $desktop-size) {

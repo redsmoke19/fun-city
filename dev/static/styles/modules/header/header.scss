@@ -1,8 +1,22 @@
 .header {
-  background-color: $white;
   flex: 0 0 auto;
-  position: relative;
-  z-index: 20;
+  &__wrapper {
+    background-color: $white;
+    position: relative;
+    width: 100%;
+    z-index: 20;
+  }
+  &__placeholder {
+    display: none;
+    min-height: 80px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      min-height: 100px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      min-height: 158px;
+    }
+  }
   &__top {
     align-items: center;
     display: flex;

@@ -1,9 +1,10 @@
 header.header
-	.container
-		.header__wrapper
+	.header__wrapper
+		.container
 			.header__top
 				a.header__logo-link(href=pageClass==="index-page" ? false : "index.html")
 					span.visually-hidden Ссылка на главную страницу
 					+icon('icon-logo', 'header__logo', '124', '40')
 				include sandwich
 			include ../main-nav/nav
+	.header__placeholder

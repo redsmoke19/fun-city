@@ -78,7 +78,14 @@
     }
   }
   &__images {
+    margin: 0 0 -1px 0;
     position: relative;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 -1px 0;
+    }
   }
   &__picture {
     display: block;

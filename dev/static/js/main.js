@@ -263,11 +263,28 @@
         nav.classList.remove('_active');
         sandwich.classList.remove('_active');
         body.classList.remove('_overlay');
+        body.classList.remove('_lock');
       }
       if (breakpointTablet.matches === false) {
       }
     }
   }
+
+  const getFixedHeader = () => {
+    const header = document.querySelector('.header__wrapper');
+    const headerPlaceholder = document.querySelector('.header__placeholder');
+    if (header) {
+      document.addEventListener('scroll', e => {
+        if (window.pageYOffset > 0) {
+          header.style.position = 'fixed';
+          headerPlaceholder.style.display = 'block';
+        } else {
+          header.style.position = 'relative';
+          headerPlaceholder.style.display = 'none';
+        }
+      });
+    }
+  };
 
   const getSandwich = () => {
     const sandwich = document.querySelector('.sandwich');
@@ -325,6 +342,7 @@
   dynamicAdaptive();
   getPageVh();
   getResize();
+  getFixedHeader();
   getSandwich();
   getSliderHero();
 })();
