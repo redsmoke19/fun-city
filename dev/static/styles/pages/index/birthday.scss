@@ -1,5 +1,6 @@
 .index-birthday {
   background-color: $blue-color;
+  margin: 0 0 30px 0;
   padding: 235px 0 80px 0;
   position: relative;
   @media screen and (min-width: $tablet-size) {
@@ -9,6 +10,7 @@
     padding: 7px 0 162px;
   }
   @media screen and (min-width: $large-size) {
+    margin: 0 0 40px 0;
     padding: 0 0 290px;
   }
   &::before {
