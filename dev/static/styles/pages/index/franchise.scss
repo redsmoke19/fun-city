@@ -1,0 +1,197 @@
+.index-franchise {
+  @media screen and (min-width: $desktop-size) {
+    overflow: hidden;
+  }
+  &::before {
+    background: url("../images/common/franchise-shape-top-mobile.svg") no-repeat center;
+    background-size: 100% 100%;
+    content: "";
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      background: url("../images/common/franchise-shape-top-tablet.svg") no-repeat center;
+      background-size: 100% 100%;
+      height: 76px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url("../images/common/franchise-shape-top-desktop.svg") no-repeat center;
+      background-size: 100% 100%;
+      height: 102px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 142px;
+    }
+  }
+  &::after {
+    background: url("../images/common/franchise-shape-bottom-mobile.svg") no-repeat center;
+    background-size: 100% 100%;
+    bottom: 0;
+    content: "";
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      background: url("../images/common/franchise-shape-bottom-tablet.svg") no-repeat center;
+      background-size: 100% 100%;
+      height: 84px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url("../images/common/franchise-shape-bottom-desktop.svg") no-repeat center;
+      background-size: 100% 100%;
+      height: 112px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 158px;
+    }
+  }
+  &__content {
+    position: relative;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+    }
+  }
+  &__description {
+    background: url("../images/common/franchise-decor-mobile.svg") no-repeat center bottom;
+    background-size: cover;
+    left: 0;
+    padding: 70px 0 20%;
+    position: absolute;
+    top: 0;
+    @media screen and (min-width: $tablet-size) {
+      padding: 120px 0 9%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      background: url("../images/common/franchise-decor-desktop.svg") no-repeat left center;
+      background-size: 56.34% 100%;
+      display: flex;
+      flex: 0 0 100%;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+    @media screen and (min-width: $large-size) {
+      background-size: 46.87% 100%;
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      width: 43.3%;
+    }
+    @media screen and (min-width: $large-size) {
+      width: 39.6%;
+    }
+  }
+  &__title {
+    @media screen and (min-width: $tablet-size) {
+      width: 350px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      width: unset;
+    }
+  }
+  &__paragraph {
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $tablet-size) {
+      justify-content: flex-start;
+    }
+  }
+  &__button {
+    padding: 16px 20px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 30px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 20px 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 40px 0 0;
+    }
+  }
+  &__link {
+    @media screen and (min-width: $desktop-size) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__icon-bow {
+    right: 10%;
+    position: absolute;
+    top: 0;
+    transform: rotate(-4.3deg);
+    z-index: 3;
+    @media screen and (min-width: $tablet-size) {
+      height: 66px;
+      right: 8%;
+      top: 20px;
+      width: 91px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 43%;
+      right: unset;
+      top: 27%;
+    }
+  }
+  &__image {
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 56.35%;
+      transform: translateX(-100%);
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 63.889%;
+      width: 63.889%;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 937px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 850px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 838px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 920px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    @media screen and (min-width: $large-size) {
+      min-width: 1160px;
+    }
+  }
+}

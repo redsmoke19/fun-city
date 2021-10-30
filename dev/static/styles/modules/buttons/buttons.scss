@@ -73,7 +73,6 @@
   &--text {
     background-color: transparent;
     color: $purple-color;
-    margin: 0 15px 0 0;
     padding: 16px 0;
     text-decoration: underline;
     text-decoration-style: dotted;
@@ -90,6 +89,7 @@
     display: flex;
     justify-content: center;
     height: 50px;
+    margin: 0 0 0 15px;
     width: 50px;
     @media screen and (min-width: $large-size) {
       height: 60px;
