@@ -238,6 +238,17 @@
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   };
 
+  const getCloudsHeight = () => {
+    const clouds = document.querySelectorAll('.js-clouds');
+    let windowWidth = document.documentElement.clientWidth;
+    let heightRatio = windowWidth / 5.45;
+    clouds.forEach(item => {
+      heightRatio = heightRatio > 400 ? 400 : windowWidth / 5.45;
+      item.style.height = `${heightRatio}`;
+      item.style.top = `${-heightRatio + 4}`;
+    });
+  };
+
   const getResize = () => {
     const breakpointTablet = window.matchMedia('(min-width: 1280px)');
     const breakpointMobile = window.matchMedia('(min-width: 768px)');
@@ -259,6 +270,7 @@
     }
     function actualResizeHandler() {
       getPageVh();
+      getCloudsHeight();
       if (nav.classList.contains('_active')) {
         nav.classList.remove('_active');
         sandwich.classList.remove('_active');
@@ -339,10 +351,29 @@
     }
   };
 
+  const getFormsLabel = () => {
+    const inputs = document.querySelectorAll('.quality-control__input');
+    inputs.forEach(item => {
+      const label = item.parentElement.querySelector('label');
+      item.addEventListener('focus', () => {
+        label.classList.add('_active');
+      });
+      item.addEventListener('blur', () => {
+        if (!item.value) {
+          label.classList.remove('_active');
+        }
+      });
+    });
+  };
+
+  validate.init();
+
   dynamicAdaptive();
   getPageVh();
   getResize();
   getFixedHeader();
   getSandwich();
   getSliderHero();
+  getFormsLabel();
+  getCloudsHeight();
 })();

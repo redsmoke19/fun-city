@@ -1,0 +1,148 @@
+.quality-control {
+  &__content {
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: $large-size) {
+      padding: 0 100px;
+    }
+  }
+  &__description {
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 42.2%;
+      margin: 0;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 31.4%;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 37%;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__form {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 48%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 48.7%;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 37%;
+    }
+  }
+  &__box {
+    flex: 0 0 100%;
+    margin: 0 0 20px 0;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+    }
+  }
+  &__input {
+    background: rgba(176, 55, 151, .05);
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: $purple-color;
+    font-size: 18px;
+    line-height: 24px;
+    outline: none;
+    padding: 35px 25px 17px;
+    transition: all ease-out .15s;
+    width: 100%;
+    &:disabled {
+      background: $light-gray-color url("../images/common/icon-lock.svg") no-repeat;
+      background-position: 25px center;
+      padding: 35px 25px 17px 60px;
+      + label {
+        color: $gray-color;
+        left: 60px;
+      }
+    }
+    &:focus {
+      background-color: $white;
+      border: 2px solid $purple-color;
+    }
+  }
+  &__input--textarea {
+    min-height: 160px;
+  }
+  &__label {
+    color: rgba($purple-color, .6);
+    font-size: 18px;
+    line-height: 24px;
+    left: 25px;
+    position: absolute;
+    pointer-events: none;
+    top: 28px;
+    transition: all ease-out .15s;
+    &._active {
+      font-size: 15px;
+      line-height: 16px;
+      top: 18px;
+    }
+  }
+  &__blue-mask {
+    left: 5px;
+    position: absolute;
+    top: -130px;
+    transform: rotate(30deg);
+    @media screen and (min-width: $tablet-size) {
+      bottom: 30px;
+      height: 99px;
+      top: unset;
+      transform: rotate(15deg);
+      width: 251px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      bottom: 20%;
+    }
+    @media screen and (min-width: $large-size) {
+      bottom: 0;
+      height: 123px;
+      width: 313px;
+    }
+  }
+  &__yellow-mask {
+    position: absolute;
+    right: 43px;
+    top: -153px;
+    transform: rotate(30deg);
+    @media screen and (min-width: $tablet-size) {
+      height: 45px;
+      right: 0;
+      top: 50%;
+      transform: rotate(-30deg);
+      width: 116px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      right: -120px;
+      top: 35%;
+    }
+  }
+  .error {
+    border-color: $red-color;
+  }
+  .error-message {
+    color: $red-color;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 25px;
+  }
+}

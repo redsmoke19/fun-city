@@ -14,3 +14,9 @@ mixin button-link(href, text, arrow)
 				+icon('icon-arrow-right', 'hero__link--icon', '13', '13')
 		else
 			span.button-link.button-link--text #{text}
+
+mixin button-submit(href, text, arrow)
+	button.button-link.button-link--submit(type="submit")&attributes(attributes)
+		span.button-link.button-link--text #{text}
+		span.button-link.button-link--icon
+			+icon('icon-arrow-right', 'hero__link--icon', '13', '13')

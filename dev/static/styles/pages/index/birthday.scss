@@ -13,40 +13,19 @@
     margin: 0 0 40px 0;
     padding: 0 0 290px;
   }
-  &::before {
-    background: url("../images/common/blue-clouds.svg") no-repeat bottom;
-    background-size: 100% auto;
-    bottom: 100%;
-    content: "";
-    height: 150px;
+  &__decor-cloud {
     position: absolute;
+    top: -65px;
+    height: 66px;
     width: 100%;
-    @media screen and (min-width: $tablet-size) {
-      background: url("../images/common/blue-clouds-tablet.svg") no-repeat bottom;
-      background-size: 100% 100%;
-      height: 142px;
-    }
-    @media screen and (min-width: $desktop-size) {
-      background: url("../images/common/blue-clouds-desktop.svg") no-repeat bottom;
-      background-size: 100% 100%;
-      height: 191px;
-    }
-    @media screen and (min-width: $large-size) {
-      background: url("../images/common/blue-clouds-large.svg") no-repeat bottom;
-      background-size: 100% 100%;
-      height: 268px;
-      margin: 0 0 -1px 0;
-    }
+    z-index: -1;
   }
-  &::after {
-    background: url("../images/common/curved-blue-decor.svg") no-repeat center;
-    background-size: 100% 100%;
-    bottom: 0;
+  &__bottom-curved {
     height: 40px;
-    content: "";
-    margin: 0 0 -1px 0;
     position: absolute;
     width: 100%;
+    bottom: 0;
+    min-width: 100%;
     @media screen and (min-width: $tablet-size) {
       height: 84px;
     }

@@ -1,0 +1,53 @@
+.footer
+	+icon("icon-purple-cloud", "footer__decor-cloud js-clouds")
+	.container
+		.footer__content
+			.footer__top
+				a.footer__logo-link(href=pageClass === "index-page" ? false : "index.html")
+					picture.footer__picture
+						//source(media="(min-width: 1024px)" srcset="static/images/content/index/franchise-large.png")
+						//source(media="(min-width: 1024px)" srcset="static/images/content/index/franchise-desktop.png")
+						source(media="(min-width: 768px)" srcset="static/images/content/footer-logo-tablet.png")
+						img.footer__logo(src="static/images/content/footer-logo-mobile.png" width="128" height="50" alt="Логотип парка")
+				ul.footer__social-list
+					li.footer__social-item
+						a.footer__social-link(href="#")
+							+icon("icon-vk", "footer__social-icon", "22", "12")
+					li.footer__social-item
+						a.footer__social-link(href="#")
+							+icon("icon-insta", "footer__social-icon", "20", "20")
+					li.footer__social-item
+						a.footer__social-link(href="#")
+							+icon("icon-youtube", "footer__social-icon", "20", "16")
+				a.footer__order.button.button--white(href="#") Заказать праздник
+			.footer__info
+				ul.footer__phone-list
+					li.footer__phone-item
+						span.footer__phone-text Администратор
+						a.footer__phone-link(href="tel:+79145438202") +7 (914) 543-82-02
+					li.footer__phone-item
+						span.footer__phone-text Заказ праздника
+						a.footer__phone-link(href="tel:+79312609788") +7 (931) 260-97-88
+				nav.footer__nav
+					ul.footer__nav-list
+						li.footer__nav-item
+							a.footer__nav-link(href="#") О нас
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Ресторан
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Праздник
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Фотогалерея
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Франчайзинг
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Акции
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Контакты
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Техника безопасности
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Договор оферты
+						li.footer__nav-item
+							a.footer__nav-link(href="#") Политика конфиденциальности
+				p.footer__copyright Fun City © 2021

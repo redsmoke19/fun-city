@@ -1,16 +1,19 @@
 section.index-franchise
+	+icon("icon-shape-top", "index-franchise__top-shape", "100", "100")
+	+icon("icon-shape-yellow-bottom", "index-franchise__bottom-shape", "100", "100")
 	.index-franchise__content
 		.index-franchise__description
 			.container
-				.index-franchise__wrapper
-					h2.index-franchise__title.section__title Франшиза ресто-парка «Fun&nbsp;City»
-					.index-franchise__paragraph
-						p.index-franchise__text Это федеральная сеть ресто-парков, которая успешно функционирует более 10 лет. На сегодняшний день функционирует 5 парков, площадью от 2500 м2, где 1/3 это ресторан с авторской кухней, а 2/3 это игровое пространство.
-						p.index-franchise__text Наша концепция позволяет одинаково весело проводить время всем членам семьи. Совместный семейный отдых, не выезжая из города, это именно то, чего не хватает в Вашем городе.
-					.index-franchise__buttons
-						a.index-franchise__button.button Оставить заявку
-						+button-link("#", "Скачать презентацию").index-franchise__link
-				+icon("icon-bow", "index-franchise__icon-bow", "62", "45")
+				.index-franchise__inner
+					.index-franchise__wrapper
+						h2.index-franchise__title.section__title Франшиза ресто-парка «Fun&nbsp;City»
+						.index-franchise__paragraph
+							p.index-franchise__text Это федеральная сеть ресто-парков, которая успешно функционирует более 10 лет. На сегодняшний день функционирует 5 парков, площадью от 2500 м2, где 1/3 это ресторан с авторской кухней, а 2/3 это игровое пространство.
+							p.index-franchise__text Наша концепция позволяет одинаково весело проводить время всем членам семьи. Совместный семейный отдых, не выезжая из города, это именно то, чего не хватает в Вашем городе.
+						.index-franchise__buttons
+							a.index-franchise__button.button Оставить заявку
+							+button-link("#", "Скачать презентацию").index-franchise__link
+					+icon("icon-bow", "index-franchise__icon-bow", "62", "45")
 		.index-franchise__image
 			picture.index-franchise__picture
 				source(media="(min-width: 1024px)" srcset="static/images/content/index/franchise-large.png")

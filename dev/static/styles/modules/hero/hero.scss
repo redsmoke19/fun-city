@@ -5,28 +5,45 @@
   &__item {
     overflow: hidden;
     position: relative;
-    &::after {
-      background: url("../images/common/hero-decor-mobile.svg") no-repeat center;
-      background-size: 100% 100%;
-      bottom: 0;
-      height: 40px;
-      content: "";
-      margin: 0 0 -1px 0;
-      position: absolute;
-      width: 100%;
-      @media screen and (min-width: $tablet-size) {
-        background: url("../images/common/hero-decor-tablet.svg") no-repeat center;
-        background-size: 100% 100%;
-        height: 85px;
-      }
-      @media screen and (min-width: $desktop-size) {
-        background: url("../images/common/hero-decor-desktop.svg") no-repeat center;
-        background-size: 100% 100%;
-        height: 113px;
-      }
-      @media screen and (min-width: $large-size) {
-        height: 160px;
-      }
+    //&::after {
+    //  background: url("../images/common/hero-decor-mobile.svg") no-repeat center;
+    //  background-size: 100% 100%;
+    //  bottom: 0;
+    //  height: 40px;
+    //  content: "";
+    //  margin: 0 0 -1px 0;
+    //  position: absolute;
+    //  width: 100%;
+    //  @media screen and (min-width: $tablet-size) {
+    //    background: url("../images/common/hero-decor-tablet.svg") no-repeat center;
+    //    background-size: 100% 100%;
+    //    height: 85px;
+    //  }
+    //  @media screen and (min-width: $desktop-size) {
+    //    background: url("../images/common/hero-decor-desktop.svg") no-repeat center;
+    //    background-size: 100% 100%;
+    //    height: 113px;
+    //  }
+    //  @media screen and (min-width: $large-size) {
+    //    height: 160px;
+    //  }
+    //}
+  }
+  &__shape-bottom {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      height: 85px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 113px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 160px;
     }
   }
   &__wrapper {

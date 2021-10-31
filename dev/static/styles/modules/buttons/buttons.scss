@@ -21,6 +21,10 @@
     font-size: 14px;
     padding: 21px 22px;
   }
+  &--white {
+    background-color: $white;
+    color: $purple-color;
+  }
   &--transparent {
     background-color: transparent;
     box-shadow: none;
@@ -69,6 +73,9 @@
   }
   &:active {
     transform: translateY(5px);
+  }
+  &--submit {
+    background-color: transparent;
   }
   &--text {
     background-color: transparent;
