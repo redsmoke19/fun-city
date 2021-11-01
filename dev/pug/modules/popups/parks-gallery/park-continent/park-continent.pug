@@ -1,0 +1,19 @@
+.popup.popup_park-continent._active
+	.popup__content
+		.popup__close
+			+icon("icon-close", "popup__close-icon", "11", "11")
+		.popup__body
+			.popup__top
+				.popup__heading
+					h2.popup__title Парк в ТЦ Континент
+					span.popup__title-city г. Санкт-Петербург
+				+button-link("#", "Перейти на сайт", true)
+			.popup__paragraph
+				p.popup__text Описание парка в ТЦ Континент. Опционально. Описания может и не быть в зависимости от требований.
+				p.popup__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.
+			.popup__gallery-slider
+				include gallery-slider
+			.popup__subtitle В нашем парке вас ждут:
+			.popup__more-slider
+				include more-slider
+

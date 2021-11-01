@@ -93,6 +93,13 @@
       }
     }
   }
+  &__link {
+    align-items: center;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
   &__picture {
     border-radius: 1000px 1000px 0 0;
     display: block;
