@@ -1,16 +1,33 @@
 .popup {
   &__top {
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 40px 0;
+    }
   }
   &__heading {
     display: flex;
     flex-direction: column;
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
   }
   &__title {
     font-family: $decor-font;
     font-size: 20px;
     line-height: 28px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
   &__subtitle {
     font-family: $decor-font;
@@ -18,20 +35,82 @@
     line-height: 28px;
     margin: 60px 0 30px;
     text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 60px 0 40px ;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
   &__title-city {
     font-size: 16px;
     line-height: 22px;
     margin: 10px 0 0 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 15px 0 0 0;
+    }
   }
   &__paragraph {
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 40px 0;
+    }
   }
   &__text {
     font-size: 16px;
     line-height: 22px;
     &:not(:last-child) {
       margin: 0 0 10px 0;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 20px 0;
+      }
     }
+  }
+}
+
+.popup-nav {
+  align-items: center;
+  background-color: $purple-color;
+  box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  z-index: 2;
+  svg {
+    fill: $white;
+  }
+  &--prev {
+    border-radius: 0 30px 30px 0;
+    left: 0;
+    right: unset;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &--white {
+    background-color: $white;
+    svg {
+      fill: $purple-color;
+    }
+  }
+  &--disabled {
+    opacity: .7;
   }
 }

@@ -458,10 +458,20 @@
       grabCursor: true,
       preventClicks: true,
       preventClicksPropagation: true,
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 3,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
+      navigation: {
+        nextEl: '.gallery-slider-modal__thumbs-nav--next',
+        prevEl: '.gallery-slider-modal__thumbs-nav--prev',
+        disabledClass: 'popup-nav--disabled',
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 10,
+        },
+      },
     });
 
     const general = new Swiper(parkGalleryGeneralSliders, {
@@ -492,6 +502,21 @@
       spaceBetween: 0,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
+      navigation: {
+        nextEl: '.more-slider-modal__nav--next',
+        prevEl: '.more-slider-modal__nav--prev',
+        disabledClass: 'popup-nav--disabled',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1440: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+      },
     });
   };
 

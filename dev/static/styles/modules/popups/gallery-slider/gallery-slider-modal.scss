@@ -1,11 +1,26 @@
 .gallery-slider-modal {
   margin: 0 -20px;
+  @media screen and (min-width: $tablet-size) {
+    border-radius: 30px;
+    margin: 0;
+    overflow: hidden;
+  }
   &__general {
     margin: 0 0 10px 0;
   }
   &__general-picture {
     display: block;
     height: 270px;
+    // pointer-events: none;
+    @media screen and (min-width: $tablet-size) {
+      height: 320px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 420px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 500px;
+    }
   }
   &__general-img {
     height: 100%;
@@ -38,10 +53,35 @@
   &__thumbs-picture {
     display: block;
     height: 80px;
+    @media screen and (min-width: $tablet-size) {
+      height: 140px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 160px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 180px;
+    }
   }
   &__thumbs-img {
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+  &__thumbs-nav--prev {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__thumbs-nav--next {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }

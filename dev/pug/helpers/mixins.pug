@@ -20,3 +20,11 @@ mixin button-submit(href, text, arrow)
 		span.button-link.button-link--text #{text}
 		span.button-link.button-link--icon
 			+icon('icon-arrow-right', 'hero__link--icon', '13', '13')
+
+mixin popup-nav-prev(color)
+	.popup-nav.popup-nav--prev(class=color ? `popup-nav--${color}` : false)&attributes(attributes)
+		+icon("icon-arrow-right", "popup-nav__icon", "13", "13")
+
+mixin popup-nav-next(color)
+	.popup-nav.popup-nav--next(class=color ? `popup-nav--${color}` : false)&attributes(attributes)
+		+icon("icon-arrow-right", "popup-nav__icon", "13", "13")

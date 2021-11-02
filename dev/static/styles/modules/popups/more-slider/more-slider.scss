@@ -1,8 +1,19 @@
 .more-slider-modal {
   margin: 0 -20px;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0;
+    overflow: initial;
+  }
   &__picture {
     display: block;
     height: 200px;
+    @media screen and (min-width: $tablet-size) {
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 300px;
+    }
   }
   &__img {
     height: 100%;
@@ -12,15 +23,46 @@
   &__inner {
     margin: 20px 0 0 0;
     padding: 0 20px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 0;
+    }
   }
   &__title {
     font-family: $decor-font;
     font-size: 18px;
     line-height: 24px;
     margin: 0 0 15px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
   &__text {
     font-size: 16px;
     line-height: 22px;
+  }
+  &__nav--prev {
+    top: 75px;
+    @media screen and (min-width: $tablet-size) {
+      left: -40px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      top: 125px;
+    }
+    @media screen and (min-width: $large-size) {
+      left: -60px;
+    }
+  }
+  &__nav--next {
+    top: 75px;
+    @media screen and (min-width: $tablet-size) {
+      right: -40px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      top: 125px;
+    }
+    @media screen and (min-width: $large-size) {
+      right: -60px;
+    }
   }
 }
