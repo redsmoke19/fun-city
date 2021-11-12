@@ -1,0 +1,35 @@
+section.restaurant-hero
+	+icon("icon-curve-restaurant", "restaurant-hero__curve")
+	picture.restaurant-hero__picture
+		img.restaurant-hero__img(src="static/images/content/restaurant/hero-mobile.jpg" alt="Фотография ресторана" width="360" height="540")
+	.container
+		.restaurant-hero__content
+			h1.restaurant-hero__title.section__title.section__title--white.font-h1 Семейный ресторан Fun&nbsp;Day
+			.restaurant-hero__wrapper.swiper
+				ul.restaurant-hero__list.swiper-wrapper
+					li.restaurant-hero__item.swiper-slide
+						//+icon("icon-restaurant-bg", "restaurant-hero__icon-bg", "140", "152")
+						a.restaurant-hero__inner(href="#")
+							+icon("icon-crown", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Основное меню
+					li.restaurant-hero__item.swiper-slide
+						.restaurant-hero__inner
+							+icon("icon-dish", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Детское меню
+					li.restaurant-hero__item.swiper-slide
+						.restaurant-hero__inner
+							+icon("icon-rice", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Меню Азии
+					li.restaurant-hero__item.swiper-slide
+						.restaurant-hero__inner
+							+icon("icon-cheers", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Карта напитков
+					li.restaurant-hero__item.swiper-slide
+						.restaurant-hero__inner
+							+icon("icon-cake", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Праздничные торты
+					li.restaurant-hero__item.swiper-slide
+						.restaurant-hero__inner
+							+icon("icon-banquet", "restaurant-hero__icon", "64", "64")
+							h2.restaurant-hero__heading Банкетное меню
+				.restaurant-hero__bullets

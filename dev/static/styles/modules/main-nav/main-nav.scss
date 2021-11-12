@@ -76,6 +76,9 @@
     pointer-events: all;
     text-decoration: none;
     text-transform: uppercase;
+    &--active {
+      color: $purple-color;
+    }
     @media screen and (min-width: $tablet-size) {
       font-size: 14px;
       line-height: 18px;

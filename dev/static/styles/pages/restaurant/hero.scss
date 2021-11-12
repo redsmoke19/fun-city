@@ -1,0 +1,125 @@
+.restaurant-hero {
+  min-height: 520px;
+  overflow-x: hidden;
+  position: relative;
+  &__curve {
+    height: 48px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    min-width: 100%;
+  }
+  &__picture {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    &::after {
+      background: linear-gradient(180deg, #4b4b4b -1.31%, rgba(75, 75, 75, .3) 100%);
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+  }
+  &__content {
+    padding: 30px 0 0;
+  }
+  &__title {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  &__wrapper {
+    overflow: inherit;
+  }
+  &__item {
+    //overflow: hidden;
+    padding: 30px 0 0 0;
+    position: relative;
+    width: 150px;
+    &::before {
+      background-color: #d79bcb;
+      border-radius: 30px;
+      content: "";
+      height: 50%;
+      opacity: .6;
+      left: 0;
+      position: absolute;
+      top: 12px;
+      transform: skewY(-8deg);
+      width: 94%;
+      z-index: -1;
+    }
+  }
+  &__inner {
+    align-items: center;
+    background-color: $purple-color;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 58px 15px 0;
+    position: relative;
+    text-decoration: none;
+    &:hover {
+      transform: translateY(-10px);
+      z-index: 1;
+    }
+  }
+  &__icon {
+    margin: 0 0 30px 0;
+  }
+  &__heading {
+    color: $white;
+    font-family: $decor-font;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+  &__bullets {
+    align-items: center;
+    bottom: -42px;
+    display: flex;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  &__bullet {
+    background-color: transparent;
+    height: 20px;
+    position: relative;
+    width: 20px;
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+    &::after {
+      background-color: rgba($white, .3);
+      border-radius: 50%;
+      content: "";
+      height: 8px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+    }
+    &--active {
+      &::after {
+        background-color: $white;
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
+}

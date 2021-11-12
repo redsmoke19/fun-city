@@ -490,7 +490,7 @@
     });
   };
 
-  const getMoreParkSkiderModal = () => {
+  const getMoreParkSliderModal = () => {
     const parkMoreSliders = document.querySelector('.more-slider-modal');
 
     const moreSlider = new Swiper(parkMoreSliders, {
@@ -520,6 +520,57 @@
     });
   };
 
+  const sliders = () => {
+    const breakpointTablet = window.matchMedia('(min-width: 768px)');
+    const restaurantPageSlider = document.querySelector('.restaurant-hero__wrapper');
+    let restaurantInitSlider;
+
+    const breakpointChecker = function () {
+      let resizeTimeout;
+      if (!resizeTimeout) {
+        resizeTimeout = setTimeout(function () {
+          resizeTimeout = null;
+          resizeHandlerTablet();
+        }, 100);
+      }
+
+      function resizeHandlerTablet() {
+        if (breakpointTablet.matches === true) {
+          if (restaurantInitSlider !== undefined) {
+            restaurantInitSlider.destroy(true, true);
+          }
+        } else if (breakpointTablet.matches === false) {
+          getTabletSlider();
+        }
+      }
+
+    const getTabletSlider = function () {
+      if (restaurantPageSlider) {
+        restaurantInitSlider = new Swiper(restaurantPageSlider, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 2,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          pagination: {
+            el: '.restaurant-hero__bullets',
+            bulletClass: 'restaurant-hero__bullet',
+            bulletActiveClass: 'restaurant-hero__bullet--active',
+            type: 'bullets',
+            clickable: true
+          },
+        });
+      }
+      }
+    };
+
+    breakpointTablet.addListener(breakpointChecker);
+    breakpointChecker();
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -532,5 +583,6 @@
   getFormsLabel();
   getCloudsHeight();
   getGalleryParkModalSlider();
-  getMoreParkSkiderModal();
+  getMoreParkSliderModal();
+  sliders();
 }());

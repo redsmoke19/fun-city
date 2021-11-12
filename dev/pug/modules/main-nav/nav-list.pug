@@ -1,6 +1,6 @@
 mixin nav-links(name,page,link)
 	li.nav__item
-		a.nav__link(href=pageClass===page ? false : link)=name
+		a.nav__link(class=pageClass===page ? "nav__link--active": false href=pageClass===page ? false : link)=name
 
 ul.nav__list
 	+nav-links('Ресторан', 'restaurant-page', 'restaurant.html')

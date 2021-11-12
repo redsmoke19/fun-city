@@ -107,11 +107,22 @@ button {
   outline: none;
 }
 
-a[href] {
+//a[href] {
+//  transition: all ease-out .15s;
+//  &:hover {
+//    opacity: .7;
+//  }
+//}
+
+a._hover {
   transition: all ease-out .15s;
   &:hover {
     opacity: .7;
   }
+}
+
+a:not([href]) {
+  cursor: default;
 }
 
 .wrapper {

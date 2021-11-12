@@ -3,7 +3,7 @@
   background-color: $purple-color;
   border: none;
   border-radius: 30px;
-  box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+  box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
   color: $white;
   display: flex;
   font-family: $second-font;
@@ -17,10 +17,6 @@
   text-transform: uppercase;
   transition: all ease-out .15s;
   width: auto;
-  @media screen and (min-width: $large-size) {
-    font-size: 14px;
-    padding: 21px 22px;
-  }
   &--white {
     background-color: $white;
     color: $purple-color;
@@ -36,21 +32,36 @@
   }
   @media screen and (min-width: $desktop-size) {
     &:hover {
-      box-shadow: none;
+      box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
       color: rgba($white, .8);
     }
     &:active {
-      background-color: $white;
       box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
-      color: $purple-color;
+      color: rgba($white, 1);
       transform: translateY(5px);
     }
     &--transparent {
       &:hover {
         box-shadow: none;
-        color: rgba($purple-color, .8);
+        color: rgba($purple-color, 1);
+        text-decoration-style: solid;
+      }
+      &:active {
+        transform: translateY(0);
       }
     }
+    &--white {
+      &:hover {
+        color: rgba($purple-color, .8);
+      }
+      &:active {
+        color: rgba($purple-color, 1);
+      }
+    }
+  }
+  @media screen and (min-width: $large-size) {
+    font-size: 14px;
+    padding: 21px 22px;
   }
 }
 
@@ -58,6 +69,7 @@
   align-items: center;
   border: none;
   color: $white;
+  cursor: pointer;
   display: inline-flex;
   font-family: $second-font;
   font-size: 12px;
@@ -71,8 +83,24 @@
   @media screen and (min-width: $large-size) {
     font-size: 14px;
   }
+  &:hover {
+    .button-link--text {
+      text-decoration-style: solid;
+    }
+    .button-link--icon {
+      box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
+      opacity: .9;
+    }
+  }
   &:active {
     transform: translateY(5px);
+    .button-link--text {
+      text-decoration-style: solid;
+    }
+    .button-link--icon {
+      box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
+      opacity: .9;
+    }
   }
   &--submit {
     background-color: transparent;
@@ -92,7 +120,7 @@
     align-items: center;
     background-color: $purple-color;
     border-radius: 50%;
-    box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
     display: flex;
     justify-content: center;
     height: 50px;
