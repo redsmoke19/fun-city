@@ -1,0 +1,68 @@
+.popup-header-parks {
+  &._active {
+    .popup-header-parks__close {
+      opacity: 1;
+      transition: all .3s ease 0s;
+    }
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 50px 0 0;
+  }
+  @media screen and (min-width: $large-size) {
+    padding: 64px 0 0;
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      justify-content: flex-start;
+    }
+  }
+  &__body {
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 30px 10px 30px 30px;
+    @media screen and (min-width: $tablet-size) {
+      max-width: 340px;
+      padding: 30px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: unset;
+    }
+  }
+  &__icon {
+    bottom: 20px;
+    fill: rgba($purple-color, .1);
+    position: absolute;
+    right: -60px;
+    z-index: -1;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 20px 0;
+    padding: 0 70px 0 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+  &__link {
+    background-color: $light-gray-color;
+    border-radius: 20px;
+    color: $text-color;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    &--active {
+      background-color: $purple-color;
+      color: $white;
+      cursor: default;
+    }
+  }
+}

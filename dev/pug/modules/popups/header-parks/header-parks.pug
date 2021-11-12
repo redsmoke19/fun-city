@@ -1,0 +1,21 @@
+mixin popup-header-parks(text,link,active)
+	li.popup-header-parks__item
+		a.popup-header-parks__link(href=link ? link : false class=active === true ? "popup-header-parks__link--active": false) #{text}
+
+.popup.popup_header-parks.popup-header-parks
+	.popup__content.popup-header-parks__content
+		.container
+			.popup__body.popup-header-parks__body
+				+icon("icon-location", "popup-header-parks__icon", "178", "215")
+				.popup__close.popup-header-parks__close
+					+icon("icon-close", "popup__close-icon", "11", "11")
+				h2.popup-header-parks__title.font-h5 Выберете парк, который желаете посетить
+				ul.popup-header-parks__list
+					+popup-header-parks("Санкт-Петербург, ТЦ Континент", "", true)
+					+popup-header-parks("Санкт-Петербург, ТК Индустриальный", "#", false)
+					+popup-header-parks("Казань, ТРК Петровский", "#", false)
+					+popup-header-parks("Екатеринбург, ТЦ Академический", "#", false)
+					+popup-header-parks("Нижний Новгород, ТЦ Сигма", "#", false)
+					+popup-header-parks("Хабаровск, ТРК Стрелка", "#", false)
+
+

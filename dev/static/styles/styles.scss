@@ -107,7 +107,7 @@ button {
   outline: none;
 }
 
-a {
+a[href] {
   transition: all ease-out .15s;
   &:hover {
     opacity: .7;
