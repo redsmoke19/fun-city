@@ -571,6 +571,46 @@
     breakpointChecker();
   };
 
+  const getLightgallery = () => {
+    const restaurantGallery = document.querySelector('.restaurant-gallery__list');
+    const restaurantMenu = document.querySelector('.restaurant-hero__list');
+    if (restaurantMenu) {
+      restaurantMenu.addEventListener('lgBeforeOpen', () => {
+        document.body.classList.add('_lock');
+      });
+      restaurantMenu.addEventListener('lgBeforeClose', () => {
+        document.body.classList.remove('_lock');
+      });
+      lightGallery(restaurantMenu, {
+        addClass: "lg-restaurant-menu",
+        appendSubHtmlTo: ".lg-outer",
+        mobileSettings: {
+          controls: true,
+          showCloseIcon: true,
+          download: false,
+          rotate: false
+        }
+      });
+    }
+    if (restaurantGallery) {
+      restaurantGallery.addEventListener('lgBeforeOpen', () => {
+        document.body.classList.add('_lock');
+      });
+      restaurantGallery.addEventListener('lgBeforeClose', () => {
+        document.body.classList.remove('_lock');
+      });
+      lightGallery(restaurantGallery, {
+        appendSubHtmlTo: ".lg-outer",
+        mobileSettings: {
+          controls: true,
+          showCloseIcon: true,
+          download: false,
+          rotate: false
+        }
+      });
+    }
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -585,4 +625,5 @@
   getGalleryParkModalSlider();
   getMoreParkSliderModal();
   sliders();
+  getLightgallery();
 }());

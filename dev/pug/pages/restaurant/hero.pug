@@ -1,35 +1,43 @@
 section.restaurant-hero
 	+icon("icon-curve-restaurant", "restaurant-hero__curve")
 	picture.restaurant-hero__picture
+		source(media="(min-width: 1440px)" srcset="static/images/content/restaurant/hero-large.jpg")
+		source(media="(min-width: 1024px)" srcset="static/images/content/restaurant/hero-desktop.jpg")
+		source(media="(min-width: 768px)" srcset="static/images/content/restaurant/hero-tablet.jpg")
 		img.restaurant-hero__img(src="static/images/content/restaurant/hero-mobile.jpg" alt="Фотография ресторана" width="360" height="540")
 	.container
 		.restaurant-hero__content
 			h1.restaurant-hero__title.section__title.section__title--white.font-h1 Семейный ресторан Fun&nbsp;Day
 			.restaurant-hero__wrapper.swiper
 				ul.restaurant-hero__list.swiper-wrapper
-					li.restaurant-hero__item.swiper-slide
-						//+icon("icon-restaurant-bg", "restaurant-hero__icon-bg", "140", "152")
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Основное меню")
 						a.restaurant-hero__inner(href="#")
 							+icon("icon-crown", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Основное меню
-					li.restaurant-hero__item.swiper-slide
-						.restaurant-hero__inner
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Детское меню")
+						a.restaurant-hero__inner(href="#")
 							+icon("icon-dish", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Детское меню
-					li.restaurant-hero__item.swiper-slide
-						.restaurant-hero__inner
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Меню Азии")
+						a.restaurant-hero__inner(href="#")
 							+icon("icon-rice", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Меню Азии
-					li.restaurant-hero__item.swiper-slide
-						.restaurant-hero__inner
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Карта напитков")
+						a.restaurant-hero__inner(href="#")
 							+icon("icon-cheers", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Карта напитков
-					li.restaurant-hero__item.swiper-slide
-						.restaurant-hero__inner
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Праздничные торты")
+						a.restaurant-hero__inner(href="#")
 							+icon("icon-cake", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Праздничные торты
-					li.restaurant-hero__item.swiper-slide
-						.restaurant-hero__inner
+					li.restaurant-hero__item.swiper-slide(data-src="static/images/content/restaurant/menu-1-mobile.jpg"
+						data-sources='[{"srcset": "static/images/content/restaurant/menu-1-desktop.jpg", "media":"(min-width:1024px)"}, {"srcset": "static/images/content/restaurant/menu-1-tablet.jpg", "media":"(min-width:768px)"}]' data-sub-html="Банкетное меню")
+						a.restaurant-hero__inner(href="#")
 							+icon("icon-banquet", "restaurant-hero__icon", "64", "64")
 							h2.restaurant-hero__heading Банкетное меню
 				.restaurant-hero__bullets

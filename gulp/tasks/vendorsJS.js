@@ -4,7 +4,8 @@ const concat = require('gulp-concat');
 const vendorsScripts = [
   'node_modules/svg4everybody/dist/svg4everybody.min.js',
   'node_modules/swiper/swiper-bundle.min.js',
-  'dev/static/js/vendor/validate.js'
+  'dev/static/js/vendor/validate.js',
+  'node_modules/lightgallery/lightgallery.min.js',
 ];
 
 module.exports = function vendors(cb) {
