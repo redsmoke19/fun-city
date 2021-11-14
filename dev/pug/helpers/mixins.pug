@@ -15,6 +15,12 @@ mixin button-link(href, text, arrow)
 		else
 			span.button-link.button-link--text #{text}
 
+mixin button-link-video(href, text)
+	a.button-link.button-link--video(href=href)&attributes(attributes)
+		span.button-link.button-link--icon.button-link--icon-video
+			+icon('icon-play', 'hero__link--icon', '13', '13')
+		span.button-link.button-link--text.button-link--text-video #{text}
+
 mixin button-submit(href, text, arrow)
 	button.button-link.button-link--submit(type="submit")&attributes(attributes)
 		span.button-link.button-link--text #{text}
@@ -22,9 +28,9 @@ mixin button-submit(href, text, arrow)
 			+icon('icon-arrow-right', 'hero__link--icon', '13', '13')
 
 mixin popup-nav-prev(color)
-	.popup-nav.popup-nav--prev(class=color ? `popup-nav--${color}` : false)&attributes(attributes)
+	.popup-nav.popup-nav--prev(class=color ? `popup-nav--${color}`: false)&attributes(attributes)
 		+icon("icon-arrow-right", "popup-nav__icon", "13", "13")
 
 mixin popup-nav-next(color)
-	.popup-nav.popup-nav--next(class=color ? `popup-nav--${color}` : false)&attributes(attributes)
+	.popup-nav.popup-nav--next(class=color ? `popup-nav--${color}`: false)&attributes(attributes)
 		+icon("icon-arrow-right", "popup-nav__icon", "13", "13")

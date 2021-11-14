@@ -1,0 +1,9 @@
+extends layout/main
+
+block variables
+	-var title = 'Фотогалерея'
+	-var pageClass = 'photo-gallery-page'
+
+block content
+	main(class=pageClass)
+		include pages/photo-gallery/photo-gallery

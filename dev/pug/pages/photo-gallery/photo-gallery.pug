@@ -1,0 +1,34 @@
+section.photo-gallery
+	.container
+		.photo-gallery__content
+			h1.photo-gallery__title.font-h1.section__title Фотогалерея
+			.photo-gallery__wrapper.swiper
+				ul.photo-gallery__category-list.swiper-wrapper
+					li.photo-gallery__category-item.swiper-slide
+						a.photo-gallery__category-link(href="#")
+							picture.photo-gallery__category-picture
+								source(media="(min-width: 1440px)" srcset="static/images/content/photo-gallery/category-1-large.jpg")
+								source(media="(min-width: 1024px)" srcset="static/images/content/photo-gallery/category-1-desktop.jpg")
+								img.photo-gallery__category-img(src="static/images/content/photo-gallery/category-1-mobile.jpg" alt="Ресторан" width="220" height="280")
+						.photo-gallery__category-inner
+							h2.photo-gallery__category-title.font-h4 Ресторан
+							+button-link("#", "Смотреть фото", true).photo-gallery__category-button.button-link--white
+					li.photo-gallery__category-item.swiper-slide
+						a.photo-gallery__category-link(href="#")
+							picture.photo-gallery__category-picture
+								source(media="(min-width: 1440px)" srcset="static/images/content/photo-gallery/category-2-large.jpg")
+								source(media="(min-width: 1024px)" srcset="static/images/content/photo-gallery/category-2-desktop.jpg")
+								img.photo-gallery__category-img(src="static/images/content/photo-gallery/category-2-mobile.jpg" alt="Парк" width="220" height="280")
+						.photo-gallery__category-inner
+							h2.photo-gallery__category-title.font-h4 Парк
+							+button-link("#", "Смотреть фото", true).photo-gallery__category-button.button-link--white
+					li.photo-gallery__category-item.swiper-slide
+						a.photo-gallery__category-link(href="#")
+							picture.photo-gallery__category-picture
+								source(media="(min-width: 1440px)" srcset="static/images/content/photo-gallery/category-3-large.jpg")
+								source(media="(min-width: 1024px)" srcset="static/images/content/photo-gallery/category-3-desktop.jpg")
+								img.photo-gallery__category-img(src="static/images/content/photo-gallery/category-3-mobile.jpg" alt="Банкетные комнаты" width="220" height="280")
+						.photo-gallery__category-inner
+							h2.photo-gallery__category-title.font-h4 Банкетные комнаты
+							+button-link("#", "Смотреть фото", true).photo-gallery__category-button.button-link--white
+

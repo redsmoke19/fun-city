@@ -1,0 +1,125 @@
+.photo-gallery {
+  overflow: hidden;
+  padding: 20px 0 5px 0;
+  @media screen and (min-width: $tablet-size) {
+    overflow: inherit;
+    padding: 30px 0 0;
+  }
+  &__title {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__wrapper {
+    overflow: inherit;
+  }
+  &__category-list {
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: $desktop-size) {
+      gap: 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      gap: 40px;
+    }
+  }
+  &__category-item {
+    border-radius: 30px;
+    position: relative;
+    width: 220px;
+    @media screen and (min-width: $tablet-size) {
+      width: auto;
+    }
+    &::before {
+      background-color: rgba(176, 55, 151, .3);
+      border-radius: 30px;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      @media screen and (min-width: $tablet-size) {
+        top: 10px;
+      }
+      @media screen and (min-width: $large-size) {
+        top: 0;
+      }
+    }
+  }
+  &__category-link {
+    border-radius: 30px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: all ease-out .15s;
+    @media screen and (min-width: $large-size) {
+      &:hover {
+        transform: translateY(-10px);
+        + .photo-gallery__category-inner {
+          bottom: 40px;
+          .photo-gallery__category-button {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__category-picture {
+    display: block;
+    height: 280px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 300px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 420px;
+    }
+    &::after {
+      background: linear-gradient(180deg, rgba(75, 75, 75, 0) 0%, #4b4b4b 77.08%);
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__category-img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__category-inner {
+    bottom: 20px;
+    left: 0;
+    padding: 0 20px;
+    position: absolute;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      bottom: -45px;
+      pointer-events: none;
+      transition: all ease-out .15s;
+    }
+  }
+  &__category-title {
+    color: $white;
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 20px 0;
+    }
+  }
+  &__category-button {
+    @media screen and (min-width: $large-size) {
+      opacity: 0;
+    }
+  }
+}

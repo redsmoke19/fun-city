@@ -1,0 +1,36 @@
+.restaurant-banquet {
+  margin: 0 0 40px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+  &__description {
+    @media screen and (min-width: $tablet-size) {
+      padding: 120px 0 13%;
+      width: 100%;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+    }
+  }
+  &__paragraph {
+    margin: 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+    }
+  }
+  &__picture {
+    height: 800px;
+    @media screen and (min-width: $tablet-size) {
+      height: 850px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 654px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 692px;
+    }
+  }
+}

@@ -112,6 +112,9 @@
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 4px;
+    &-video {
+      color: $white;
+    }
     &:active {
       transform: translateY(0);
     }
@@ -126,6 +129,10 @@
     height: 50px;
     margin: 0 0 0 15px;
     width: 50px;
+    &-video {
+      background-color: $white;
+      margin: 0 20px 0 0;
+    }
     @media screen and (min-width: $large-size) {
       height: 60px;
       width: 60px;
@@ -136,6 +143,17 @@
     }
     &:active {
       transform: translateY(0);
+    }
+  }
+  &--white {
+    .button-link--text {
+      color: $white;
+    }
+    .button-link--icon {
+      background-color: $white;
+      svg {
+        fill: $purple-color;
+      }
     }
   }
 }

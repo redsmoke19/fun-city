@@ -523,7 +523,9 @@
   const sliders = () => {
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
     const restaurantPageSlider = document.querySelector('.restaurant-hero__wrapper');
+    const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     let restaurantInitSlider;
+    let photoGalleyCategoryInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -539,31 +541,46 @@
           if (restaurantInitSlider !== undefined) {
             restaurantInitSlider.destroy(true, true);
           }
+          if (photoGalleyCategoryInit !== undefined) {
+            photoGalleyCategoryInit.destroy(true, true);
+          }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
         }
       }
 
-    const getTabletSlider = function () {
-      if (restaurantPageSlider) {
-        restaurantInitSlider = new Swiper(restaurantPageSlider, {
-          direction: 'horizontal',
-          grabCursor: true,
-          preventClicks: true,
-          preventClicksPropagation: true,
-          slidesPerView: 2,
-          spaceBetween: 20,
-          slidesOffsetBefore: 0,
-          slidesOffsetAfter: 0,
-          pagination: {
-            el: '.restaurant-hero__bullets',
-            bulletClass: 'restaurant-hero__bullet',
-            bulletActiveClass: 'restaurant-hero__bullet--active',
-            type: 'bullets',
-            clickable: true
-          },
-        });
-      }
+      const getTabletSlider = function () {
+        if (restaurantPageSlider) {
+          restaurantInitSlider = new Swiper(restaurantPageSlider, {
+            direction: 'horizontal',
+            grabCursor: true,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            pagination: {
+              el: '.restaurant-hero__bullets',
+              bulletClass: 'restaurant-hero__bullet',
+              bulletActiveClass: 'restaurant-hero__bullet--active',
+              type: 'bullets',
+              clickable: true
+            },
+          });
+        }
+        if (photoGalleyCategorySlider) {
+          photoGalleyCategoryInit = new Swiper(photoGalleyCategorySlider, {
+            direction: 'horizontal',
+            grabCursor: true,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0
+          });
+        }
       }
     };
 
@@ -571,7 +588,7 @@
     breakpointChecker();
   };
 
-  const getLightgallery = () => {
+  const getLightGallery = () => {
     const restaurantGallery = document.querySelector('.restaurant-gallery__list');
     const restaurantMenu = document.querySelector('.restaurant-hero__list');
     if (restaurantMenu) {
@@ -625,5 +642,5 @@
   getGalleryParkModalSlider();
   getMoreParkSliderModal();
   sliders();
-  getLightgallery();
+  getLightGallery();
 }());
