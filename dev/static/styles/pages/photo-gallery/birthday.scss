@@ -1,0 +1,12 @@
+.photo-gallery-birthday {
+  .ball-text__images {
+    &::after {
+      background-color: rgba($blue-color, .5);
+    }
+  }
+  .ball-text__picture {
+    &::after {
+      display: none;
+    }
+  }
+}

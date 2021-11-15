@@ -1,0 +1,17 @@
+section.photo-gallery-birthday.ball-text
+	.container
+		.ball-text__content
+			.ball-text__inner
+				h2.font-h2.section__title.ball-text__title День рождения в Fun City
+				p.ball-text__text Описание дней рождений в рамках калькулятора и пакета “Собери сам”.
+				p.ball-text__text Здесь надо сказать о состовляющих праздника в калькуляторе, то есть о возможности выбрать зал на определнное количество гостей, какие блюда из ресторана можно добавить в предзаказ, о том что можно выбрать развлекательную программу и дополнительные услуги.
+				.ball-text__buttons
+					a.ball-text__button.button(href="#") Заказать праздник
+					+button-link("#", "Подробнее", true).ball-text__link-button
+			.ball-text__images
+				.ball-text__images-wrapper
+					picture.ball-text__picture
+						source(media="(min-width: 1440px)" srcset="static/images/content/index/birthday-large.png")
+						source(media="(min-width: 1024px)" srcset="static/images/content/index/birthday-desktop.png")
+						source(media="(min-width: 768px)" srcset="static/images/content/index/birthday-tablet.png")
+						img.index-family__img(src="static/images/content/index/birthday-mobile.png" alt="Видео мастер-класса" width="400" height="400")

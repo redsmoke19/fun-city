@@ -34,3 +34,10 @@ mixin popup-nav-prev(color)
 mixin popup-nav-next(color)
 	.popup-nav.popup-nav--next(class=color ? `popup-nav--${color}`: false)&attributes(attributes)
 		+icon("icon-arrow-right", "popup-nav__icon", "13", "13")
+
+mixin breadcrumbs-item(text,href)
+	li.breadcrumbs__item
+		if(href)
+			a.breadcrumbs__link(href=href)=text
+		else
+			span.breadcrumbs__text=text

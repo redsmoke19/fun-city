@@ -589,17 +589,16 @@
   };
 
   const getLightGallery = () => {
-    const restaurantGallery = document.querySelector('.restaurant-gallery__list');
-    const restaurantMenu = document.querySelector('.restaurant-hero__list');
-    if (restaurantMenu) {
-      restaurantMenu.addEventListener('lgBeforeOpen', () => {
+    const allGallery = document.querySelectorAll('._gallery');
+    const galleryInit = (item, addClass) => {
+      item.addEventListener('lgBeforeOpen', () => {
         document.body.classList.add('_lock');
       });
-      restaurantMenu.addEventListener('lgBeforeClose', () => {
+      item.addEventListener('lgBeforeClose', () => {
         document.body.classList.remove('_lock');
       });
-      lightGallery(restaurantMenu, {
-        addClass: "lg-restaurant-menu",
+      lightGallery(item, {
+        addClass: addClass,
         appendSubHtmlTo: ".lg-outer",
         mobileSettings: {
           controls: true,
@@ -608,24 +607,13 @@
           rotate: false
         }
       });
-    }
-    if (restaurantGallery) {
-      restaurantGallery.addEventListener('lgBeforeOpen', () => {
-        document.body.classList.add('_lock');
-      });
-      restaurantGallery.addEventListener('lgBeforeClose', () => {
-        document.body.classList.remove('_lock');
-      });
-      lightGallery(restaurantGallery, {
-        appendSubHtmlTo: ".lg-outer",
-        mobileSettings: {
-          controls: true,
-          showCloseIcon: true,
-          download: false,
-          rotate: false
-        }
-      });
-    }
+    };
+    allGallery.forEach(item => {
+      if (item) {
+        const addClass = `lg-${item.className.split(' ')[0].slice(0, -6)}`;
+        galleryInit(item, addClass);
+      }
+    });
   };
 
   validate.init();

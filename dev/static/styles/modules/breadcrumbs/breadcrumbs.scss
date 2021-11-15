@@ -1,0 +1,45 @@
+.breadcrumbs {
+  &__list {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+  &__link {
+    align-items: center;
+    color: $gray-color;
+    display: flex;
+    font-family: $second-font;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 14px;
+    padding: 0 24px 0 0;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    &::after {
+      background-color: $gray-color;
+      border-radius: 50%;
+      content: "";
+      height: 4px;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 2px);
+      width: 4px;
+    }
+  }
+  &__text {
+    align-items: center;
+    color: $gray-color;
+    display: flex;
+    font-family: $second-font;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+}

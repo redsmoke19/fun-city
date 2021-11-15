@@ -110,8 +110,23 @@
     color: $text-color;
     font-size: 16px;
     line-height: 22px;
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin: 0 0 10px 0;
+    }
+  }
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    @media screen and (min-width: $large-size) {
+      margin: 40px 0 0 0;
+    }
+  }
+  &__button {
+    padding: 16px 17px;
+    @media screen and (min-width: $large-size) {
+      padding: 21px 22px;
     }
   }
 }

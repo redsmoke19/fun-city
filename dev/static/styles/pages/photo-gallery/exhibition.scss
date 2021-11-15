@@ -1,0 +1,29 @@
+.photo-gallery-exhibition {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 -20px;
+    gap: 4px;
+    @media screen and (min-width: $tablet-size) {
+      border-radius: 30px;
+      gap: 10px;
+      overflow: hidden;
+      margin: 0;
+    }
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__picture {
+    display: block;
+    height: 120px;
+    @media screen and (min-width: $tablet-size) {
+      height: 234px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
