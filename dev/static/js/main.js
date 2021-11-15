@@ -616,6 +616,39 @@
     });
   };
 
+  const getMap = () => {
+    const contactsMap = document.querySelector('.contacts__ya-map')
+    ymaps.ready(function () {
+      const map = new ymaps.Map(contactsMap, {
+        center: [59.850509, 30.304028],
+        zoom: 14,
+        controls: [],
+      });
+      const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      );
+      const myPlacers = new ymaps.Placemark(
+        map.getCenter(),
+        {
+          hintContent: 'Офис Intergator.Digital',
+        },
+        {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: './static/images/common/map-pin.svg',
+          // Размеры метки.
+          iconImageSize: [80, 50],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38],
+        }
+      );
+      map.geoObjects.add(myPlacers);
+    });
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -631,4 +664,5 @@
   getMoreParkSliderModal();
   sliders();
   getLightGallery();
+  getMap();
 }());

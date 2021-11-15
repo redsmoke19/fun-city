@@ -1,4 +1,8 @@
 .photo-gallery-exhibition {
+  padding: 10px 0 0 0;
+  @media screen and (min-width: $tablet-size) {
+    padding: 20px 0 0 0;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

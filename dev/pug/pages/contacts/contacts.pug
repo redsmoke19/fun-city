@@ -1,0 +1,33 @@
+section.contacts
+	.container
+		.contacts__content
+			h1.contacts__title.font-h1.section__title Контакты
+			h2.contacts__subtitle.font-h2 Мы находимся
+			.contacts__wrapper
+				.contacts__place
+					+icon("icon-rope", "contacts__place-rope", "94", "44")
+					h3.contacts__place-title.font-h3 ТКР «Континент»
+					p.contacts__place-address г. Санкт-Петербург, пр. Стачек, 99, 3 этаж
+					ul.contacts__place-list
+						li.contacts__place-item
+							.contacts__place-icon-box
+								+icon("icon-clock", "contacts__place-icon", "20", "20")
+							p.contacts__place-text Время работы
+							p.contacts__place-value ПН-ВС с 10:00 до 22:00
+						li.contacts__place-item
+							.contacts__place-icon-box
+								+icon("icon-phone", "contacts__place-icon", "20", "20")
+							p.contacts__place-text Администратор
+							p.contacts__place-value ПН-ВС с 10:00 до 22:00
+						li.contacts__place-item
+							.contacts__place-icon-box
+								+icon("icon-phone", "contacts__place-icon", "20", "20")
+							p.contacts__place-text Организация праздника
+							p.contacts__place-value ПН-ВС с 10:00 до 22:00
+				.contacts__map
+					.contacts__ya-map
+				.contacts__quality
+					+icon("icon-rope-yellow", "contacts__place-rope", "94", "44")
+					h3.contacts__quality-title.font-h4 Служба контроля качества
+					p.contacts__quality-text Дорогие гости! Мы стремимся быть лучше, поэтому внимательно изучаем ваши замечания и предложения.
+					a.contacts__quality__link.button(href="#") Оставить отзыв
