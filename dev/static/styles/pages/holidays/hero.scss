@@ -1,0 +1,97 @@
+.holidays-hero {
+  background-color: $yellow-color;
+  overflow: hidden;
+  &__shape {
+    bottom: 0;
+    height: 37px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 80px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 105px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 150px;
+    }
+  }
+  &__content {
+    padding: 80px 0;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      padding: 60px 0 100px;
+    }
+    @media screen and (min-width: $large-size) {
+      padding: 90px 0 100px;
+    }
+  }
+  &__salut-small {
+    left: 20px;
+    position: absolute;
+    top: -35px;
+    @media screen and (min-width: $tablet-size) {
+      left: 0;
+      top: -10px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 100px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 130px;
+      left: 250px;
+      top: -30px;
+      width: 107px;
+    }
+  }
+  &__salut-big {
+    position: absolute;
+    right: -90px;
+    top: -50px;
+    transform: rotate(-14deg);
+    @media screen and (min-width: $tablet-size) {
+      right: -70px;
+      top: 55px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      right: 30px;
+      top: 45px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 200px;
+      right: 142px;
+      top: 32px;
+      width: 162px;
+    }
+  }
+  &__title {
+    margin: 0 0 20px 0;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0 auto;
+      max-width: 510px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      max-width: 610px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 850px;
+    }
+  }
+}

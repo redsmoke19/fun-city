@@ -1,17 +1,63 @@
 .contacts {
   overflow: hidden;
+  margin: 0 0 60px 0;
+  padding: 20px 0 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+    padding: 30px 0 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 100px 0;
+  }
   &__title {
     margin: 0 0 15px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 40px 0;
+    }
   }
   &__subtitle {
     color: $text-color;
     font-family: $decor-font;
     margin: 0 0 75px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 115px 0;
+      text-align: center;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 104px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 124px 0;
+    }
   }
   &__wrapper {
     align-items: center;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: start;
+      display: grid;
+      flex-direction: unset;
+      flex-wrap: unset;
+      gap: 100px 0;
+      grid-template-columns: 370px 1fr;
+      grid-template-rows: minmax(380px, auto) auto;
+      justify-content: unset;
+    }
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: 400px 590px 290px;
+      grid-template-rows: auto;
+    }
   }
   &__map {
     border-radius: 50%;
@@ -20,10 +66,41 @@
     margin: -90px -20px 0;
     position: relative;
     width: 500px;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 800px;
+      height: 800px;
+      order: 3;
+      margin: -170px 0 0;
+      width: 800px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-row: 1 / -1;
+      height: 930px;
+      margin: -65px 0 0 -130px;
+      width: 930px;
+    }
+    @media screen and (min-width: $large-size) {
+      grid-column: 2 / 3;
+      height: 840px;
+      margin: -65px 0 0 -180px;
+      width: 840px;
+    }
   }
   &__ya-map {
     height: 500px;
     width: 500px;
+    @media screen and (min-width: $tablet-size) {
+      height: 800px;
+      width: 800px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 930px;
+      width: 930px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 840px;
+      width: 840px;
+    }
   }
 }
 
@@ -36,11 +113,27 @@
   position: relative;
   width: 100%;
   z-index: 2;
+  @media screen and (min-width: $tablet-size) {
+    flex: 0 0 54%;
+    width: 54%;
+  }
+  @media screen and (min-width: $desktop-size) {
+    flex: unset;
+    width: auto;
+  }
+  @media screen and (min-width: $large-size) {
+    padding: 40px;
+  }
   &-rope {
-    bottom: 100%;
+    bottom: calc(100% - 2px);
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
+    z-index: -1;
+    @media screen and (min-width: $tablet-size) {
+      height: 64px;
+      width: 140px;
+    }
   }
   &-title {
     font-family: $decor-font;
@@ -50,10 +143,22 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   &-list {
     display: grid;
     gap: 15px;
+    @media screen and (min-width: $tablet-size) {
+      gap: 30px;
+    }
   }
   &-item {
     align-items: center;
@@ -61,6 +166,9 @@
     gap: 8px 20px;
     grid-template-columns: 50px 1fr;
     grid-template-rows: auto auto;
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: 60px 1fr;
+    }
   }
   &-icon-box {
     align-items: center;
@@ -72,20 +180,44 @@
     justify-content: center;
     height: 50px;
     width: 50px;
+    @media screen and (min-width: $large-size) {
+      height: 60px;
+      width: 60px;
+    }
   }
   &-icon {
     fill: $white;
+    @media screen and (min-width: $large-size) {
+      height: 24px;
+      width: 24px;
+    }
   }
   &-text {
     color: $light-gray-color;
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &-value {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -98,6 +230,25 @@
   padding: 30px;
   position: relative;
   width: 100%;
+  z-index: 2;
+  @media screen and (min-width: $tablet-size) {
+    flex: 0 0 42%;
+    order: 2;
+    margin: 0;
+    width: 42%;
+  }
+  @media screen and (min-width: $desktop-size) {
+    flex: unset;
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+    width: 290px;
+  }
+  @media screen and (min-width: $large-size) {
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
+    margin: 185px 0 0 0;
+    padding: 40px;
+  }
   &-title {
     font-family: $decor-font;
     margin: 0 0 16px 0;
@@ -106,6 +257,10 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0 0 30px 0;
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -113,3 +268,4 @@
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(100%);
 }
+@import "cooperation";

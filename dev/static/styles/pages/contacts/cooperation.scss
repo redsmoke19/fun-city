@@ -1,0 +1,125 @@
+.contacts-cooperation {
+  margin: 0 0 212px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 60px 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 100px 0;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+      text-align: center;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 60px 0;
+    }
+  }
+  &__list {
+    display: grid;
+    gap: 20px;
+    @media screen and (min-width: $tablet-size) {
+      gap: 30px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: $large-size) {
+      gap: 40px;
+    }
+  }
+  &__item {
+    border: 2px solid $purple-color;
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
+    border-radius: 30px;
+    padding: 20px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 30px 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      padding: 40px;
+    }
+  }
+  &__position {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 20px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__contacts {
+    align-items: center;
+    display: flex;
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 15px 0;
+      }
+      @media screen and (min-width: $large-size) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+  &__icon-box {
+    margin: 0 15px 0 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      border: 2px solid $purple-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 60px;
+      margin: 0 20px 0 0;
+      width: 60px;
+    }
+  }
+  &__icon {
+    fill: $purple-color;
+    @media screen and (min-width: $large-size) {
+      height: 24px;
+      width: 24px;
+    }
+  }
+  &__value {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    left: 22px;
+    margin: 25px 0 0 0;
+    @media screen and (min-width: $desktop-size) {
+      margin: 30px 0 0 0;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
