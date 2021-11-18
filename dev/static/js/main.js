@@ -655,8 +655,8 @@
     const sliders = document.querySelectorAll('._holiday-slider');
     sliders.forEach(item => {
       if (item) {
-        const prevButton = item.querySelector('.holiday__slider-prev');
-        const nextButton = item.querySelector('.holiday__slider-next');
+        const prevButton = item.parentElement.querySelector('.holiday__slider-prev');
+        const nextButton = item.parentElement.querySelector('.holiday__slider-next');
         new Swiper(item, {
           direction: 'horizontal',
           grabCursor: true,
@@ -674,6 +674,14 @@
           breakpoints: {
             768: {
               spaceBetween: 20,
+            },
+            1024: {
+              slidesOffsetAfter: 20,
+              spaceBetween: 20,
+            },
+            1440: {
+              slidesOffsetAfter: 0,
+              spaceBetween: 30,
             }
           }
         });

@@ -4,7 +4,7 @@ section.holidays-list
 			ul.holidays-list__list.holiday
 				li.holiday__item
 					.holiday__wrapper
-						+icon("icon-blue-mask", "holiday__icon holiday__icon--mask", "102", "40")
+						+icon("icon-blue-mask", "holiday__icon holiday__icon--mask", "102", "40")(data-da=".holiday__images--blue,1024,0")
 						.holiday__box
 							h2.holiday__title.font-h2 День Рождения
 							.holiday__box-inner
@@ -13,54 +13,177 @@ section.holidays-list
 								.holiday__buttons
 									a.button.holiday__link-button(href="#") Заказать день рождения
 									+button-link("#", "Узнать больше", true)
-						.holiday__images
+						.holiday__images.holiday__images--blue
 							picture.holiday__picture
 								source(media="(min-width: 1440px)" srcset="static/images/content/index/birthday-large.png")
 								source(media="(min-width: 1024px)" srcset="static/images/content/index/birthday-desktop.png")
 								img.holiday__img(src="static/images/content/index/birthday-tablet.png" alt="Видео мастер-класса" width="450" height="450")
 					.holiday__preview
 						h3.holiday__subtitle.font-h3 Готовые предложения
-						.holiday__inner.swiper._holiday-slider
-							ul.holiday__slider-list.swiper-wrapper
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
-											source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Школа кулинара
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
-											source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Квест L
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Школа кулинара
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
-											source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Школа кулинара
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
-											source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Квест L
-								li.holiday__slider-item.swiper-slide
-									.holiday__slider-inner
-										picture.holiday__slider-picture
-											source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
-											img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
-										h3.holiday__slider-title.font-h5 Школа кулинара
+						.holiday__slider-wrapper
+							.holiday__inner.swiper._holiday-slider
+								ul.holiday__slider-list.swiper-wrapper
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+							+slider-button("left").holiday__slider-prev
+							+slider-button("right").holiday__slider-next
+				li.holiday__item
+					.holiday__wrapper
+						+icon("icon-bow-yellow", "holiday__icon holiday__icon--bow", "102", "40")(data-da=".holiday__images--yellow,1024,0")
+						.holiday__box
+							h2.holiday__title.font-h2 Выпускной
+							.holiday__box-inner
+								p.holiday__text Описание дней рождения в FUN CITY.
+								p.holiday__text Гостей ждет уютный ресторан с лаунж-зонами и видом на игровые площадки, европейское и паназиатское меню, барная карта и специальные предложения.
+								.holiday__buttons
+									+button-link("#", "Узнать больше", true)
+						.holiday__images.holiday__images--yellow
+							picture.holiday__picture
+								source(media="(min-width: 1440px)" srcset="static/images/content/holidays/holiday-graduation-large.png")
+								img.holiday__img(src="static/images/content/holidays/holiday-graduation-tablet.png" alt="картинка праздника" width="450" height="450")
+					.holiday__preview
+						h3.holiday__subtitle.font-h3 Готовые предложения
+						.holiday__slider-wrapper
+							.holiday__inner.swiper._holiday-slider
+								ul.holiday__slider-list.swiper-wrapper
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+							+slider-button("left").holiday__slider-prev
+							+slider-button("right").holiday__slider-next
+				li.holiday__item
+					.holiday__wrapper
+						+icon("icon-hat", "holiday__icon holiday__icon--hat", "51", "76")(data-da=".holiday__images--purple,1024,0")
+						.holiday__box
+							h2.holiday__title.font-h2 Новый год
+							.holiday__box-inner
+								p.holiday__text Описание дней рождения в FUN CITY.
+								p.holiday__text Гостей ждет уютный ресторан с лаунж-зонами и видом на игровые площадки, европейское и паназиатское меню, барная карта и специальные предложения.
+								.holiday__buttons
+									+button-link("#", "Узнать больше", true)
+						.holiday__images.holiday__images--purple
+							picture.holiday__picture
+								source(media="(min-width: 1440px)" srcset="static/images/content/holidays/holiday-new-year-large.png")
+								img.holiday__img(src="static/images/content/holidays/holiday-new-year-tablet.png" alt="картинка праздника" width="450" height="450")
+					.holiday__preview
+						h3.holiday__subtitle.font-h3 Готовые предложения
+						.holiday__slider-wrapper
+							.holiday__inner.swiper._holiday-slider
+								ul.holiday__slider-list.swiper-wrapper
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-1-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-1-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-1-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-2-desktop.jpg")
+												source(media="(min-width: 768px)" srcset="static/images/content/holidays/holiday-preview-2-tablet.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-2-mobile.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Квест L
+									li.holiday__slider-item.swiper-slide
+										.holiday__slider-inner
+											picture.holiday__slider-picture
+												source(media="(min-width: 1024px)" srcset="static/images/content/holidays/holiday-preview-3-desktop.jpg")
+												img.holiday__slider-img(src="static/images/content/holidays/holiday-preview-3-tablet.jpg" alt="Фото превью праздника" width="155" height="160")
+											h3.holiday__slider-title.font-h5 Школа кулинара
 							+slider-button("left").holiday__slider-prev
 							+slider-button("right").holiday__slider-next
