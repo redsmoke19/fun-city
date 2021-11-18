@@ -1,0 +1,186 @@
+.holidays-list {
+  overflow: hidden;
+  padding: 90px 0 0;
+}
+
+.holiday {
+  &__wrapper {
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex-wrap: wrap;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    &--mask {
+      top: -40px;
+      transform: rotate(30deg);
+      @media screen and (min-width: $tablet-size) {
+        height: 65px;
+        left: 48%;
+        top: 33px;
+        right: unset;
+        width: 164px;
+      }
+    }
+  }
+  &__box {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 48%;
+      margin: 0 30px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      flex: 0 0 100%;
+    }
+  }
+  &__images {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex: 0 0 450px;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: -135px 0 0 0;
+    }
+    &::after {
+      background-color: rgba($blue-color, .5);
+      border-radius: 50%;
+      content: "";
+      height: 400px;
+      left: 0;
+      top: 5px;
+      position: absolute;
+      width: 400px;
+      z-index: 1;
+      @media screen and (min-width: $tablet-size) {
+        height: 450px;
+        top: 15px;
+        width: 450px;
+      }
+    }
+  }
+  &__picture {
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 20px 0;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__buttons {
+    gap: 20px;
+    display: grid;
+    justify-content: start;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      gap: 30px;
+      margin: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      gap: 40px;
+      grid-template-columns: 1fr 169px;
+      width: 94%;
+    }
+  }
+  &__subtitle {
+    font-family: $decor-font;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__inner {
+    overflow: inherit;
+  }
+  &__slider-item {
+    width: auto;
+  }
+  &__slider-inner {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      background: linear-gradient(180deg, rgba(75, 75, 75, 0) 31.25%, rgba(75, 75, 75, .9) 100%);
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__slider-picture {
+    display: block;
+    height: 160px;
+    width: 155px;
+    @media screen and (min-width: $tablet-size) {
+      height: 240px;
+      width: 216px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 266px;
+    }
+  }
+  &__slider-img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__slider-title {
+    bottom: 20px;
+    color: $white;
+    font-family: $decor-font;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+  }
+  &__slider-prev,
+  &__slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+  &__slider-prev {
+    left: -25px;
+  }
+  &__slider-next {
+    right: -25px;
+  }
+  &__slider-disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}

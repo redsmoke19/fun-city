@@ -651,6 +651,36 @@
     }
   };
 
+  const holidaysSliders = () => {
+    const sliders = document.querySelectorAll('._holiday-slider');
+    sliders.forEach(item => {
+      if (item) {
+        const prevButton = item.querySelector('.holiday__slider-prev');
+        const nextButton = item.querySelector('.holiday__slider-next');
+        new Swiper(item, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          navigation: {
+            nextEl: nextButton,
+            prevEl: prevButton,
+            disabledClass: 'holiday__slider-disabled',
+          },
+          breakpoints: {
+            768: {
+              spaceBetween: 20,
+            }
+          }
+        });
+      }
+    })
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -667,4 +697,5 @@
   sliders();
   getLightGallery();
   getMap();
+  holidaysSliders();
 }());

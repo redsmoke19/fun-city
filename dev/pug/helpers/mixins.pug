@@ -41,3 +41,8 @@ mixin breadcrumbs-item(text,href)
 			a.breadcrumbs__link(href=href)=text
 		else
 			span.breadcrumbs__text=text
+
+mixin slider-button(direction)
+	button.slider-nav-button(class= `slider-nav-button--${direction}`)&attributes(attributes)
+		+icon("icon-arrow-right", "slider-nav-button__icon", "13", "13")
+
