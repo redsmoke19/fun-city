@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'День рождения'
+	-var pageClass = 'birthday-page'
+
+block content
+	main(class=pageClass)
+		include pages/birthday/hero
+		include pages/birthday/programs

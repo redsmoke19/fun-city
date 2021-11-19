@@ -2,6 +2,7 @@
   &__list {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 0 10px 0;
   }
   &__item {
@@ -21,6 +22,10 @@
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 12px;
+      line-height: 16px;
+    }
     &::after {
       background-color: $gray-color;
       border-radius: 50%;
@@ -41,5 +46,9 @@
     font-weight: 800;
     line-height: 14px;
     text-transform: uppercase;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }

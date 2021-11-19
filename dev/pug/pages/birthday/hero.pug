@@ -1,0 +1,21 @@
+section.birthday-hero
+	+icon("icon-shape-bottom-blue", "birthday-hero__shape")
+	.container
+		.birthday-hero__content
+			+icon("icon-yellow-mask", "birthday-hero__icon--yellow", "85", "34")
+			+icon("icon-blue-mask", "birthday-hero__icon--blue", "140", "55")
+			ul.breadcrumbs__list
+				+breadcrumbs-item("Главная", "index.html")
+				+breadcrumbs-item("Праздники", "holidays.html")
+				+breadcrumbs-item("День рождения")
+			.birthday-hero__inner
+				h1.birthday-hero__title.font-h1 День рождения
+				h2.birthday-hero__heading.font-h3 Готовые предложения для вашего праздника
+	.birthday-hero__images
+		picture.birthday-hero__picture
+			source(media="(min-width: 1440px)" srcset="static/images/content/birthday/hero-large.png")
+			source(media="(min-width: 1024px)" srcset="static/images/content/birthday/hero-desktop.png")
+			source(media="(min-width: 768px)" srcset="static/images/content/birthday/hero-tablet.png")
+			img.birthday-hero__img(src="static/images/content/birthday/hero-mobile.png" alt="Картинка девочки" width="360" height="560")
+
+

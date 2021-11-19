@@ -1,0 +1,63 @@
+.birthday-programs {
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__count {
+    display: block;
+    font-size: 12px;
+    letter-spacing: .1em;
+    line-height: 16px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+  }
+  &__prog-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+  }
+  &__prog-item {
+    padding-left: 16px;
+    position: relative;
+    &::before {
+      background-color: $purple-color;
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 6px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+  }
+  &__prog-sub-list {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0 0 0;
+  }
+  &__prog-sub-item {
+    padding: 0 0 0 16px;
+    position: relative;
+    &::before {
+      background-color: transparent;
+      border: 1px solid $purple-color;
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 6px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 6px 0;
+    }
+  }
+  &__prog-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
