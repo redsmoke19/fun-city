@@ -1,0 +1,105 @@
+.holidays-activity {
+  overflow: hidden;
+  @media screen and (min-width: $tablet-size) {
+    padding: 160px 0 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 120px 0 0;
+  }
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__inner {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 60px 0;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 48%;
+      margin: 0 30px 0 0;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 40%;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 40px 0 0;
+    }
+  }
+  &__icon {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      position: absolute;
+      right: -15px;
+      top: -40px;
+      transform: rotate(15deg);
+    }
+    @media screen and (min-width: $desktop-size) {
+      right: 20px;
+      top: -60px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 75px;
+      right: 0;
+      width: 103px;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0 0 30px 0;
+    }
+    &:last-of-type {
+      margin: 0 0 20px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+  &__link {
+    padding: 16px 34px;
+    @media screen and (min-width: $large-size) {
+      padding: 21px 30px;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 333px;
+    margin: 0 0 0 auto;
+    width: 360px;
+    @media screen and (min-width: $tablet-size) {
+      height: 398px;
+      margin: unset;
+      width: 430px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 490px;
+      width: 530px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 676px;
+      width: 730px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}

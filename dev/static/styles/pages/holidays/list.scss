@@ -1,7 +1,9 @@
 .holidays-list {
   overflow: hidden;
+  margin: 0 0 60px 0;
   padding: 90px 0 0;
   @media screen and (min-width: $tablet-size) {
+    margin: 0;
     padding: 60px 0 0;
   }
   @media screen and (min-width: $desktop-size) {
@@ -226,7 +228,7 @@
       z-index: 10;
     }
     @media screen and (min-width: $large-size) {
-      margin: -290px 0 0 auto;
+      margin: -300px 0 0 auto;
       width: 65.625%;
     }
   }
