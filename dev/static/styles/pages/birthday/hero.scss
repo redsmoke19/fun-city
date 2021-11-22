@@ -1,4 +1,8 @@
 .birthday-hero {
+  margin: 0 0 20px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0;
+  }
   &__shape {
     bottom: 0;
     height: 37px;

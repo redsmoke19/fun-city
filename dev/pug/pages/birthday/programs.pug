@@ -1,11 +1,14 @@
 section.birthday-programs
 	.container
 		h2.visually-hidden Программы дня рождения
-		.birthday-programs__wrapper
-			ul.birthday-programs__list
-				li.birthday-programs__item
+		.birthday-programs__wrapper.swiper
+			ul.birthday-programs__list.swiper-wrapper
+				li.birthday-programs__item.swiper-slide
 					.birthday-programs__inner
-						h3.birthday-programs__title.font-h3 Школа кулинарии
+						.birthday-programs__promotion
+							span.birthday-programs__promotion-text Акция!
+							span.birthday-programs__promotion-count -50%
+						h3.birthday-programs__title.font-h4 Школа кулинарии
 						span.birthday-programs__count от 8 детей
 						ul.birthday-programs__prog-list
 							li.birthday-programs__prog-item
@@ -27,7 +30,7 @@ section.birthday-programs
 										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
 						.birthday-programs__gift
 							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
-							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная] комната и пригласительный для соцсетей в подарок*!
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
 						.birthday-programs__buy
 							span.birthday-programs__buy-text Цена на человека
 							.birthday-programs__buy-col
@@ -38,4 +41,182 @@ section.birthday-programs
 								span.birthday-programs__buy-price 1150₽
 						a.birthday-programs__link.button(href="#") Заказать
 						p.birthday-programs__note *при заказе по меню от 5000₽
-
+				li.birthday-programs__item.swiper-slide
+					.birthday-programs__inner
+						.birthday-programs__promotion.birthday-programs__promotion--new
+							span.birthday-programs__promotion-text Новинка
+						h3.birthday-programs__title.font-h4 Школа кулинарии
+						span.birthday-programs__count от 8 детей
+						ul.birthday-programs__prog-list
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Входные билеты на целый день развлечений
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Кулинарный мастер класс и дегустации (40 мин):
+								ul.birthday-programs__prog-sub-list
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Пиццу и итальянский лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Бургер и цитрусовый лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Сырники и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
+						.birthday-programs__gift
+							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
+						.birthday-programs__buy
+							span.birthday-programs__buy-text Цена на человека
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Будни
+								span.birthday-programs__buy-price 1150₽
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Выходные
+								span.birthday-programs__buy-price 1150₽
+						a.birthday-programs__link.button(href="#") Заказать
+						p.birthday-programs__note *при заказе по меню от 5000₽
+				li.birthday-programs__item.swiper-slide
+					.birthday-programs__inner
+						h3.birthday-programs__title.font-h4 Школа кулинарии
+						span.birthday-programs__count от 8 детей
+						ul.birthday-programs__prog-list
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Входные билеты на целый день развлечений
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Кулинарный мастер класс и дегустации (40 мин):
+								ul.birthday-programs__prog-sub-list
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Пиццу и итальянский лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Бургер и цитрусовый лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Сырники и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
+						.birthday-programs__gift
+							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
+						.birthday-programs__buy
+							span.birthday-programs__buy-text Цена на человека
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Будни
+								span.birthday-programs__buy-price 1150₽
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Выходные
+								span.birthday-programs__buy-price 1150₽
+						a.birthday-programs__link.button(href="#") Заказать
+						p.birthday-programs__note *при заказе по меню от 5000₽
+				li.birthday-programs__item.swiper-slide
+					.birthday-programs__inner
+						h3.birthday-programs__title.font-h4 Школа кулинарии
+						span.birthday-programs__count от 8 детей
+						ul.birthday-programs__prog-list
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Входные билеты на целый день развлечений
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Кулинарный мастер класс и дегустации (40 мин):
+								ul.birthday-programs__prog-sub-list
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Пиццу и итальянский лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Бургер и цитрусовый лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Сырники и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
+						.birthday-programs__gift
+							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
+						.birthday-programs__buy
+							span.birthday-programs__buy-text Цена на человека
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Будни
+								span.birthday-programs__buy-price 1150₽
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Выходные
+								span.birthday-programs__buy-price 1150₽
+						a.birthday-programs__link.button(href="#") Заказать
+						p.birthday-programs__note *при заказе по меню от 5000₽
+				li.birthday-programs__item.swiper-slide
+					.birthday-programs__inner
+						h3.birthday-programs__title.font-h4 Школа кулинарии
+						span.birthday-programs__count от 8 детей
+						ul.birthday-programs__prog-list
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Входные билеты на целый день развлечений
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Кулинарный мастер класс и дегустации (40 мин):
+								ul.birthday-programs__prog-sub-list
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Пиццу и итальянский лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Бургер и цитрусовый лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Сырники и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
+						.birthday-programs__gift
+							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
+						.birthday-programs__buy
+							span.birthday-programs__buy-text Цена на человека
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Будни
+								span.birthday-programs__buy-price 1150₽
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Выходные
+								span.birthday-programs__buy-price 1150₽
+						a.birthday-programs__link.button(href="#") Заказать
+						p.birthday-programs__note *при заказе по меню от 5000₽
+				li.birthday-programs__item.swiper-slide
+					.birthday-programs__inner
+						h3.birthday-programs__title.font-h4 Школа кулинарии
+						span.birthday-programs__count от 8 детей
+						ul.birthday-programs__prog-list
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Входные билеты на целый день развлечений
+							li.birthday-programs__prog-item
+								p.birthday-programs__prog-text Кулинарный мастер класс и дегустации (40 мин):
+								ul.birthday-programs__prog-sub-list
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Пиццу и итальянский лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Бургер и цитрусовый лимонад
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Сырники и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Капкейки и какао с маршмеллоу
+									li.birthday-programs__prog-sub-item
+										p.birthday-programs__prog-text Тайские вафли и тропический лимонад
+						.birthday-programs__gift
+							+icon("icon-gift", "birthday-programs__gift-icon", "40", "40")
+							p.birthday-programs__gift-text #[span.birthday-programs__gift-text--decor Банкетная комната] <br> и пригласительный для соцсетей в&nbsp;подарок*!
+						.birthday-programs__buy
+							span.birthday-programs__buy-text Цена на человека
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Будни
+								span.birthday-programs__buy-price 1150₽
+							.birthday-programs__buy-col
+								span.birthday-programs__buy-day Выходные
+								span.birthday-programs__buy-price 1150₽
+						a.birthday-programs__link.button(href="#") Заказать
+						p.birthday-programs__note *при заказе по меню от 5000₽
+			+slider-button("left").birthday-programs__slider-prev
+			+slider-button("right").birthday-programs__slider-next

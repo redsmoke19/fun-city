@@ -524,8 +524,10 @@
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
     const restaurantPageSlider = document.querySelector('.restaurant-hero__wrapper');
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
+    const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
+    let birthdayProgramsSliderInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -543,6 +545,9 @@
           }
           if (photoGalleyCategoryInit !== undefined) {
             photoGalleyCategoryInit.destroy(true, true);
+          }
+          if (birthdayProgramsSliderInit !== undefined) {
+            birthdayProgramsSliderInit.destroy(true, true);
           }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
@@ -579,6 +584,23 @@
             spaceBetween: 20,
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 0
+          });
+        }
+        if (birthdayProgramsSlider) {
+          birthdayProgramsSliderInit= new Swiper(birthdayProgramsSlider, {
+            direction: 'horizontal',
+            grabCursor: true,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            navigation: {
+              nextEl: '.birthday-programs__slider-next',
+              prevEl: '.birthday-programs__slider-prev',
+              disabledClass: 'birthday-programs__slider-disabled',
+            }
           });
         }
       }

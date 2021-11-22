@@ -1,0 +1,79 @@
+.birthday-gift {
+  margin: -20px 0 0 0;
+  position: relative;
+  @media screen and (min-width: $tablet-size) {
+    margin: -30px 0 0 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: -80px 0 0 0;
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 348px;
+    padding: 58px 0 58px;
+    @media screen and (min-width: $tablet-size) {
+      min-height: 438px;
+      padding: 100px 0 102px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 100px 0 150px;
+    }
+    @media screen and (min-width: $large-size) {
+      min-height: 604px;
+      padding: 160px 0 228px;
+    }
+  }
+  &__cloud {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: -1;
+    @media screen and (min-width: $tablet-size) {
+      width: 930px;
+    }
+    @media screen and (min-width: $large-size) {
+      width: 1280px;
+    }
+  }
+  &__icon {
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    text-align: center;
+    @media screen and (min-width: $desktop-size) {
+      max-width: 90%;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 400px;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      max-width: 90%;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
