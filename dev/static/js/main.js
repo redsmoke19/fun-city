@@ -711,6 +711,89 @@
     })
   };
 
+  const birthdayBanquetSlider = () => {
+    const birthdaySlider = document.querySelector('.birthday-banquet__wrapper');
+    if (birthdaySlider) {
+      new Swiper(birthdaySlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        navigation: {
+          nextEl: '.birthday-banquet__slider-right',
+          prevEl: '.birthday-banquet__slider-left',
+          disabledClass: 'birthday-banquet__slider-disabled',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 3
+          },
+          1440: {
+            spaceBetween: 40
+          }
+        }
+      });
+    }
+  }
+
+  const animatorsBirthdaySlider = () => {
+    const animatorsSlider = document.querySelector('.birthday-animators__wrapper');
+    if (animatorsSlider) {
+      const animSlider = new Swiper(animatorsSlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        // preventClicks: true,
+        // preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        loop: true,
+        // loopedSlides: 1,
+        slideActiveClass: 'swiper-slide-active birthday-animators__item--active',
+        navigation: {
+          nextEl: '.birthday-animators__slider-right',
+          prevEl: '.birthday-animators__slider-left',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            loop: true,
+            loopedSlides: 4,
+          }
+        }
+      });
+
+      animSlider.on('resize', () => {
+        animSlider.update();
+      });
+
+      // animSlider.on('slideChangeTransitionEnd', () => {
+      //   console.log('hey');
+      //   animSlider.update();
+      //   animSlider.updateSlides();
+      //   animSlider.updateSize();
+      //   animSlider.updateSize();
+      // });
+      // animSlider.on('slideChangeTransitionStart', () => {
+      //   console.log('hey');
+      //   animSlider.update();
+      //   animSlider.updateSlides();
+      //   animSlider.updateSize();
+      //   animSlider.updateSize();
+      // });
+    }
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -728,4 +811,6 @@
   getLightGallery();
   getMap();
   holidaysSliders();
+  birthdayBanquetSlider();
+  animatorsBirthdaySlider();
 }());

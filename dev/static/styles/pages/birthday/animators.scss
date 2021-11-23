@@ -1,0 +1,114 @@
+.birthday-animators {
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  &__wrapper {
+    margin: 0 -20px;
+    padding: 0 20px;
+    @media screen and (min-width: $tablet-size) {
+      overflow: inherit;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__item {
+    width: 320px;
+    @media screen and (min-width: $tablet-size) {
+      //width: 210px;
+      transform: scale(.6);
+      transition: all ease-out .3s;
+      .birthday-animators__text {
+        //display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .birthday-animators__link {
+        //display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__item--active {
+    @media screen and (min-width: $tablet-size) {
+      //width: 330px;
+      transform: scale(1);
+      transition: all ease-out .3s;
+      .birthday-animators__text {
+        //display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      .birthday-animators__link {
+        //display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+      .birthday-animators__picture {
+        //width: 330px;
+        //height: 387px;
+        opacity: 1;
+        visibility: visible;
+        transition: all ease-out .3s;
+      }
+    }
+  }
+  &__picture {
+    display: block;
+    height: 374px;
+    margin: 0 auto 20px auto;
+    width: 320px;
+    @media screen and (min-width: $tablet-size) {
+      //height: 246px;
+      //width: 210px;
+      transition: all ease-out .3s;
+      opacity: .7;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 30px 0;
+  }
+  &__link {
+    width: 80%;
+    @media screen and (min-width: $tablet-size) {
+      width: 50%;
+    }
+  }
+  &__slider-left {
+    left: -5px;
+    position: absolute;
+    top: 189px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      left: -25px;
+    }
+  }
+  &__slider-right {
+    position: absolute;
+    right: -5px;
+    top: 189px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      left: 295px;
+      right: unset;
+    }
+  }
+}

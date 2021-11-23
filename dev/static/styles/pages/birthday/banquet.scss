@@ -1,0 +1,156 @@
+.birthday-banquet {
+  padding: 0 0 80px 0;
+  @media screen and (min-width: $tablet-size) {
+    padding: 0 0 100px 0;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 30px 0;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 50px 0;
+    }
+  }
+  &__wrapper {
+    overflow: inherit;
+    @media screen and (min-width: $large-size) {
+      overflow: hidden;
+      margin: 0 -25px;
+      padding: 10px 25px 0;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 250px;
+    @media screen and (min-width: $tablet-size) {
+      width: 330px;
+    }
+    @media screen and (min-width: $large-size) {
+      width: 400px;
+      &:hover {
+        .birthday-banquet__inner {
+          transform: translateY(-10px);
+        }
+        .birthday-banquet__link {
+          //display: flex;
+          max-height: initial;
+          padding: 21px 22px;
+        }
+      }
+    }
+    &::after {
+      background-color: rgba(176, 55, 151, .3);
+      border-radius: 30px;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      z-index: -1;
+      @media screen and (min-width: $tablet-size) {
+        top: 10px;
+      }
+      @media screen and (min-width: $large-size) {
+        top: 0;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    @media screen and (min-width: $large-size) {
+      transition: all ease-out .15s;
+    }
+  }
+  &__picture {
+    border-radius: 30px;
+    display: block;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 400px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 540px;
+    }
+    &::after {
+      background: linear-gradient(180deg, rgba(75, 75, 75, 0) 0%, #4b4b4b 77.08%);
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__box {
+    bottom: 30px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    @media screen and (min-width: $tablet-size) {
+      left: 30px;
+      right: 30px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 25px;
+      right: 25px;
+    }
+  }
+  &__heading {
+    color: $white;
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__link {
+    @media screen and (min-width: $large-size) {
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  &__slider-left {
+    left: -25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    @media screen and (min-width: $large-size) {
+      left: 0;
+    }
+  }
+  &__slider-right {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    @media screen and (min-width: $large-size) {
+      right: 0;
+    }
+  }
+  &__slider-disabled {
+    opacity: .7;
+  }
+}

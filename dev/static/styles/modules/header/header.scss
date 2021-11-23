@@ -6,6 +6,11 @@
     width: 100%;
     z-index: 20;
   }
+  .container {
+    @media screen and (min-width: $large-size) {
+      max-width: 100%;
+    }
+  }
   &__placeholder {
     display: none;
     min-height: 80px;
