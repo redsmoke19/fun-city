@@ -745,55 +745,43 @@
   };
 
   const animatorsBirthdaySlider = () => {
-    const animatorsSlider = document.querySelector('.birthday-animators__wrapper');
-    if (animatorsSlider) {
-      const animSlider = new Swiper(animatorsSlider, {
-        direction: 'horizontal',
-        grabCursor: false,
-        // preventClicks: true,
-        // preventClicksPropagation: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
-        loop: true,
-        // loopedSlides: 1,
-        slideActiveClass: 'swiper-slide-active birthday-animators__item--active',
-        navigation: {
-          nextEl: '.birthday-animators__slider-right',
-          prevEl: '.birthday-animators__slider-left',
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            loop: true,
-            loopedSlides: 4,
+    const animatorsSlider = document.querySelectorAll('.birthday-animators__wrapper');
+    animatorsSlider.forEach((item) => {
+      if (item) {
+        const nextButton = item.querySelector('.birthday-animators__slider-right');
+        const prevButton = item.querySelector('.birthday-animators__slider-left');
+        const animSlider = new Swiper(item, {
+          direction: 'horizontal',
+          grabCursor: false,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          loop: true,
+          slideActiveClass: 'swiper-slide-active birthday-animators__item--active',
+          navigation: {
+            nextEl: nextButton,
+            prevEl: prevButton,
           },
-        },
-      });
-
-      animSlider.on('resize', () => {
-        animSlider.update();
-        animSlider.updateSlides();
-        animSlider.updateSize();
-      });
-
-      // animSlider.on('slideChange', () => {
-      //   console.log('hey');
-      //   animSlider.update();
-      //   animSlider.updateSlides();
-      //   animSlider.updateSize();
-      //   animSlider.updateSize();
-      // });
-      // animSlider.on('slideChangeTransitionStart', () => {
-      //   console.log('hey');
-      //   animSlider.update();
-      //   animSlider.updateSlides();
-      //   animSlider.updateSize();
-      //   animSlider.updateSize();
-      // });
-    }
+          breakpoints: {
+            768: {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+              loop: true,
+              loopedSlides: 4,
+            },
+          },
+        });
+        animSlider.allowTouchMove = false;
+        animSlider.on('resize', () => {
+          animSlider.update();
+          animSlider.updateSlides();
+          animSlider.updateSize();
+        });
+      }
+    });
   };
 
   validate.init();

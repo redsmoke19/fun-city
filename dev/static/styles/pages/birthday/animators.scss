@@ -1,4 +1,5 @@
 .birthday-animators {
+  margin: 0 0 60px 0;
   &__mask--purple {
     display: none;
     @media screen and (min-width: $tablet-size) {
@@ -29,12 +30,19 @@
       width: 109px;
     }
   }
+  &__top {
+    @media screen and (min-width: $large-size) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 40px 0;
+    }
+  }
   &__title {
     font-family: $decor-font;
     margin: 0 0 30px 0;
     text-align: center;
     @media screen and (min-width: $tablet-size) {
-      margin: 0 0 40px 0;
+      margin: 0;
       text-align: left;
     }
   }
@@ -44,6 +52,11 @@
       display: flex;
       justify-content: flex-end;
       margin: 0 0 -50px 0;
+      position: relative;
+      z-index: 2;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0;
     }
   }
   &__wrapper {
@@ -152,6 +165,9 @@
     width: 80%;
     @media screen and (min-width: $tablet-size) {
       width: 50%;
+    }
+    @media screen and (min-width: $large-size) {
+      width: 35%;
     }
   }
   &__slider-left {
