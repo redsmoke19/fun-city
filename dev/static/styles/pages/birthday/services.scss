@@ -1,0 +1,18 @@
+.birthday-services {
+  &__item {
+    &::after {
+      display: none;
+    }
+  }
+  &__text {
+    margin: 0;
+  }
+  &__picture {
+    @media screen and (min-width: $tablet-size) {
+      height: 380px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 420px;
+    }
+  }
+}

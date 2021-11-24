@@ -33,7 +33,7 @@
   @media screen and (min-width: $desktop-size) {
     &:hover {
       box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
-      color: rgba($white, .8);
+      color: rgba($white, 1);
     }
     &:active {
       box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
@@ -52,7 +52,7 @@
     }
     &--white {
       &:hover {
-        color: rgba($purple-color, .8);
+        color: rgba($purple-color, 1);
       }
       &:active {
         color: rgba($purple-color, 1);

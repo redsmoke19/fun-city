@@ -1,12 +1,23 @@
 .birthday-animators {
   margin: 0 0 60px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 100px 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 60px 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 80px 0;
+  }
   &--girls {
     background-color: $yellow-color;
     padding: 60px 0 70px;
     @media screen and (min-width: $tablet-size) {
+      margin: 0 0 80px 0;
       padding: 120px 0 110px;
     }
     @media screen and (min-width: $large-size) {
+      margin: 0 0 120px 0;
       padding: 180px 0 170px;
     }
   }

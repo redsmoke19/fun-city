@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 (function() {
   'use strict';
 
@@ -711,37 +712,41 @@
     })
   };
 
-  const birthdayBanquetSlider = () => {
-    const birthdaySlider = document.querySelector('.birthday-banquet__wrapper');
-    if (birthdaySlider) {
-      new Swiper(birthdaySlider, {
-        direction: 'horizontal',
-        grabCursor: true,
-        preventClicks: true,
-        preventClicksPropagation: true,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
-        navigation: {
-          nextEl: '.birthday-banquet__slider-right',
-          prevEl: '.birthday-banquet__slider-left',
-          disabledClass: 'birthday-banquet__slider-disabled',
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30
+  const birthdayPageSliders = () => {
+    const birthdaySlider = document.querySelectorAll('.birthday-banquet__wrapper');
+    birthdaySlider.forEach((item) => {
+      if (item) {
+        const nextButton = item.querySelector('.birthday-banquet__slider-right');
+        const prevButton = item.querySelector('.birthday-banquet__slider-left');
+        new Swiper(item, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          navigation: {
+            nextEl: nextButton,
+            prevEl: prevButton,
+            disabledClass: 'birthday-banquet__slider-disabled',
           },
-          1024: {
-            slidesPerView: 3
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            1440: {
+              spaceBetween: 40,
+            },
           },
-          1440: {
-            spaceBetween: 40
-          },
-        },
-      });
-    }
+        });
+      }
+    });
   };
 
   const animatorsBirthdaySlider = () => {
@@ -780,6 +785,9 @@
           animSlider.updateSlides();
           animSlider.updateSize();
         });
+        animSlider.on('slideChangeTransitionEnd', () => {
+          console.log(animSlider.slides[animSlider.realIndex]);
+        });
       }
     });
   };
@@ -801,6 +809,6 @@
   getLightGallery();
   getMap();
   holidaysSliders();
-  birthdayBanquetSlider();
+  birthdayPageSliders();
   animatorsBirthdaySlider();
 }());
