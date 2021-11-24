@@ -1,5 +1,49 @@
 .birthday-animators {
   margin: 0 0 60px 0;
+  &--girls {
+    background-color: $yellow-color;
+    padding: 60px 0 70px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 120px 0 110px;
+    }
+    @media screen and (min-width: $large-size) {
+      padding: 180px 0 170px;
+    }
+  }
+  &__top-shape {
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 79px;
+      top: -3px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 105px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 148px;
+      top: -4px;
+    }
+  }
+  &__bottom-shape {
+    bottom: -1px;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 102px;
+    }
+    @media screen and (min-width: $decor-font) {
+      height: 135px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 190px;
+    }
+  }
   &__mask--purple {
     display: none;
     @media screen and (min-width: $tablet-size) {
@@ -28,6 +72,45 @@
       height: 43px;
       right: 25%;
       width: 109px;
+    }
+  }
+  &__bow--purple {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      left: 45%;
+      position: absolute;
+      top: -18px;
+      transform: rotate(-15deg);
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 70px;
+      width: 96px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 87px;
+      left: 30%;
+      width: 119px;
+    }
+  }
+  &__bow--blue {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      position: absolute;
+      right: 27%;
+      top: 85px;
+      transform: rotate(15deg);
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 50px;
+      width: 68px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 60px;
+      right: 45%;
+      top: 120px;
+      width: 82px;
     }
   }
   &__top {
@@ -61,7 +144,7 @@
   }
   &__wrapper {
     margin: 0 -20px;
-    padding: 0 20px;
+    padding: 0 20px 10px;
     @media screen and (min-width: $tablet-size) {
       overflow: inherit;
       margin: 0;
