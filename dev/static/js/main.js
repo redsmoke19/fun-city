@@ -738,18 +738,18 @@
           },
           1440: {
             spaceBetween: 40
-          }
-        }
+          },
+        },
       });
     }
-  }
+  };
 
   const animatorsBirthdaySlider = () => {
     const animatorsSlider = document.querySelector('.birthday-animators__wrapper');
     if (animatorsSlider) {
       const animSlider = new Swiper(animatorsSlider, {
         direction: 'horizontal',
-        grabCursor: true,
+        grabCursor: false,
         // preventClicks: true,
         // preventClicksPropagation: true,
         slidesPerView: 1,
@@ -769,15 +769,17 @@
             spaceBetween: 0,
             loop: true,
             loopedSlides: 4,
-          }
-        }
+          },
+        },
       });
 
       animSlider.on('resize', () => {
         animSlider.update();
+        animSlider.updateSlides();
+        animSlider.updateSize();
       });
 
-      // animSlider.on('slideChangeTransitionEnd', () => {
+      // animSlider.on('slideChange', () => {
       //   console.log('hey');
       //   animSlider.update();
       //   animSlider.updateSlides();

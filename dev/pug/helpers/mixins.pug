@@ -15,6 +15,15 @@ mixin button-link(href, text, arrow)
 		else
 			span.button-link.button-link--text #{text}
 
+mixin button-download-link(href, text, arrow)
+	a.button-link(href=href)&attributes(attributes)
+		if arrow
+			span.button-link.button-link--text #{text}
+			span.button-link.button-link--icon
+				+icon('icon-download', 'hero__link--icon', '20', '20')
+		else
+			span.button-link.button-link--text #{text}
+
 mixin button-link-video(href, text)
 	a.button-link.button-link--video(href=href)&attributes(attributes)
 		span.button-link.button-link--icon.button-link--icon-video
