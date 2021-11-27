@@ -1,0 +1,127 @@
+.birthday-amusement {
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 30px 0;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 60px 0;
+    }
+  }
+  &__wrapper {
+    overflow: inherit;
+  }
+  &__item {
+    @media screen and (min-width: $tablet-size) {
+      width: 370px;
+      .birthday-amusement__inner {
+        opacity: .7;
+        transition: all ease-out .2s .2s;
+        transform: scale(.6);
+      }
+    }
+    @media screen and (min-width: $large-size) {
+      width: 400px;
+      .birthday-amusement__inner {
+        transform: scale(.55);
+      }
+    }
+  }
+  &__item--active {
+    @media screen and (min-width: $tablet-size) {
+      .birthday-amusement__inner {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .birthday-amusement__text {
+        opacity: 1;
+        visibility: visible;
+        max-height: min-content;
+        transition: all ease-out .2s .2s;
+      }
+    }
+  }
+  &__picture {
+    border-radius: 50%;
+    display: block;
+    height: 420px;
+    left: 50%;
+    overflow: hidden;
+    margin: 0 0 30px 0;
+    position: relative;
+    transform: translateX(-50%);
+    width: 420px;
+    @media screen and (min-width: $tablet-size) {
+      height: 370px;
+      left: unset;
+      transform: unset;
+      width: 370px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 400px;
+      width: 400px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__heading {
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 20px 0;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+      transition: all ease-out .2s;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__slider-left {
+    left: -25px;
+    position: absolute;
+    top: 185px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      left: 50%;
+      transform: translateX(-210px);
+      top: 160px;
+    }
+    @media screen and (min-width: $large-size) {
+      transform: translateX(-225px);
+      top: 170px;
+    }
+  }
+  &__slider-right {
+    position: absolute;
+    right: -25px;
+    top: 185px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      right: 50%;
+      top: 160px;
+      transform: translateX(210px);
+    }
+    @media screen and (min-width: $large-size) {
+      transform: translateX(225px);
+      top: 170px;
+    }
+  }
+}

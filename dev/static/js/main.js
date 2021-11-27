@@ -792,6 +792,38 @@
     });
   };
 
+  const amusementBirthdaySlider = () => {
+    const amusementWrapper = document.querySelector('.birthday-amusement__wrapper');
+    if (amusementWrapper) {
+      const amusementSlider = new Swiper(amusementWrapper, {
+        direction: 'horizontal',
+        // autoHeight: true,
+        grabCursor: false,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 110,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        loop: true,
+        slideActiveClass: 'swiper-slide-active birthday-amusement__item--active',
+        navigation: {
+          nextEl: '.birthday-amusement__slider-right',
+          prevEl: '.birthday-amusement__slider-left',
+        },
+        breakpoints: {
+          768: {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            loop: true,
+            loopedSlides: 4,
+          },
+        },
+      });
+    }
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -811,4 +843,5 @@
   holidaysSliders();
   birthdayPageSliders();
   animatorsBirthdaySlider();
+  amusementBirthdaySlider();
 }());
