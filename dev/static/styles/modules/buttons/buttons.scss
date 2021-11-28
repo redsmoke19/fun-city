@@ -32,13 +32,14 @@
   }
   @media screen and (min-width: $desktop-size) {
     &:hover {
-      box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
+      box-shadow: 0 15px 0 rgba(176, 55, 151, .1);
       color: rgba($white, 1);
+      transform: translateY(-5px);
     }
     &:active {
-      box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
+      box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
       color: rgba($white, 1);
-      transform: translateY(5px);
+      transform: translateY(0);
     }
     &--transparent {
       &:hover {

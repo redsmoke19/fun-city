@@ -18,7 +18,7 @@
       width: 370px;
       .birthday-amusement__inner {
         opacity: .7;
-        transition: all ease-out .2s .2s;
+        transition: all ease-out .2s;
         transform: scale(.6);
       }
     }
@@ -39,7 +39,7 @@
         opacity: 1;
         visibility: visible;
         max-height: min-content;
-        transition: all ease-out .2s .2s;
+        transition: max-height ease-out .2s .2s;
       }
     }
   }

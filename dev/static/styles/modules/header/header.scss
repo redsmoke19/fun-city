@@ -30,6 +30,16 @@
     @media screen and (min-width: $tablet-size) {
       padding: 20px 0;
     }
+    @media screen and (min-width: $desktop-size) {
+      position: relative;
+    }
+  }
+  &__logo-link {
+    @media screen and (min-width: $desktop-size) {
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
   }
   &__logo {
     @media screen and (min-width: $tablet-size) {

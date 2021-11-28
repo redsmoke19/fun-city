@@ -199,6 +199,8 @@
       .birthday-animators__text {
         opacity: 1;
         visibility: visible;
+        max-height: min-content;
+        transition: all ease-out .2s .2s;
       }
       .birthday-animators__link {
         opacity: 1;
@@ -253,6 +255,10 @@
     @media screen and (min-width: $tablet-size) {
       font-size: 16px;
       line-height: 22px;
+      transition: all ease-out .2s;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
     }
     @media screen and (min-width: $large-size) {
       font-size: 18px;

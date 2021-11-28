@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'Калькулятор праздника'
+	-var pageClass = 'calc-page'
+
+block content
+	main(class=pageClass)
+		include pages/holiday-calculator/hero
+		include pages/holiday-calculator/steps

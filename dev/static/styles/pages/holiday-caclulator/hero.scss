@@ -1,0 +1,42 @@
+.calculator-hero {
+  &__top {
+    background-color: $blue-color;
+    padding: 40px 0 80px;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      padding: 60px 0 150px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 60px 0 165px;
+    }
+    @media screen and (min-width: $large-size) {
+      padding: 90px 0 190px;
+    }
+  }
+  &__curve {
+    bottom: 0;
+    height: 37px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 79px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 105px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 148px;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      padding: 0 100px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+    }
+  }
+}

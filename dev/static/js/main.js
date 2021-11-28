@@ -526,9 +526,11 @@
     const restaurantPageSlider = document.querySelector('.restaurant-hero__wrapper');
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
+    const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
+    let calculatorSliderInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -549,6 +551,9 @@
           }
           if (birthdayProgramsSliderInit !== undefined) {
             birthdayProgramsSliderInit.destroy(true, true);
+          }
+          if (calculatorSliderInit !== undefined) {
+            calculatorSliderInit.destroy(true, true);
           }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
@@ -602,6 +607,19 @@
               prevEl: '.birthday-programs__slider-prev',
               disabledClass: 'birthday-programs__slider-disabled',
             }
+          });
+        }
+        if (calculatorSlider) {
+          new Swiper(calculatorSlider, {
+            direction: 'horizontal',
+            grabCursor: false,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 'auto',
+            spaceBetween: 6,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 20,
+            centerInsufficientSlides: true,
           });
         }
       }
@@ -721,8 +739,8 @@
         new Swiper(item, {
           direction: 'horizontal',
           grabCursor: true,
-          preventClicks: true,
-          preventClicksPropagation: true,
+          // preventClicks: true,
+          // preventClicksPropagation: true,
           slidesPerView: 'auto',
           spaceBetween: 20,
           slidesOffsetBefore: 0,

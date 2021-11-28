@@ -99,6 +99,16 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    @media screen and (min-width: $desktop-size) {
+      &:hover {
+        .index-our-parks__heading {
+          color: $purple-color;
+        }
+        .index-our-parks__image {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
   &__picture {
     border-radius: 1000px 1000px 0 0;
@@ -123,6 +133,7 @@
   &__image {
     height: 100%;
     object-fit: cover;
+    transition: all ease-out .2s;
     width: 100%;
   }
   &__heading {
@@ -130,6 +141,7 @@
     font-size: 18px;
     line-height: 24px;
     margin: 0 0 10px 0;
+    transition: all ease-out .15s;
     @media screen and (min-width: $tablet-size) {
       font-size: 20px;
       line-height: 26px;
