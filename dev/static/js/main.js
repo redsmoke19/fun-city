@@ -593,7 +593,7 @@
           });
         }
         if (birthdayProgramsSlider) {
-          birthdayProgramsSliderInit= new Swiper(birthdayProgramsSlider, {
+          birthdayProgramsSliderInit = new Swiper(birthdayProgramsSlider, {
             direction: 'horizontal',
             grabCursor: true,
             preventClicks: true,
@@ -610,7 +610,7 @@
           });
         }
         if (calculatorSlider) {
-          new Swiper(calculatorSlider, {
+          calculatorSliderInit = new Swiper(calculatorSlider, {
             direction: 'horizontal',
             grabCursor: false,
             preventClicks: true,
@@ -842,6 +842,71 @@
     }
   };
 
+  const getSelects = () => {
+    const selectItems = document.querySelectorAll('._select');
+    if (selectItems.length > 0) {
+      selectItems.forEach(item => {
+        new Choices(item, {
+          searchEnabled: false,
+          itemSelectText: '',
+          shouldSort: false,
+        });
+      });
+    }
+  };
+
+  const getInputNumberCalculator = () => {
+    const upButton = document.querySelector('.calculator-time__button--top');
+    const downBottun = document.querySelector('.calculator-time__button--bottom');
+    upButton.addEventListener('click', () => {
+      upButton.nextElementSibling.stepUp();
+    });
+    downBottun.addEventListener('click', () => {
+      downBottun.previousElementSibling.stepDown();
+    });
+  };
+
+  const getDatePicker = () => {
+    const calendarCalc = document.querySelector('.calculator-time__datepicker');
+    const customDays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+    const customMonth = [
+      'Январь',
+      'Февраль',
+      'Март',
+      'Апрель',
+      'Май',
+      'Июнь',
+      'Июль',
+      'Август',
+      'Сентябрь',
+      'Октябрь',
+      'Ноябрь',
+      'Декабрь',
+    ];
+
+    if (calendarCalc) {
+      const dateChoise = datepicker(calendarCalc, {
+        formatter: (input, date, instance) => {
+          input.value = 'c ' + date.toLocaleDateString();
+        },
+        disabledDates: [
+          new Date(2021, 10, 5),
+          new Date(2021, 10, 8),
+          new Date(2021, 11, 10),
+          new Date(2021, 10, 11),
+          new Date(2021, 10, 19),
+        ],
+        alwaysShow: true,
+        showAllDates: true,
+        startDay: 1,
+        customDays: customDays,
+        customMonths: customMonth,
+        overlayButton: 'Выбрать',
+        overlayPlaceholder: 'Введите год',
+      });
+    }
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -862,4 +927,7 @@
   birthdayPageSliders();
   animatorsBirthdaySlider();
   amusementBirthdaySlider();
+  getSelects();
+  getInputNumberCalculator();
+  getDatePicker();
 }());

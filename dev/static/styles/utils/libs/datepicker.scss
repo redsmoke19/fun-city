@@ -1,10 +1,9 @@
 .qs-datepicker-container {
-  margin: 5px;
-  font-size: 1rem;
-  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: $main-font;
   color: #000;
-  position: absolute;
-  width: 15.625em;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,30 +16,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  //border-radius: 0.26392em;
   overflow: hidden;
-  background: #000;
-  -webkit-box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
-  border-right: 1px solid #fff;
-  border-left: 1px solid #f1ad70;
-  padding: 5px;
-  &:before,
-  &:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    left: 0;
-    z-index: 2;
-    position: absolute;
-    background-image: linear-gradient(to right, #f1ad70 0%, #fffdf2 100%);
-  }
-  &:before {
-    top: 0;
-  }
-  &:after {
-    bottom: 0;
-  }
+  background: transparent;
 }
 .qs-datepicker-container * {
   -webkit-box-sizing: border-box;
@@ -163,15 +140,27 @@
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-negative: 0;
+  margin: 0 0 16px 0;
   flex-shrink: 0;
-  background: #000;
-  color: #fff;
+  background-color: rgba(176, 55, 151, 0.05);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 15px 20px;
+  color: $text-color;
   -webkit-filter: blur(0);
   filter: blur(0);
   -webkit-transition: -webkit-filter 0.3s;
   transition: -webkit-filter 0.3s;
   transition: filter 0.3s;
   transition: filter 0.3s, -webkit-filter 0.3s;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  @media screen and (min-width: $tablet-size) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .qs-datepicker .qs-controls.qs-blur {
   -webkit-filter: blur(5px);
@@ -196,32 +185,24 @@
   border-left-color: #000;
 }
 .qs-datepicker .qs-arrow:after {
-  content: '';
-  border: 0.39062em solid rgba(0, 0, 0, 0);
+  content: "";
+
   position: absolute;
   top: 50%;
-  -webkit-transition: border 0.2s;
-  transition: border 0.2s;
+  left: 50%;
+  height: 14px;
+  width: 15px;
+  transition: all ease-out 0.2s;
+  background: url("../images/common/icon-arrow.svg") center no-repeat;
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 .qs-datepicker .qs-arrow.qs-left:after {
-  border-right-color: grey;
-  right: 50%;
-  -webkit-transform: translate(25%, -50%);
-  -ms-transform: translate(25%, -50%);
-  transform: translate(25%, -50%);
 }
 .qs-datepicker .qs-arrow.qs-right:after {
-  border-left-color: grey;
-  left: 50%;
-  -webkit-transform: translate(-25%, -50%);
-  -ms-transform: translate(-25%, -50%);
-  transform: translate(-25%, -50%);
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 .qs-datepicker .qs-month-year {
-  font-weight: 700;
-  -webkit-transition: border 0.2s;
-  transition: border 0.2s;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  font-weight: 600;
   cursor: pointer;
 }
 .qs-datepicker .qs-month-year:hover {
@@ -238,13 +219,16 @@
   padding-left: 0.5ex;
 }
 .qs-datepicker .qs-squares {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0.3125em;
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  //display: flex;
+  //justify-content: space-between;
+  //color: #fff;
+  //-ms-flex-wrap: wrap;
+  //flex-wrap: wrap;
+  //padding: 1.5px 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   -webkit-filter: blur(0);
   filter: blur(0);
   -webkit-transition: -webkit-filter 0.3s;
@@ -257,8 +241,9 @@
   filter: blur(5px);
 }
 .qs-datepicker .qs-square {
-  width: 14.28571%;
-  height: 1.5625em;
+  width: 45px;
+  color: #303236;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,19 +254,45 @@
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
+  margin: 0;
   -webkit-transition: background 0.1s;
   transition: background 0.1s;
-  border-radius: 0.26392em;
+  border-radius: 50%;
+  border: none;
+  background-color: $white;
+  font-size: 13px;
+  line-height: 18px;
+  justify-self: center;
+  @media screen and (min-width: $tablet-size) {
+    height: 60px;
+    font-size: 17px;
+    line-height: 23px;
+    width: 60px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    height: 65px;
+    width: 65px;
+  }
+  @media screen and (min-width: $large-size) {
+    height: 57px;
+    width: 57px;
+  }
 }
 .qs-datepicker .qs-square.qs-current {
-  font-weight: 700;
+  font-weight: 600;
 }
 .qs-datepicker .qs-square.qs-current span {
   text-decoration: underline;
 }
 .qs-datepicker .qs-square.qs-active {
-  background: #fff;
-  color: #000;
+  background: $purple-color;
+  color: #ffffff;
+  font-weight: 400;
+}
+.qs-datepicker .qs-square.qs-outside-current-month {
+  background: $white;
+  color: rgba(#D5D7DD, 0.8);
+  border: none;
 }
 .qs-datepicker .qs-square.qs-range-date-start:not(.qs-range-date-6) {
   border-top-right-radius: 0;
@@ -290,8 +301,7 @@
 .qs-datepicker .qs-square.qs-range-date-middle {
   background: #d4ebf2;
 }
-.qs-datepicker
-  .qs-square.qs-range-date-middle:not(.qs-range-date-0):not(.qs-range-date-6) {
+.qs-datepicker .qs-square.qs-range-date-middle:not(.qs-range-date-0):not(.qs-range-date-6) {
   border-radius: 0;
 }
 .qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-0 {
@@ -311,21 +321,24 @@
 }
 .qs-datepicker .qs-square.qs-disabled {
   cursor: not-allowed;
+  background-color: #EEEEF0;
+  color: #94979E;
+  border: none;
 }
 .qs-datepicker .qs-square.qs-day {
   cursor: default;
-  font-weight: 700;
-  color: grey;
+  font-weight: 600;
+  color: $text-color;
+  text-transform: uppercase;
 }
-.qs-datepicker
-  .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
-  background: orange;
+.qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background: rgba($purple-color, .2);
 }
 .qs-datepicker .qs-event {
   position: relative;
 }
 .qs-datepicker .qs-event:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0.46875em;
   height: 0.46875em;
