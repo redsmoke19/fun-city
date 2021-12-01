@@ -1,0 +1,40 @@
+.radio-times {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(54px, 54px));
+  position: relative;
+  z-index: 10;
+  &__input {
+    appearance: none;
+    position: absolute;
+    left: -9999px;
+    + label {
+      align-items: center;
+      background-color: $light-gray-color;
+      border-radius: 30px;
+      border: 1px solid transparent;
+      color: $purple-color;
+      cursor: pointer;
+      display: flex;
+      font-family: $second-font;
+      font-size: 12px;
+      font-weight: 900;
+      justify-content: center;
+      line-height: 18px;
+      height: 32px;
+      position: relative;
+      transition: all ease-out .2s;
+      width: 100%;
+    }
+    &:focus-visible + label {
+      border: 1px solid $purple-color;
+    }
+    &:checked + label {
+      background-color: $purple-color;
+      color: $white;
+    }
+    &:disabled + label {
+      color: $gray-color;
+    }
+  }
+}

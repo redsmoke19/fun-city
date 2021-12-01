@@ -907,6 +907,19 @@
     }
   };
 
+  const calculatorBanquetRooms = () => {
+    const disabledRooms = document.querySelectorAll('.calculator-rooms__item--disabled');
+    disabledRooms.forEach(item => {
+      if (item.classList.contains('calculator-rooms__item--disabled')) {
+        item.addEventListener('click', () => {
+          for(let i = 0; i < disabledRooms.length; i += 1) {
+            disabledRooms[i].classList.remove('calculator-rooms__item--disabled');
+          }
+        })
+      }
+    })
+  }
+
   validate.init();
 
   dynamicAdaptive();
@@ -930,4 +943,5 @@
   getSelects();
   getInputNumberCalculator();
   getDatePicker();
+  calculatorBanquetRooms();
 }());
