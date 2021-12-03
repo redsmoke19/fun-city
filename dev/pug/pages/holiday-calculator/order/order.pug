@@ -1,0 +1,51 @@
+section.calculator-order.order
+	+icon("icon-order-shape", "order__top-shape")
+	button.order__toggle
+		+icon("icon-arrow-right", "order__toggle-icon", "14", "14")
+	.order__content
+		h2.order__title.font-h4 Мой заказ
+		ul.order__categories
+			li.order__category
+				h3.order__heading Место и время
+				.order__inner
+					p.order__place.order__text ТРК Континент, г. Санкт-Петербург
+					p.order__date.order__text 1 сентября 2021 года
+					.order__service-box
+						p.order__service.order__text 8 детских билетов
+						span.order__price 2 500 ₽
+					.order__service-box
+						p.order__service.order__text Зал «Джунгли», 9:00
+						span.order__price 3 000 ₽
+			li.order__category
+				h3.order__heading Угощения ресторана
+				.order__inner
+					.order__service-box
+						p.order__service.order__text Салат «Цезарь», 5 шт.
+						span.order__price 2 500 ₽
+					.order__service-box
+						p.order__service.order__text Торт «Хлопчик кучерявый» 1 шт.
+						span.order__price 600 ₽
+			li.order__category
+				h3.order__heading Развлекательные и шоу-программы
+				.order__inner
+					.order__service-box
+						p.order__service.order__text Программа с аниматором
+						span.order__price 3 800 ₽/час
+					p.order__sub-text.order__text Название стиля оформления
+			li.order__category
+				h3.order__heading Дополнительные услуги
+				.order__inner
+					.order__service-box
+						p.order__service.order__text Аквагрим, 5 чел
+						span.order__price 5 000 ₽
+					.order__service-box
+						p.order__service.order__text Визуальное оформление праздника
+						span.order__price 1 000 ₽
+					p.order__sub-text.order__text Название стиля оформления
+		.order__bottom
+			.order__total
+				.order__totat-text.font-h5 Итого:
+				.order__total-price 5 500 ₽
+			button.order__button.button(type="submit")
+				span Продолжить
+				+icon("icon-arrow-right", "order__button-icon", "13", "13")

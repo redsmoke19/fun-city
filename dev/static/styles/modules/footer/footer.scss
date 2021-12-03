@@ -14,6 +14,9 @@
   @media screen and (min-width: $large-size) {
     margin: 350px 0 0 0;
   }
+  &--calc {
+    padding: 10px 0 100px;
+  }
   &__decor-cloud {
     position: absolute;
     top: -65px;

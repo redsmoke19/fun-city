@@ -338,6 +338,7 @@
     const breakpointMobile = window.matchMedia('(min-width: 768px)');
     const nav = document.querySelector('.nav');
     const sandwich = document.querySelector('.sandwich');
+    const order = document.querySelector('.order');
     if (breakpointTablet.matches === false) {
     }
     if (breakpointMobile.matches === false) {
@@ -360,6 +361,9 @@
         sandwich.classList.remove('_active');
         body.classList.remove('_overlay');
         body.classList.remove('_lock');
+      }
+      if (order) {
+        order.classList.remove('order--index');
       }
       if (breakpointTablet.matches === false) {
       }
@@ -385,6 +389,7 @@
   const getSandwich = () => {
     const sandwich = document.querySelector('.sandwich');
     const nav = document.querySelector('.nav');
+    const order = document.querySelector('.order');
 
     if (sandwich != null) {
       const delay = 500;
@@ -395,6 +400,9 @@
           nav.classList.toggle('_active');
           body.classList.toggle('_overlay');
         }
+        if (order) {
+          order.classList.toggle('order--index');
+        }
       });
       document.addEventListener('click', function (e) {
         if (!nav.classList.contains('_active')) return;
@@ -403,6 +411,9 @@
           nav.classList.remove('_active');
           sandwich.classList.remove('_active');
           body.classList.remove('_overlay');
+          if (order) {
+            order.classList.remove('order--index');
+          }
         }
       });
     }
@@ -857,13 +868,15 @@
 
   const getInputNumberCalculator = () => {
     const upButton = document.querySelector('.calculator-time__button--top');
-    const downBottun = document.querySelector('.calculator-time__button--bottom');
-    upButton.addEventListener('click', () => {
-      upButton.nextElementSibling.stepUp();
-    });
-    downBottun.addEventListener('click', () => {
-      downBottun.previousElementSibling.stepDown();
-    });
+    const downButton = document.querySelector('.calculator-time__button--bottom');
+    if (upButton && downButton) {
+      upButton.addEventListener('click', () => {
+        upButton.nextElementSibling.stepUp();
+      });
+      downButton.addEventListener('click', () => {
+        downButton.previousElementSibling.stepDown();
+      });
+    }
   };
 
   const getDatePicker = () => {
@@ -920,11 +933,31 @@
     })
   }
 
-  validate.init();
+  const orderMobileAction = () => {
+    const orderOpenButton = document.querySelector('.order__toggle')
+    const order = document.querySelector('.order');
+    if (orderOpenButton) {
+      const delay = 500;
+      orderOpenButton.addEventListener('click', () => {
+        if (order.classList.contains('order--active')) {
+          orderOpenButton.parentElement.classList.remove('order--active');
+          orderOpenButton.classList.remove('_active');
+          bodyLock(delay);
+        }
+        else {
+          orderOpenButton.parentElement.classList.add('order--active');
+          orderOpenButton.classList.add('_active');
+          bodyLock(delay);
+        }
+      });
+    }
+  }
 
+  validate.init();
+  // getPageVh();
   dynamicAdaptive();
   getPopup();
-  getPageVh();
+  // getPageVh();
   getResize();
   getFixedHeader();
   getSandwich();
@@ -944,4 +977,6 @@
   getInputNumberCalculator();
   getDatePicker();
   calculatorBanquetRooms();
+  orderMobileAction();
+  getPageVh();
 }());

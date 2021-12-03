@@ -6,8 +6,10 @@
   &__list {
     display: grid;
     gap: 30px;
+    margin: 0 0 30px 0;
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 1fr 1fr;
+      margin: 0 0 40px 0;
     }
   }
   &__item {
@@ -37,7 +39,7 @@
         position: absolute;
         top: -5px;
         width: 100%;
-        z-index: 15;
+        z-index: 10;
       }
     }
     &::after {
@@ -124,5 +126,53 @@
       top: 0;
       width: 100%;
     }
+  }
+  &__wrapper {
+    @media screen and (min-width: $tablet-size) {
+      align-items: start;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 61% auto;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-template-columns: 66% auto;
+    }
+  }
+  &__description {
+    color: $gray-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 85px 0;
+  }
+  &__gift {
+    background-color: $yellow-color;
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      margin: 44px 0 0 0;
+      padding: 30px 20px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 30px;
+    }
+  }
+  &__gift-title {
+    font-family: $decor-font;
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+  &__gift-text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+  &__gift-rope {
+    left: 50%;
+    position: absolute;
+    top: -42px;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 }
