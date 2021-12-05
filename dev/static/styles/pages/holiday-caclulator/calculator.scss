@@ -1,3 +1,23 @@
+.calculator {
+  margin: 55px 0 0 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 80px 0 0 0;
+  }
+  &__row {
+    @media screen and (min-width: $large-size) {
+      align-items: start;
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 840px 1fr;
+    }
+  }
+  &__order {
+    @media screen and (min-width: $large-size) {
+      position: sticky;
+      top: 158px;
+    }
+  }
+}
 @import "hero";
 @import "steps";
 @import "time";

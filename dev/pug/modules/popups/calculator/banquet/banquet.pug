@@ -1,0 +1,33 @@
+.popup.popup_calc-banquet
+	.popup__content
+		.popup__close
+			+icon("icon-close", "popup__close-icon", "11", "11")
+		.popup__body
+			.popup__top.popup__top--banquet
+				.popup__heading.popup__heading--banquet
+					h2.popup__title Банкетный зал “Джунгли”
+					span.popup__title-city до 16 человек
+			.popup__paragraph
+				p.popup__text Описание банкетного зала.
+				p.popup__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.
+			.popup__select-time
+				h3.popup__select-title.font-h4 Доступное время:
+				p.popup__text.popup__select-text на 01.09.2021
+				ul.radio-times.radio-times--modal
+					li.radio-times__item
+						input.radio-times__input.radio-times__input--modal(type="radio" name="calcModalBanquet" id="calcModalTimes9AM" value="9AM" disabled)
+						label.radio-times__label(for="calcModalTimes9AM") 9:00
+					li.radio-times__item
+						input.radio-times__input.radio-times__input--modal(type="radio" name="calcModalBanquet" id="calcModalTimes11AM" value="11AM")
+						label.radio-times__label(for="calcModalTimes11AM") 11:00
+					li.radio-times__item
+						input.radio-times__input.radio-times__input--modal(type="radio" name="calcModalBanquet" id="calcModalTimes13PM" value="13PM" disabled)
+						label.radio-times__label(for="calcModalTimes13PM") 13:00
+					li.radio-times__item
+						input.radio-times__input.radio-times__input--modal(type="radio" name="calcModalBanquet" id="calcModalTimes17PM" value="17PM")
+						label.radio-times__label(for="calcModalTimes17PM") 17:00
+					li.radio-times__item
+						input.radio-times__input.radio-times__input--modal(type="radio" name="calcModalBanquet" id="calcModalTimes19PM" value="19PM")
+						label.radio-times__label(for="calcModalTimes19PM") 19:00
+			.popup__gallery-slider
+				include gallery-slider

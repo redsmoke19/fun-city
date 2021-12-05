@@ -5,15 +5,38 @@
   position: fixed;
   transition: transform ease-out .3s, z-index ease-out 0s 1s;
   transform: translateY(calc(var(--vh) * 100 - 100px));
-  //transform: translateY(calc(var(--vh) * 100 - 210px));
   width: 100%;
   z-index: 50;
+  @media screen and (min-width: $tablet-size) {
+    left: 40px;
+    transform: translateY(calc(var(--vh) * 100 - 300px));
+    width: calc(100% - 80px);
+  }
+  @media screen and (min-width: $desktop-size) {
+    left: 50px;
+    width: calc(100% - 100px);
+  }
+  @media screen and (min-width: $large-size) {
+    left: unset;
+    bottom: unset;
+    margin: 35px 0 144px 0;
+    padding: 0;
+    position: relative;
+    transform: translate(0, 0);
+    width: auto;
+    z-index: unset;
+  }
   &--active {
     transform: translateY(0);
     .order__content {
       overflow-y: auto;
       overflow-x: hidden;
       padding: 14px 20px 30px;
+    }
+    @media screen and (min-width: $tablet-size) {
+      .order__content {
+        padding: 0 30px 30px;
+      }
     }
   }
   &--index {
@@ -28,6 +51,44 @@
     top: 20px;
     width: 100%;
     z-index: 1;
+    &--mobile {
+      @media screen and (min-width: $tablet-size) {
+        display: none;
+      }
+    }
+    &--tablet {
+      display: none;
+      @media screen and (min-width: $tablet-size) {
+        display: block;
+        height: 31px;
+        top: 25px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 45px;
+      }
+      @media screen and (min-width: $large-size) {
+        display: none;
+      }
+    }
+    &--large {
+      display: none;
+      @media screen and (min-width: $large-size) {
+        display: block;
+        filter: unset;
+        height: 40px;
+        top: -35px;
+      }
+    }
+    &--bottom {
+      display: none;
+      @media screen and (min-width: $large-size) {
+        bottom: -40px;
+        display: block;
+        filter: unset;
+        height: 40px;
+        top: unset;
+      }
+    }
   }
   &__toggle {
     align-items: center;
@@ -45,6 +106,9 @@
     transform: translateX(-50%);
     width: 50px;
     z-index: 3;
+    @media screen and (min-width: $large-size) {
+      display: none;
+    }
     &._active {
       svg {
         transform: rotate(90deg);
@@ -64,18 +128,40 @@
     padding: 0 20px 30px;
     position: relative;
     z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      height: calc(var(--vh) * 100 - 235px);
+    }
+    @media screen and (min-width: $large-size) {
+      height: unset;
+      padding: 0 30px 20px;
+    }
   }
   &__title {
     font-family: $decor-font;
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 20px 0;
+    }
   }
   &__categories {
     margin: 0 0 10px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 -30px 20px;
+    }
   }
   &__category {
     border-bottom: 1px dashed $blue-color;
     margin: 0 -20px;
     padding: 10px 20px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+      padding: 15px 30px;
+    }
+    @media screen and (min-width: $large-size) {
+      &:first-child {
+        border-top: 1px dashed $blue-color;
+      }
+    }
   }
   &__heading {
     color: $blue-color;
@@ -89,13 +175,23 @@
   }
   &__place {
     margin: 0 0 6px 0;
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 8px 0;
+    }
   }
   &__date {
     margin: 0 0 6px 0;
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 8px 0;
+    }
   }
   &__text {
     font-size: 14px;
     line-height: 18px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__service-box {
     align-items: baseline;
@@ -104,12 +200,21 @@
     &:not(:last-child) {
       margin: 0 0 6px 0;
     }
+    @media screen and (min-width: $large-size) {
+      &:not(:last-child) {
+        margin: 0 0 8px 0;
+      }
+    }
   }
   &__price {
     color: $purple-color;
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__sub-text {
     padding: 0 0 0 20px;
@@ -134,18 +239,41 @@
     display: flex;
     justify-content: space-between;
     margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
   }
   &__total-text {
     font-family: $decor-font;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   &__total-price {
     color: $purple-color;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
   &__button {
     width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      width: auto;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 0 auto;
+      position: relative;
+      right: unset;
+      top: unset;
+    }
   }
   &__button-icon {
     fill: $white;

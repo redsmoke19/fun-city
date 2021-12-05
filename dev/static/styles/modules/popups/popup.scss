@@ -103,6 +103,19 @@
       display: inline-flex;
     }
   }
+  &__select-time {
+    margin: 0 0 40px 0;
+  }
+  &__select-title {
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__select-text {
+    margin: 0 0 20px 0;
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
 }
 
 .popup-nav {

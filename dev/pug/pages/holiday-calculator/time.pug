@@ -1,23 +1,22 @@
 section.calculator-time
-	.container
-		.calculator-time__content
-			.calculator-time__title.font-h2 Место, время и участники
-			.calculator-time__inner
-				.calculator-time__choice
-					label.calculator-time__label(for="calcChoicePark") Парк*
-					select.calculator-time__select._select(id="calcChoicePark" data-trigger)
-						option(value="Continent") ТРК Континент, г. Санкт-Петербург
-						option(value="Indastrial") ТК Индустриальный, г. Санкт-Петербург
-						option(value="Petrovskyi") ТРК Петровский, Казань
-						option(value="Academ") ТЦ Академический, Екатеринбург
-						option(value="Sigma") ТЦ Сигма, Нижний Новгород
-						option(value="Strelka") ТРК Стрелка, Хабаровск
-				.calculator-time__count
-					label.calculator-time__label(for="calcChoiceCountChildren") Количество детей*
-					button.calculator-time__button.calculator-time__button--top
-						+icon("icon-select-arrow", "calculator-time__icon calculator-time__icon-top", "13", "8")
-					input.calculator-time__number(type="number" id="calcChoiceCountChildren" min="1" max="20" value="8" readonly)
-					button.calculator-time__button.calculator-time__button--bottom
-						+icon("icon-select-arrow", "calculator-time__icon calculator-time__icon-bottom", "13", "8")
-			.calculator-time__date(data-da=".calculator-time__inner, 768,last")
-				.calculator-time__datepicker
+	.calculator-time__content
+		.calculator-time__title.font-h2 Место, время и участники
+		.calculator-time__inner
+			.calculator-time__choice
+				label.calculator-time__label(for="calcChoicePark") Парк*
+				select.calculator-time__select._select(id="calcChoicePark" data-trigger)
+					option(value="Continent") ТРК Континент, г. Санкт-Петербург
+					option(value="Indastrial") ТК Индустриальный, г. Санкт-Петербург
+					option(value="Petrovskyi") ТРК Петровский, Казань
+					option(value="Academ") ТЦ Академический, Екатеринбург
+					option(value="Sigma") ТЦ Сигма, Нижний Новгород
+					option(value="Strelka") ТРК Стрелка, Хабаровск
+			.calculator-time__count
+				label.calculator-time__label(for="calcChoiceCountChildren") Количество детей*
+				button.calculator-time__button.calculator-time__button--top
+					+icon("icon-select-arrow", "calculator-time__icon calculator-time__icon-top", "13", "8")
+				input.calculator-time__number(type="number" id="calcChoiceCountChildren" min="1" max="20" value="8" readonly)
+				button.calculator-time__button.calculator-time__button--bottom
+					+icon("icon-select-arrow", "calculator-time__icon calculator-time__icon-bottom", "13", "8")
+		.calculator-time__date(data-da=".calculator-time__inner, 768,last")
+			.calculator-time__datepicker

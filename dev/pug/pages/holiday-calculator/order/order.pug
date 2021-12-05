@@ -1,6 +1,9 @@
 section.calculator-order.order
-	+icon("icon-order-shape", "order__top-shape")
-	button.order__toggle
+	+icon("icon-order-shape-mobile", "order__top-shape order__top-shape--mobile")
+	+icon("icon-order-shape-tablet", "order__top-shape order__top-shape--tablet")
+	+icon("icon-order-shape-large", "order__top-shape order__top-shape--large")
+	+icon("icon-order-shape-bottom-large", "order__top-shape order__top-shape--bottom")
+	button.order__toggle(type="button")
 		+icon("icon-arrow-right", "order__toggle-icon", "14", "14")
 	.order__content
 		h2.order__title.font-h4 Мой заказ
@@ -44,8 +47,8 @@ section.calculator-order.order
 					p.order__sub-text.order__text Название стиля оформления
 		.order__bottom
 			.order__total
-				.order__totat-text.font-h5 Итого:
+				.order__total-text.font-h5 Итого:
 				.order__total-price 5 500 ₽
-			button.order__button.button(type="submit")
+			button.order__button.button(type="submit" data-da=".calculator__info, 1440, last")
 				span Продолжить
 				+icon("icon-arrow-right", "order__button-icon", "13", "13")

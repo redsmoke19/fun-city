@@ -365,6 +365,12 @@
       if (order) {
         order.classList.remove('order--index');
       }
+      if (order.classList.contains('order--active')) {
+        const orderOpenButton = document.querySelector('.order__toggle')
+        order.classList.remove('order--active');
+        body.classList.remove('_lock');
+        orderOpenButton.classList.remove('_active');
+      }
       if (breakpointTablet.matches === false) {
       }
     }

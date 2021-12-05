@@ -4,6 +4,13 @@
   grid-template-columns: repeat(auto-fill, minmax(54px, 54px));
   position: relative;
   z-index: 10;
+  &--modal {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(67px, 67px));
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: repeat(auto-fill, minmax(90px, 90px));
+    }
+  }
   &__input {
     appearance: none;
     position: absolute;
@@ -35,6 +42,25 @@
     }
     &:disabled + label {
       color: $gray-color;
+    }
+  }
+  &__input--modal {
+    + label {
+      border: 2px solid $purple-color;
+      box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
+      height: 50px;
+      @media screen and (min-width: $large-size) {
+        font-size: 14px;
+        line-height: 20px;
+        height: 60px;
+      }
+    }
+    &:checked + label {
+      box-shadow: unset;
+    }
+    &:disabled + label {
+      border: 2px solid transparent;
+      box-shadow: unset;
     }
   }
 }
