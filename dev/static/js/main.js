@@ -756,8 +756,6 @@
         new Swiper(item, {
           direction: 'horizontal',
           grabCursor: true,
-          // preventClicks: true,
-          // preventClicksPropagation: true,
           slidesPerView: 'auto',
           spaceBetween: 20,
           slidesOffsetBefore: 0,
@@ -959,11 +957,30 @@
     }
   }
 
+  const calculatorTreadListSlider = () => {
+    const treadSlider = document.querySelector('.tread-slider');
+    if (treadSlider) {
+      new Swiper(treadSlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 50,
+        navigation: {
+          nextEl: '.tread-slider__next',
+          disabledClass: 'tread-slider__next--disabled',
+        }
+      });
+    }
+  }
+
   validate.init();
-  // getPageVh();
+
   dynamicAdaptive();
   getPopup();
-  // getPageVh();
   getResize();
   getFixedHeader();
   getSandwich();
@@ -984,5 +1001,6 @@
   getDatePicker();
   calculatorBanquetRooms();
   orderMobileAction();
+  calculatorTreadListSlider();
   getPageVh();
 }());

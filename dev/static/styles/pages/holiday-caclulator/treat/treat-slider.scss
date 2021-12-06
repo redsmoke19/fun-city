@@ -1,0 +1,37 @@
+.tread-slider {
+  overflow: inherit;
+  padding: 20px 0;
+  &__item {
+    width: auto;
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed $gray-color;
+    color: $gray-color;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 10px;
+    text-transform: uppercase;
+    width: auto;
+    &--active {
+      border-bottom: 2px solid $purple-color;
+      color: $purple-color;
+    }
+  }
+  &__next {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &--disabled {
+      cursor: default;
+      opacity: .7;
+    }
+    &:active {
+      transform: translateY(calc(-50% + 10px));
+    }
+  }
+}

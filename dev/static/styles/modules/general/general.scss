@@ -97,8 +97,14 @@
     box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
   }
   &:active {
-    box-shadow: 0 6px 0 rgba(176, 55, 151, .1);
-    // transform: translateY(5px);
+    box-shadow: 0 5px 0 rgba(176, 55, 151, .1);
+  }
+}
+
+.slider-nav-button--white {
+  background-color: $white;
+  svg {
+    fill: $purple-color;
   }
 }
 @import 'light-gallery';
