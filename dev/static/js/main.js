@@ -540,14 +540,17 @@
 
   const sliders = () => {
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
+    const breakpointDesktop = window.matchMedia('(min-width: 1024px)');
     const restaurantPageSlider = document.querySelector('.restaurant-hero__wrapper');
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
+    const treadSlider = document.querySelector('.tread-slider');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
     let calculatorSliderInit;
+    let treadSliderInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -555,6 +558,7 @@
         resizeTimeout = setTimeout(function () {
           resizeTimeout = null;
           resizeHandlerTablet();
+          getAllBreakpointSlider();
         }, 100);
       }
 
@@ -640,9 +644,37 @@
           });
         }
       }
+
+      const getAllBreakpointSlider = function () {
+        if (treadSlider) {
+          treadSliderInit = new Swiper(treadSlider, {
+            direction: 'horizontal',
+            grabCursor: true,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 50,
+            navigation: {
+              nextEl: '.tread-slider__next',
+              disabledClass: 'tread-slider__next--disabled',
+            },
+            breakpoints: {
+              1024: {
+                slidesOffsetAfter: 0,
+              },
+              1440: {
+                slidesOffsetAfter: 60,
+              }
+            },
+          });
+        }
+      }
     };
 
     breakpointTablet.addListener(breakpointChecker);
+    breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
   };
 
@@ -871,15 +903,19 @@
   };
 
   const getInputNumberCalculator = () => {
-    const upButton = document.querySelector('.calculator-time__button--top');
-    const downButton = document.querySelector('.calculator-time__button--bottom');
-    if (upButton && downButton) {
-      upButton.addEventListener('click', () => {
-        upButton.nextElementSibling.stepUp();
-      });
-      downButton.addEventListener('click', () => {
-        downButton.previousElementSibling.stepDown();
-      });
+    const upButton = document.querySelectorAll('._js-count-plus');
+    const downButton = document.querySelectorAll('._js-count-minus');
+    if (upButton.length > 0 && downButton.length > 0) {
+      upButton.forEach(item => {
+        item.addEventListener('click', () => {
+          item.parentElement.querySelector('input').stepUp();
+        });
+      })
+      downButton.forEach(item => {
+        item.addEventListener('click', () => {
+          item.parentElement.querySelector('input').stepDown();
+        });
+      })
     }
   };
 
@@ -957,26 +993,6 @@
     }
   }
 
-  const calculatorTreadListSlider = () => {
-    const treadSlider = document.querySelector('.tread-slider');
-    if (treadSlider) {
-      new Swiper(treadSlider, {
-        direction: 'horizontal',
-        grabCursor: true,
-        preventClicks: true,
-        preventClicksPropagation: true,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 50,
-        navigation: {
-          nextEl: '.tread-slider__next',
-          disabledClass: 'tread-slider__next--disabled',
-        }
-      });
-    }
-  }
-
   validate.init();
 
   dynamicAdaptive();
@@ -1001,6 +1017,5 @@
   getDatePicker();
   calculatorBanquetRooms();
   orderMobileAction();
-  calculatorTreadListSlider();
   getPageVh();
 }());

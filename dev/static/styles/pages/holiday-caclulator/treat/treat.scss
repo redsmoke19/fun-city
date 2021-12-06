@@ -1,2 +1,8 @@
+.calculator-tread {
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 25px 0;
+  }
+}
 @import "treat-slider";
 @import "treat-menu";

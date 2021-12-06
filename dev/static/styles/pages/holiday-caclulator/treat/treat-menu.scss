@@ -1,0 +1,129 @@
+.tread-menu {
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 60px 0;
+  }
+  &__list {
+    display: grid;
+    gap: 30px;
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      &:hover {
+        .tread-menu__inner {
+          transform: translateY(-10px);
+        }
+      }
+    }
+    &::after {
+      background-color: rgba(176, 55, 151, .3);
+      border-radius: 30px;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &__inner {
+    position: relative;
+    transform: translateY(-5px);
+    @media screen and (min-width: $desktop-size) {
+      transition: all ease-out .15s;
+      transform: translateY(0);
+    }
+  }
+  &__picture {
+    border-radius: 30px;
+    display: block;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 340px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 400px;
+    }
+    &::after {
+      background: linear-gradient(97.13deg, #4b4b4b 0%, rgba(75, 75, 75, 0) 94.44%);
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__box {
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  &__title {
+    color: $white;
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__description {
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__price {
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 5px 0 0;
+  }
+  &__bottom {
+    align-items: center;
+    display: flex;
+    margin: auto 0 0 0;
+  }
+  &__button {
+    align-items: center;
+    background-color: $white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    width: 40px;
+  }
+  &__number {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    justify-content: center;
+    padding: 0 5px;
+    text-align: center;
+    //width: 60px;
+  }
+}
