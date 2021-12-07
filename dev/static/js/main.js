@@ -545,12 +545,12 @@
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
-    const treadSlider = document.querySelector('.tread-slider');
+    const tabsSlider = document.querySelector('.tabs-slider');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
     let calculatorSliderInit;
-    let treadSliderInit;
+    let tabsSliderInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -646,8 +646,8 @@
       }
 
       const getAllBreakpointSlider = function () {
-        if (treadSlider) {
-          treadSliderInit = new Swiper(treadSlider, {
+        if (tabsSlider) {
+          tabsSliderInit = new Swiper(tabsSlider, {
             direction: 'horizontal',
             grabCursor: true,
             preventClicks: true,
@@ -657,8 +657,8 @@
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 50,
             navigation: {
-              nextEl: '.tread-slider__next',
-              disabledClass: 'tread-slider__next--disabled',
+              nextEl: '.tabs-slider__next',
+              disabledClass: 'tabs-slider__next--disabled',
             },
             breakpoints: {
               1024: {
@@ -993,6 +993,34 @@
     }
   }
 
+  const getTabs = function () {
+    const tabNav = document.querySelectorAll('.tabs-slider__button');
+    const tabContent = document.querySelectorAll('.tabs-slider__content');
+    let tabName;
+    tabNav.forEach(item => {
+      item.addEventListener('click', selectTabNav);
+    });
+
+    function selectTabNav() {
+      tabNav.forEach(item => {
+        item.classList.remove('tabs-slider__button--active');
+      });
+      this.classList.add('tabs-slider__button--active');
+      tabName = this.getAttribute('data-tabs-name');
+      console.log(tabName);
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tab) {
+      tabContent.forEach(item => {
+        const classList = item.classList;
+        classList.contains(tab)
+          ? classList.add('tabs-slider__content--active')
+          : classList.remove('tabs-slider__content--active');
+      });
+    }
+  };
+
   validate.init();
 
   dynamicAdaptive();
@@ -1017,5 +1045,6 @@
   getDatePicker();
   calculatorBanquetRooms();
   orderMobileAction();
+  getTabs();
   getPageVh();
 }());
