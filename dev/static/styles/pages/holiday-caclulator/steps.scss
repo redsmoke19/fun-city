@@ -95,6 +95,9 @@
       height: 170px;
       width: 290px;
     }
+    &--active {
+      filter: drop-shadow(0 5px 0 rgba(176, 55, 151, .3));
+    }
   }
   &__box {
     align-items: center;

@@ -545,7 +545,7 @@
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
-    const tabsSlider = document.querySelector('.tabs-slider');
+    const tabsSlider = document.querySelector('.service-slider');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
@@ -655,17 +655,17 @@
             slidesPerView: 'auto',
             spaceBetween: 0,
             slidesOffsetBefore: 0,
-            slidesOffsetAfter: 50,
+            slidesOffsetAfter: 0,
             navigation: {
-              nextEl: '.tabs-slider__next',
-              disabledClass: 'tabs-slider__next--disabled',
+              nextEl: '.service-slider__next',
+              disabledClass: 'service-slider__next--disabled',
             },
             breakpoints: {
               1024: {
                 slidesOffsetAfter: 0,
               },
               1440: {
-                slidesOffsetAfter: 60,
+                slidesOffsetAfter: 0,
               }
             },
           });
@@ -994,8 +994,8 @@
   }
 
   const getTabs = function () {
-    const tabNav = document.querySelectorAll('.tabs-slider__button');
-    const tabContent = document.querySelectorAll('.tabs-slider__content');
+    const tabNav = document.querySelectorAll('.service-slider__button');
+    const tabContent = document.querySelectorAll('.service-slider__content');
     let tabName;
     tabNav.forEach(item => {
       item.addEventListener('click', selectTabNav);
@@ -1003,9 +1003,9 @@
 
     function selectTabNav() {
       tabNav.forEach(item => {
-        item.classList.remove('tabs-slider__button--active');
+        item.classList.remove('service-slider__button--active');
       });
-      this.classList.add('tabs-slider__button--active');
+      this.classList.add('service-slider__button--active');
       tabName = this.getAttribute('data-tabs-name');
       console.log(tabName);
       selectTabContent(tabName);
@@ -1015,8 +1015,8 @@
       tabContent.forEach(item => {
         const classList = item.classList;
         classList.contains(tab)
-          ? classList.add('tabs-slider__content--active')
-          : classList.remove('tabs-slider__content--active');
+          ? classList.add('service-slider__content--active')
+          : classList.remove('service-slider__content--active');
       });
     }
   };
