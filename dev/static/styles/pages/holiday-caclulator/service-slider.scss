@@ -6,6 +6,12 @@
     overflow: hidden;
     padding: 20px 60px 20px 0;
   }
+  &__list {
+    &--popup {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   &__item {
     width: auto;
   }
@@ -36,6 +42,9 @@
       font-size: 16px;
       line-height: 22px;
       padding: 20px;
+    }
+    &--popup {
+      width: 100%;
     }
     &--active {
       border-bottom: 2px solid $purple-color;

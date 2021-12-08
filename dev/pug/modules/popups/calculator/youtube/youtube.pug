@@ -1,0 +1,20 @@
+.popup.popup_youtube-party
+	.popup__content
+		.popup__close
+			+icon("icon-close", "popup__close-icon", "11", "11")
+		.popup__body
+			.popup__top.popup__top--party
+				.popup__heading.popup__heading--party
+					h2.popup__title Квест “YouTube-вечеринка”  (6+)
+					span.popup__title-city #[strong 3 000 ₽/час]
+				button.popup__link.popup__link--party.button.button--white._checked Добавить к заказу
+					+icon("icon-plus", "popup__link-icon", "12", "12")
+			.popup__inner
+				picture.popup__picture
+					source(media="(min-width: 1440px)" srcset="static/images/content/calculator/youtube-large.jpg")
+					source(media="(min-width: 1024px)" srcset="static/images/content/calculator/youtube-desktop.jpg")
+					source(media="(min-width: 768px)" srcset="static/images/content/calculator/youtube-tablet.jpg")
+					img.popup__img(src="static/images/content/calculator/youtube-mobile.jpg" width="320" height="320" alt="Фотография вечеринки")
+				.popup__paragraph
+					p.popup__text Описание банкетного зала.
+					p.popup__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.

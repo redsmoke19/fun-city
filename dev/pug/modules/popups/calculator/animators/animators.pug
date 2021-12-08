@@ -1,0 +1,16 @@
+.popup.popup_animatrors-party._active
+	.popup__content
+		.popup__close
+			+icon("icon-close", "popup__close-icon", "11", "11")
+		.popup__body
+			.popup__top.popup__top--party
+				.popup__heading.popup__heading--party
+					h2.popup__title Программа с аниматором
+					span.popup__title-city #[strong 3 000 ₽/час]
+			.service-slider
+				ul.service-slider__list.service-slider__list--popup
+					li.service-slider__item.service-slider__item--popup
+						button.service-slider__button.service-slider__button--active.service-slider__button--popup(type="button" data-tabs-name="_") Аниматоры девочки
+					li.service-slider__item.service-slider__item--popup
+						button.service-slider__button.service-slider__button--popup(type="button" data-tabs-name="_") Аниматоры мальчики
+

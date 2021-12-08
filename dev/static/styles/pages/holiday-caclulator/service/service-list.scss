@@ -15,9 +15,9 @@
   &__item {
     position: relative;
     width: 100%;
-    @media screen and (min-width: $desktop-size) {
+    @media screen and (min-width: $large-size) {
       &:hover {
-        .tread-menu__inner {
+        .service-list__inner {
           transform: translateY(-10px);
         }
       }
@@ -115,6 +115,9 @@
     justify-content: center;
     padding: 0;
     width: 40px;
+    svg {
+      fill: $purple-color;
+    }
   }
   &__number {
     background-color: transparent;
@@ -127,6 +130,116 @@
     justify-content: center;
     padding: 0 5px;
     text-align: center;
-    //width: 60px;
+  }
+  &__input-box {
+    position: relative;
+    z-index: 10;
+  }
+  &__checkbox {
+    appearance: none;
+    position: absolute;
+    left: -9999px;
+    + label {
+      align-items: center;
+      background: $white url("../images/common/icon-plus.svg") no-repeat center;
+      background-size: 12px 12px;
+      border-radius: 50%;
+      border: none;
+      color: $purple-color;
+      cursor: pointer;
+      display: flex;
+      font-family: $second-font;
+      font-size: 14px;
+      font-weight: 900;
+      justify-content: center;
+      line-height: 20px;
+      height: 40px;
+      position: relative;
+      transition: all ease-out .2s;
+      width: 40px;
+      .service-list__label-text {
+        &::before {
+          content: "Добавить к заказу";
+        }
+        .service-list__label-icon--minus {
+          display: none;
+        }
+        .service-list__label-icon--plus {
+          display: inline-block;
+        }
+      }
+    }
+    &:focus-visible + label {
+      outline: 2px solid $purple-color;
+    }
+    &:checked + label {
+      background: $purple-color url("../images/common/icon-check.svg") no-repeat center;
+      background-size: 14px 10px;
+      color: $white;
+      .service-list__label-text {
+        &::before {
+          content: "Убрать из заказа";
+        }
+        .service-list__label-icon--plus {
+          display: none;
+        }
+        .service-list__label-icon--minus {
+          display: inline-block;
+        }
+      }
+    }
+    &:disabled + label {
+      color: $gray-color;
+    }
+    &:checked {
+      &:focus-visible + label {
+        outline: 2px solid $white;
+      }
+    }
+  }
+  &__label-checkbox {
+    @media screen and (min-width: $large-size) {
+      position: relative;
+      &:hover {
+        .service-list__label-text {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+  &__label-text {
+    align-items: center;
+    background-color: $purple-color;
+    border-radius: 30px;
+    color: $white;
+    display: none;
+    height: 40px;
+    left: -1px;
+    opacity: 0;
+    padding: 0 15px 0 10px;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    transition: all ease-out .15s;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @media screen and (min-width: $large-size) {
+      display: flex;
+    }
+  }
+  &__label-icon {
+    fill: $white;
+    margin: 0 0 0 9px;
+  }
+  &__shadow-link {
+    &::after {
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
 }

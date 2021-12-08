@@ -545,7 +545,7 @@
     const photoGalleyCategorySlider = document.querySelector('.photo-gallery__wrapper');
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
-    const tabsSlider = document.querySelector('.service-slider');
+    const tabsSlider = document.querySelector('.service-slider--slide');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
@@ -1007,7 +1007,6 @@
       });
       this.classList.add('service-slider__button--active');
       tabName = this.getAttribute('data-tabs-name');
-      console.log(tabName);
       selectTabContent(tabName);
     }
 

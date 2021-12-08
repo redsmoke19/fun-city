@@ -19,15 +19,36 @@
         margin: 0 0 40px 0;
       }
     }
+    &--party {
+      margin: 0 0 30px 0;
+      @media screen and (min-width: $tablet-size) {
+        display: block;
+      }
+      @media screen and (min-width: $desktop-size) {
+        align-items: start;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        justify-content: unset;
+      }
+    }
   }
   &__heading {
     display: flex;
     flex-direction: column;
     margin: 0 0 20px 0;
-    @media screen and (min-width: $tablet-size) {
+    @media screen and (min-width: $tablet-size)   {
       margin: 0;
     }
     &--banquet {
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 30px 0;
+      }
+      @media screen and (min-width: $desktop-size) {
+        margin: 0;
+      }
+    }
+    &--party {
       @media screen and (min-width: $tablet-size) {
         margin: 0 0 30px 0;
       }
@@ -79,6 +100,16 @@
       margin: 15px 0 0 0;
     }
   }
+  &__inner {
+    @media screen and (min-width: $desktop-size) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 570px 1fr;
+    }
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: 600px 1fr;
+    }
+  }
   &__paragraph {
     margin: 0 0 20px 0;
     @media screen and (min-width: $tablet-size) {
@@ -102,6 +133,19 @@
     &--banquet {
       display: inline-flex;
     }
+    &--party {
+      background-color: $white;
+      border: 2px solid $purple-color;
+      color: $purple-color;
+      margin: 0 auto;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0;
+      }
+      svg {
+        fill: $purple-color;
+        margin: 0 0 0 15px;
+      }
+    }
   }
   &__select-time {
     margin: 0 0 40px 0;
@@ -115,6 +159,28 @@
     &:not(:last-child) {
       margin: 0 0 20px 0;
     }
+  }
+  &__picture {
+    border-radius: 30px;
+    display: block;
+    height: 320px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 400px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 430px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 450px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
