@@ -6,6 +6,13 @@
     overflow: hidden;
     padding: 20px 60px 20px 0;
   }
+  &--animators {
+    margin: 0 -20px;
+    padding: 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
+  }
   &__list {
     &--popup {
       display: grid;

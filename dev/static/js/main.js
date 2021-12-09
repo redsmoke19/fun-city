@@ -993,32 +993,62 @@
     }
   }
 
-  const getTabs = function () {
-    const tabNav = document.querySelectorAll('.service-slider__button');
-    const tabContent = document.querySelectorAll('.service-slider__content');
-    let tabName;
-    tabNav.forEach(item => {
-      item.addEventListener('click', selectTabNav);
-    });
-
-    function selectTabNav() {
-      tabNav.forEach(item => {
-        item.classList.remove('service-slider__button--active');
+  const getTabs = () => {
+    const tabNavTread = document.querySelectorAll('.service-slider__button[data-tabs-group="tread"]');
+    const tabContent = document.querySelectorAll('.service-slider__content[data-tabs-group="tread"]');
+    const tabNavEntertainment = document.querySelectorAll('.service-slider__button[data-tabs-group="entertainment"]');
+    const tabContentEntertainment = document.querySelectorAll('.service-slider__content[data-tabs-group="entertainment"]');
+    const tabNavAnimators = document.querySelectorAll('.service-slider__button[data-tabs-group="animators"]');
+    const tabContentAnimators = document.querySelectorAll('.service-slider__content[data-tabs-group="animators"]');
+    // const tabNav = document.querySelectorAll('.service-slider__button');
+    // const tabContent = document.querySelectorAll('.service-slider__content');
+    const tabsChange = (links, content) => {
+      let tabName;
+      links.forEach(item => {
+        item.addEventListener('click', selectTabNav);
       });
-      this.classList.add('service-slider__button--active');
-      tabName = this.getAttribute('data-tabs-name');
-      selectTabContent(tabName);
+
+      function selectTabNav() {
+        links.forEach(item => {
+          item.classList.remove('service-slider__button--active');
+        });
+        this.classList.add('service-slider__button--active');
+        tabName = this.getAttribute('data-tabs-name');
+        selectTabContent(tabName);
+      }
+
+      function selectTabContent(tab) {
+        content.forEach(item => {
+          const classList = item.classList;
+          classList.contains(tab)
+            ? classList.add('service-slider__content--active')
+            : classList.remove('service-slider__content--active');
+        });
+      }
     }
 
-    function selectTabContent(tab) {
-      tabContent.forEach(item => {
-        const classList = item.classList;
-        classList.contains(tab)
-          ? classList.add('service-slider__content--active')
-          : classList.remove('service-slider__content--active');
-      });
-    }
+    tabsChange(tabNavTread, tabContent);
+    tabsChange(tabNavEntertainment, tabContentEntertainment);
+    tabsChange(tabNavAnimators, tabContentAnimators);
   };
+
+  const getCheckboxPair = () => {
+    const popupCheckboxes = document.querySelectorAll('._popup-check');
+    popupCheckboxes.forEach(item => {
+      item.addEventListener('change', () => {
+        const checkboxData = document.querySelectorAll(`[data-popup-check=${item.dataset.popupCheck}]`);
+        if (item.checked) {
+          for (let i = 0; i < checkboxData.length; i++) {
+            checkboxData[i].checked = true;
+          }
+        } else {
+          for (let i = 0; i < checkboxData.length; i++) {
+            checkboxData[i].checked = false;
+          }
+        }
+      });
+    });
+  }
 
   validate.init();
 
@@ -1045,5 +1075,6 @@
   calculatorBanquetRooms();
   orderMobileAction();
   getTabs();
+  getCheckboxPair();
   getPageVh();
 }());

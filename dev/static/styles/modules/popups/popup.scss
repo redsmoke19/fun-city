@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 0 20px 0;
-    @media screen and (min-width: $tablet-size)   {
+    @media screen and (min-width: $tablet-size) {
       margin: 0;
     }
     &--banquet {
@@ -181,6 +181,51 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+  &__check-button {
+    appearance: none;
+    position: absolute;
+    left: -9999px;
+    + label {
+      .popup__check-icon--plus {
+        display: inline-block;
+      }
+      .popup__check-icon--check {
+        display: none;
+      }
+      .popup__check-text {
+        &::before {
+          content: "Добавить к заказу";
+          transition: all ease-out .15s;
+        }
+      }
+    }
+    &:focus-visible + label {
+      outline: 2px solid $purple-color;
+    }
+    &:checked + label {
+      background-color: $purple-color;
+      color: $white;
+      .popup__check-icon--plus {
+        display: none;
+      }
+      .popup__check-icon--check {
+        display: inline-block;
+      }
+      .popup__check-text {
+        &::before {
+          content: "Добавлено";
+        }
+      }
+    }
+    &:disabled + label {
+      color: $gray-color;
+    }
+    &:checked {
+      &:focus-visible + label {
+        outline: 2px solid $white;
+      }
+    }
   }
 }
 

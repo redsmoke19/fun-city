@@ -7,8 +7,11 @@
 				.popup__heading.popup__heading--party
 					h2.popup__title Квест “YouTube-вечеринка”  (6+)
 					span.popup__title-city #[strong 3 000 ₽/час]
-				button.popup__link.popup__link--party.button.button--white._checked Добавить к заказу
-					+icon("icon-plus", "popup__link-icon", "12", "12")
+				input.popup__check-button._popup-check(type="checkbox" name="program-3-1" id="program-3-1" data-popup-check="youtube")
+				label.popup__check-label.popup__link.button.popup__link--party.button--white(for="program-3-1")
+					span.popup__check-text
+					+icon("icon-plus", "popup__check-icon popup__check-icon--plus", "12", "12")
+					+icon("icon-check", "popup__check-icon popup__check-icon--check", "12", "12")
 			.popup__inner
 				picture.popup__picture
 					source(media="(min-width: 1440px)" srcset="static/images/content/calculator/youtube-large.jpg")

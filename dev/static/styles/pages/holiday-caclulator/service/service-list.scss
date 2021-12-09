@@ -11,6 +11,11 @@
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 1fr 1fr;
     }
+    &--animators {
+      @media screen and (min-width: $desktop-size) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
   &__item {
     position: relative;
@@ -41,6 +46,9 @@
       transition: all ease-out .15s;
       transform: translateY(0);
     }
+    &--animators {
+      transform: translateY(0);
+    }
   }
   &__picture {
     border-radius: 30px;
@@ -64,6 +72,21 @@
       position: absolute;
       top: 0;
       width: 100%;
+    }
+    &--animators {
+      height: 360px;
+      @media screen and (min-width: $tablet-size) {
+        height: 340px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 320px;
+      }
+      @media screen and (min-width: $large-size) {
+        height: 400px;
+      }
+      &::after {
+        background: linear-gradient(180deg, rgba(63, 58, 58, 0) 53.12%, rgba(63, 58, 58, .7) 100%);
+      }
     }
   }
   &__img {

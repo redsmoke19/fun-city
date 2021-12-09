@@ -7,10 +7,13 @@
 				.popup__heading.popup__heading--party
 					h2.popup__title Программа с аниматором
 					span.popup__title-city #[strong 3 000 ₽/час]
-			.service-slider
+			.service-slider.service-slider--animators
 				ul.service-slider__list.service-slider__list--popup
 					li.service-slider__item.service-slider__item--popup
-						button.service-slider__button.service-slider__button--active.service-slider__button--popup(type="button" data-tabs-name="_") Аниматоры девочки
+						button.service-slider__button.service-slider__button--active.service-slider__button--popup(type="button" data-tabs-name="_animators-girls" data-tabs-group="animators") Аниматоры девочки
 					li.service-slider__item.service-slider__item--popup
-						button.service-slider__button.service-slider__button--popup(type="button" data-tabs-name="_") Аниматоры мальчики
+						button.service-slider__button.service-slider__button--popup(type="button" data-tabs-name="_animators-boys" data-tabs-group="animators") Аниматоры мальчики
+			.service-list__content
+				include girls
+				include boys
 
