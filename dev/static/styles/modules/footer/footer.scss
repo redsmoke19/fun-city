@@ -80,7 +80,11 @@
     display: flex;
     justify-content: center;
     height: 50px;
+    transition: all ease-out .15s;
     width: 50px;
+    &:hover {
+      opacity: .7;
+    }
     @media screen and (min-width: $large-size) {
       height: 60px;
       width: 60px;
@@ -133,6 +137,10 @@
     font-weight: 600;
     line-height: 22px;
     text-decoration: none;
+    transition: all ease-out .15s;
+    &:hover {
+      opacity: .7;
+    }
     @media screen and (min-width: $large-size) {
       font-size: 18px;
       line-height: 24px;
@@ -175,6 +183,10 @@
     font-weight: 600;
     line-height: 22px;
     text-decoration: none;
+    transition: all ease-out .15s;
+    &:hover {
+      opacity: .7;
+    }
     @media screen and (min-width: $large-size) {
       font-size: 18px;
       line-height: 24px;

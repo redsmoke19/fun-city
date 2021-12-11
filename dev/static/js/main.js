@@ -364,12 +364,12 @@
       }
       if (order) {
         order.classList.remove('order--index');
-      }
-      if (order.classList.contains('order--active')) {
-        const orderOpenButton = document.querySelector('.order__toggle')
-        order.classList.remove('order--active');
-        body.classList.remove('_lock');
-        orderOpenButton.classList.remove('_active');
+        if (order.classList.contains('order--active')) {
+          const orderOpenButton = document.querySelector('.order__toggle')
+          order.classList.remove('order--active');
+          body.classList.remove('_lock');
+          orderOpenButton.classList.remove('_active');
+        }
       }
       if (breakpointTablet.matches === false) {
       }
@@ -1000,8 +1000,6 @@
     const tabContentEntertainment = document.querySelectorAll('.service-slider__content[data-tabs-group="entertainment"]');
     const tabNavAnimators = document.querySelectorAll('.service-slider__button[data-tabs-group="animators"]');
     const tabContentAnimators = document.querySelectorAll('.service-slider__content[data-tabs-group="animators"]');
-    // const tabNav = document.querySelectorAll('.service-slider__button');
-    // const tabContent = document.querySelectorAll('.service-slider__content');
     const tabsChange = (links, content) => {
       let tabName;
       links.forEach(item => {

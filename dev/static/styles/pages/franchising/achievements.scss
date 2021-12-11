@@ -1,0 +1,90 @@
+.franchising-achievements {
+  margin: 0 0 60px 0;
+  &__content {
+    position: relative;
+  }
+  &__decor {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      left: 0;
+      position: absolute;
+      top: -80px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 120px;
+      width: 120px;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 40px 0;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 80px 0;
+      padding: 0 50px;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 auto 80px;
+      max-width: 800px;
+    }
+  }
+  &__list {
+    display: grid;
+    gap: 60px 20px;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      height: 64px;
+      margin: 0 0 30px 0;
+      width: 64px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 80px;
+      margin: 0 0 40px 0;
+      width: 80px;
+    }
+  }
+  &__heading {
+    color: $purple-color;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 5px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 32px;
+      line-height: 44px;
+      margin: 0 0 10px 0;
+    }
+    &--bold {
+      font-weight: 600;
+    }
+  }
+  &__text {
+    font-family: $decor-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.franchising-hero {
+  margin: 0 0 60px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 100px 0;
+  }
+  &__bottom-shape {
+    bottom: -1px;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      height: 102px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 135px;
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      width: 47%;
+    }
+    @media screen and (min-width: $large-size) {
+      width: 40%;
+    }
+  }
+  &__description {
+    background: url("../images/common/franchising-decor-circle-mobile.svg") no-repeat center bottom;
+    background-size: cover;
+    padding: 40px 0 60px;
+    @media screen and (min-width: $tablet-size) {
+      background: url("../images/common/franchising-decor-circle-tablet.svg") no-repeat center bottom;
+      background-size: 100% 100%;
+      padding: 60px 0 100px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: start;
+      background: url("../images/common/franchising-decor-circle-desktop.svg") no-repeat left center;
+      background-size: 57% 100%;
+      padding: 60px 0 100px;
+    }
+    @media screen and (min-width: $large-size) {
+      background-size: 50% 100%;
+      padding: 80px 0 120px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+    &--bold {
+      font-family: $decor-font;
+    }
+  }
+  &__image {
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 70%;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 90%;
+    }
+  }
+  &__picture {
+    height: 797px;
+    @media screen and (min-width: $tablet-size) {
+      height: 850px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 620px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 830px;
+    }
+  }
+}

@@ -75,14 +75,22 @@
     line-height: 16px;
     letter-spacing: .1em;
     pointer-events: all;
+    transition: all ease-out .15s;
     text-decoration: none;
     text-transform: uppercase;
-    &--active {
-      color: $purple-color;
-    }
     @media screen and (min-width: $tablet-size) {
       font-size: 14px;
       line-height: 18px;
+    }
+    &--active {
+      color: $purple-color;
+    }
+  }
+  &__link:not(.nav__link--active) {
+    @media screen and (min-width: $desktop-size) {
+      &:hover {
+        color: rgba($purple-color, .5);
+      }
     }
   }
 }
