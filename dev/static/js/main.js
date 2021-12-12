@@ -546,11 +546,13 @@
     const birthdayProgramsSlider = document.querySelector('.birthday-programs__wrapper');
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
     const tabsSlider = document.querySelector('.service-slider--slide');
+    const franchisingConceptSlider = document.querySelector('.franchising-concept__wrapper');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
     let calculatorSliderInit;
     let tabsSliderInit;
+    let franchisingConceptInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -575,6 +577,9 @@
           }
           if (calculatorSliderInit !== undefined) {
             calculatorSliderInit.destroy(true, true);
+          }
+          if (franchisingConceptInit !== undefined) {
+            franchisingConceptInit.destroy(true, true);
           }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
@@ -641,6 +646,31 @@
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 20,
             centerInsufficientSlides: true,
+          });
+        }
+        if (franchisingConceptSlider) {
+          franchisingConceptInit = new Swiper(franchisingConceptSlider, {
+            direction: 'horizontal',
+            grabCursor: false,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            centerInsufficientSlides: true,
+            navigation: {
+              nextEl: '.franchising-concept__slider-right',
+              prevEl: '.franchising-concept__slider-left',
+              disabledClass: 'franchising-concept__slider-disabled',
+            },
+            pagination: {
+              el: '.franchising-concept__bullets',
+              bulletClass: 'hero__bullet',
+              bulletActiveClass: 'hero__bullet--active',
+              type: 'bullets',
+              clickable: true
+            },
           });
         }
       }

@@ -1,5 +1,31 @@
-.franchising-concept
-	.container
-		.franchising-concept__content
-			h2.franchising-concept__title.font-h2 Наша концепция:
-			p.franchising-content__text #[span.franchising-content__text--bold Fun City] — это #[span.franchising-content__text--bold 3 направления] на единой площади, где родители наслаждаются авторской кухней в ресторане, а дети любого возраста всегда найдут себе развлечение по душе, более чем на #[span.franchising-content__text--decor 50 видах аттракционов.]
+section.franchising-concept
+  +icon("icon-shape-top-ellipse", "franchising-concept__decor-top")
+  +icon("icon-bottom-shape-wave", "franchising-concept__decor-bottom")
+  +icon("icon-decor-cirle", "franchising-concept__decor-circle", "80", "80")
+  .franchising-concept__decor-lines
+    +icon("icon-lines", "franchising-concept__decor-lines--line", "150", "150")
+  .container
+    .franchising-concept__content
+      .franchising-concept__box
+        h2.franchising-concept__title.font-h2 Наша концепция:
+        p.franchising-concept__text #[span.franchising-concept__text--bold Fun City] — это #[span.franchising-concept__text--bold 3 направления] на единой площади, где родители наслаждаются авторской кухней в ресторане, а дети любого возраста всегда найдут себе развлечение по душе, более чем на #[span.franchising-concept__text--decor 50&nbsp;видах&nbsp;аттракционов.]
+    .franchising-concept__wrapper.swiper
+      ul.franchising-concept__list.swiper-wrapper
+        li.franchising-concept__item.swiper-slide
+          .franchising-concept__image
+            picture.franchising-concept__picture
+              img.franchising-concept__img(src="static/images/content/franchising/concept-1.png" width="320" height="320" alt="Картинка концепции парка")
+          h3.franchising-concept__heading.font-h4 Ресторан для всей семьи
+        li.franchising-concept__item.swiper-slide
+          .franchising-concept__image
+            picture.franchising-concept__picture
+              img.franchising-concept__img(src="static/images/content/franchising/concept-2.png" width="320" height="320" alt="Картинка концепции парка")
+          h3.franchising-concept__heading.font-h4 Активити-парк
+        li.franchising-concept__item.swiper-slide
+          .franchising-concept__image
+            picture.franchising-concept__picture
+              img.franchising-concept__img(src="static/images/content/franchising/concept-3.png" width="320" height="320" alt="Картинка концепции парка")
+          h3.franchising-concept__heading.font-h4 Организация праздников и&nbsp;банкетов
+      +slider-button("left").franchising-concept__slider-left
+      +slider-button("right").franchising-concept__slider-right
+      .hero__bullets.franchising-concept__bullets

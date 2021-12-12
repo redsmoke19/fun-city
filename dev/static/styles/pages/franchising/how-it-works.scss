@@ -1,0 +1,184 @@
+.franchising-how-it-works {
+  @media screen and (min-width: $tablet-size) {
+    overflow: hidden;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 60px 0;
+      text-align: center;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 80px 0;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+    }
+  }
+  &__list {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 48%;
+      margin: 0 30px 0 0;
+      width: 48%;
+    }
+  }
+  &__item {
+    padding: 0 0 0 40px;
+    position: relative;
+    &:first-child,
+    &:last-child {
+      span {
+        &::after {
+          background-color: $purple-color;
+          border: none;
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 20px 0;
+      }
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 30px 0;
+      }
+      @media screen and (min-width: $large-size) {
+        margin: 0 0 42px 0;
+      }
+    }
+    @media screen and (min-width: $tablet-size) {
+      max-width: 330px;
+      &:nth-child(1) { transform: translateX(230px); }
+      &:nth-child(2) { transform: translateX(170px); }
+      &:nth-child(3) { transform: translateX(110px); }
+      &:nth-child(4) { transform: translateX(70px); }
+      &:nth-child(6) { transform: translateX(10px); }
+      &:nth-child(9) { transform: translateX(30px); }
+      &:nth-child(10) { transform: translateX(50px); }
+      &:nth-child(11) { transform: translateX(100px); }
+      &:nth-child(12) { transform: translateX(80px); }
+      &:nth-child(13) { transform: translateX(170px); }
+      &:nth-child(14) { transform: translateX(240px); }
+    }
+    @media screen and (min-width: $desktop-size) {
+      max-width: 370px;
+      width: 370px;
+    }
+    @media screen and (min-width: $large-size) {
+      max-width: 480px;
+      width: 480px;
+      &:nth-child(1) { transform: translateX(270px); }
+      &:nth-child(2) { transform: translateX(180px); }
+      &:nth-child(3) { transform: translateX(90px); }
+      &:nth-child(4) { transform: translateX(150px); }
+      &:nth-child(5) { transform: translateX(180px); }
+      &:nth-child(6) { transform: translateX(0); }
+      &:nth-child(7) { transform: translateX(90px); }
+      &:nth-child(8) { transform: translateX(30px); }
+      &:nth-child(9) { transform: translateX(120px); }
+      &:nth-child(10) { transform: translateX(180px); }
+      &:nth-child(11) { transform: translateX(90px); }
+      &:nth-child(12) { transform: translateX(180px); }
+      &:nth-child(13) { transform: translateX(210px); }
+      &:nth-child(14) { transform: translateX(300px); }
+    }
+  }
+  &__dots {
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 22px;
+    &::after {
+      border: 4px solid $purple-color;
+      border-radius: 50%;
+      content: "";
+      height: 12px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    &--bold {
+      font-weight: 600;
+    }
+  }
+  &__image {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex: 0 0 600px;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 800px;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 1200px;
+      padding: 0 0 20px 0;
+    }
+    &::after {
+      display: none;
+      @media screen and (min-width: $tablet-size) {
+        background-color: rgba($purple-color, .5);
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 600px;
+        left: 0;
+        top: 10px;
+        position: absolute;
+        width: 600px;
+        z-index: -1;
+      }
+      @media screen and (min-width: $desktop-size) {
+        height: 800px;
+        width: 800px;
+      }
+      @media screen and (min-width: $large-size) {
+        height: 1200px;
+        top: 20px;
+        width: 1200px;
+      }
+    }
+  }
+  &__picture {
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      border-radius: 50%;
+      height: 600px;
+      overflow: hidden;
+      width: 600px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 800px;
+      width: 800px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 1200px;
+      width: 1200px;
+    }
+  }
+  &__img {
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

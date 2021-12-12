@@ -1,0 +1,31 @@
+mixin how-it-works-item(text)
+  li.franchising-how-it-works__item
+    span.franchising-how-it-works__dots
+    p.franchising-how-it-works__text&attributes(attributes)= text
+
+section.franchising-how-it-works
+  .container
+    .franchising-how-it-works__content
+      h2.franchising-how-it-works__title.font-h2 Как строиться работа
+      .franchising-how-it-works__inner
+        ul.franchising-how-it-works__list
+          +how-it-works-item("1. Подписание анкеты партнера").franchising-how-it-works__text--bold
+          +how-it-works-item("2. Подписание договора о конфиденциальности")
+          +how-it-works-item("3. Встреча на территории действующего парка Fun Jump")
+          +how-it-works-item("4. Определение паушального взноса и подписание договора концессии")
+          +how-it-works-item("5. Анализ рынка и конкурентной среды")
+          +how-it-works-item("6. Анализ схемы помещения и ТУ на предмет пригодности помещения для полноценного формата")
+          +how-it-works-item("7. Разработка концепции проекта, который действительно приносит деньги")
+          +how-it-works-item("8. Разработка зонирования ресторана и дизайн-проекта игрового оборудования")
+          +how-it-works-item("9. Оптимальный подбор оборудования")
+          +how-it-works-item("10. Рекомендации проверенных поставщиков оборудования с лояльными условиями")
+          +how-it-works-item("11. Строительство парка")
+          +how-it-works-item("12. Маркетинговый анализ и подготовка площадки к открытию с предоставлением эффективных каналов рекламы")
+          +how-it-works-item("13. Обучение управляющего персонала в действующем ресто-парке \"Fun Jump\"")
+          +how-it-works-item("14. Запуск готового \"Fun Jump\"").franchising-how-it-works__text--bold
+        .franchising-how-it-works__image
+          picture.franchising-how-it-works__picture
+            source(media="(min-width: 1440px)" srcset="static/images/content/index-family-large.png")
+            source(media="(min-width: 1024px)" srcset="static/images/content/index-family-desktop.png")
+            img.franchising-how-it-works__img(src="static/images/content/index-family-tablet.png" alt="Картинка Ресторана" width="600" height="600")
+
