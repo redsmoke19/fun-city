@@ -1,0 +1,187 @@
+.franchising-offer {
+  overflow: hidden;
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 60px 0;
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 0 80px 0;
+    }
+  }
+  &__offer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin: 0 0 60px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 100px 0;
+      }
+      @media screen and (min-width: $large-size) {
+        margin: 0 0 120px 0;
+      }
+    }
+  }
+  &__inner {
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 60px 0;
+      &--revers {
+        flex-direction: row-reverse;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  &__image {
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 420px;
+      margin: 0;
+      position: relative;
+      width: 420px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 450px;
+      width: 450px;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 585px;
+      width: 585px;
+    }
+  }
+  &__image-bow {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      position: absolute;
+      right: 15px;
+      transform: rotate(25deg);
+      top: 10px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 90px;
+      right: unset;
+      top: 0;
+      transform: rotate(-35deg);
+    }
+    @media screen and (min-width: $large-size) {
+      height: 75px;
+      left: 130px;
+      width: 103px;
+    }
+  }
+  &__image-dashed {
+    display: none;
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 10px;
+      z-index: -1;
+    }
+  }
+  &__image-mask {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      left: -30px;
+      position: absolute;
+      top: 10px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 82px;
+      width: 208px;
+    }
+  }
+  &__image-lines {
+    display: none;
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      left: unset;
+      right: 70px;
+      top: -15px;
+      z-index: -1;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 223px;
+    overflow: hidden;
+    width: 240px;
+    @media screen and (min-width: $tablet-size) {
+      height: 390px;
+      width: 420px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 417px;
+      width: 450px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 540px;
+      width: 585px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__list {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 61%;
+      margin: 0 0 0 30px;
+      &--revers {
+        margin: 0 30px 0 0;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 1 auto;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 40%;
+    }
+  }
+  &__item {
+    display: flex;
+    padding: 0 0 0 22px;
+    position: relative;
+    &::before {
+      background-color: $text-color;
+      border-radius: 50%;
+      content: "";
+      height: 4px;
+      flex: 0 0 4px;
+      left: 10px;
+      position: absolute;
+      top: 8px;
+      width: 4px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__link {
+    margin: 0 auto;
+    width: auto;
+    svg {
+      margin: 0 0 0 14px;
+    }
+  }
+}

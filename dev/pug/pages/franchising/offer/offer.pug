@@ -1,0 +1,68 @@
+mixin franchising-offer-item(text)
+	li.franchising-offer__item
+		p.franchising-offer__text= text
+
+section.franchising-offer
+	.container
+		.franchising-offer__content
+			.franchising-offer__offer
+				h2.franchising-offer__title.font-h2 Франчайзинговое предложение
+				.franchising-offer__inner
+					.franchising-offer__image
+						+icon("icon-bow-yellow", "franchising-offer__image-bow", "78", "58")
+						+icon("icon-dashed-circle", "franchising-offer__image-dashed", "60", "60")
+						picture.franchising-offer__picture
+							source(media="(min-width: 1024px)" srcset="static/images/content/franchising/offer-1-desktop.png")
+							source(media="(min-width: 768px)" srcset="static/images/content/franchising/offer-1-tablet.png")
+							img.franchising-offer__img(src="static/images/content/franchising/offer-1-mobile.png" width="240" height="223" alt="Картинка предложения 1")
+					ul.franchising-offer__list
+						+franchising-offer-item("Анализ рынка и конкурентной среды")
+						+franchising-offer-item("Анализ схемы помещения и ТУ на предмет пригодности помещения для полноценного формата")
+						+franchising-offer-item("Разработка концепции проекта, который действительно приносит деньги")
+						+franchising-offer-item("Разработка зонирования ресторана и дизайн-проекта игрового оборудования")
+						+franchising-offer-item("Оптимальный подбор оборудования")
+						+franchising-offer-item("Рекомендации проверенных поставщиков оборудования с лояльными условиями")
+						+franchising-offer-item("Предоставление эффективно работающих стандартов управления и обслуживания")
+						+franchising-offer-item("Маркетинговый анализ и подготовка площадки к открытию с предоставлением эффективных каналов рекламы")
+						+franchising-offer-item("Участие в сетевой маркетинговой и партнерских программах")
+						+franchising-offer-item("Разработка индивидуальных событийных мероприятий")
+						+franchising-offer-item("Стандарты в найме персонала")
+						+franchising-offer-item("Обучение управляющего персонала в действующем ресто-парке Fun Jump")
+						+franchising-offer-item("Предоставление бренд-бука товарного знака Fun Jump")
+				a.franchising-offer__link.button(href="#")
+					span.franchising-offer__link-text Хочу открыть в своем городе!
+					+icon("icon-arrow-white", "franchising-offer__link-icon", "14", "13")
+			.franchising-offer__offer
+				h2.franchising-offer__title.font-h2 Запуск парка под ключ
+				.franchising-offer__inner.franchising-offer__inner--revers
+					.franchising-offer__image
+						+icon("icon-blue-mask", "franchising-offer__image-mask", "151", "60")
+						.franchising-concept__decor-lines.franchising-offer__image-lines
+							+icon("icon-lines", "franchising-concept__decor-lines--line", "150", "150")
+						picture.franchising-offer__picture
+							source(media="(min-width: 1024px)" srcset="static/images/content/franchising/offer-2-desktop.png")
+							source(media="(min-width: 768px)" srcset="static/images/content/franchising/offer-2-tablet.png")
+							img.franchising-offer__img(src="static/images/content/franchising/offer-2-mobile.png" width="240" height="223" alt="Картинка предложения 2")
+					ul.franchising-offer__list.franchising-offer__list--revers
+						+franchising-offer-item("Анализ рынка и конкурентной среды")
+						+franchising-offer-item("Анализ схемы помещения и ТУ на предмет пригодности помещения для полноценного формата")
+						+franchising-offer-item("Анализ и корректировка договора аренды перед его подписанием инвестором")
+						+franchising-offer-item("Разработка архитектурного плана")
+						+franchising-offer-item("Разработка концепции РЦ и его дизайн-проекта")
+						+franchising-offer-item("Планирование сметы на ремонтные работы")
+						+franchising-offer-item("Строительно-ремонтные работы")
+						+franchising-offer-item("Подбор и закупка оборудования")
+						+franchising-offer-item("Установка и монтаж развлекательного оборудования")
+						+franchising-offer-item("Закупка и расстановка мебели")
+						+franchising-offer-item("Закупка и настройка кассового и музыкального оборудования")
+						+franchising-offer-item("Предоставление полного комплекта документации и сертификации")
+						+franchising-offer-item("Разработка технологического проекта кухни")
+						+franchising-offer-item("Подбор и закупка кухонного оборудования")
+						+franchising-offer-item("Проработка меню – составление технологических и калькуляционных карт")
+						+franchising-offer-item("Подбор персонала по согласованному штатному расписанию")
+						+franchising-offer-item("Обучение персонала в действующем парке Fun Jump")
+						+franchising-offer-item("Разработка инструктажа по технике безопасности")
+						+franchising-offer-item("Передача всей документации и парка в дальнейшее управление")
+				a.franchising-offer__link.button(href="#")
+					span.franchising-offer__link-text Узнать подробнее
+					+icon("icon-arrow-white", "franchising-offer__link-icon", "14", "13")

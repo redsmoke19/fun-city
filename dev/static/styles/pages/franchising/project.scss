@@ -1,13 +1,16 @@
 .franchising-project {
   overflow: hidden;
+  margin: 0 0 60px 0;
   padding: 62px 0 0;
   @media screen and (min-width: $tablet-size) {
+    margin: 0 0 100px 0;
     padding: 132px 0 0;
   }
   @media screen and (min-width: $desktop-size) {
     padding: 176px 0 0;
   }
   @media screen and (min-width: $large-size) {
+    margin: 0 0 160px 0;
     padding: 248px 0 0;
   }
   &__inner {
