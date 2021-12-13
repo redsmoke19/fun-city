@@ -1,17 +1,63 @@
-.franchising-project
-  .container
-    .franchising-project__content
-      h2.franchising-project__title.font-h2 Наши реализованные проекты
-      .franchising-project__wrapper.swiper
-        ul.franchising-project__list.swiper-wrapper
-          li.franchising-project__item.swiper-slide
-            .franchising-project__image
-              picture.franchising-project__picture
-                source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-1-large.jpg")
-                img.franchising-project__image(src="static/images/content/index/parks-1-mobile.jpg" width="320" height="300" alt="Фото парка ТРК Континент")
-            h3.franchising-project__heading.font-h4 ТРК Континент
-            span.franchising-project__city Санкт-Петербург
-        +slider-button("left").franchising-project__slider-left
-        +slider-button("right").franchising-project__slider-right
-        .hero__bullets.franchising-project__bullets
+section.franchising-project
+  +icon("yellow-clouds", "franchising-project__clouds")
+  +icon("icon-yellow-curve-buttom", "franchising-project__decor-bottom")
+  .franchising-project__inner
+    .container
+      .franchising-project__content
+        +icon('icon-rocket', 'index-our-parks__icon-left franchising-project__icon-left', '16', '44')
+        +icon('icon-rocket', 'index-our-parks__icon-right franchising-project__icon-right', '25', '68')
+        h2.franchising-project__title.font-h2 Наши реализованные проекты
+        .franchising-project__wrapper.swiper
+          ul.franchising-project__list.swiper-wrapper
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-1-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-1-mobile.jpg" width="320" height="300" alt="Фото парка ТРК Континент")
+              h3.franchising-project__heading.font-h4 ТРК Континент
+              span.franchising-project__city Санкт-Петербург
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-2-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-2-mobile.jpg" width="320" height="300" alt="Фото парка ТК Индустриальный")
+              h3.franchising-project__heading.font-h4 ТК Индустриальный
+              span.franchising-project__city Санкт-Петербург
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-3-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-3-mobile.jpg" width="320" height="300" alt="Фото парка ТЦ Академический")
+              h3.franchising-project__heading.font-h4 ТЦ Академический
+              span.franchising-project__city Екатеринбург
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-4-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-4-mobile.jpg" width="320" height="300" alt="Фото парка ТЦ Сигма")
+              h3.franchising-project__heading.font-h4 ТЦ Сигма
+              span.franchising-project__city Нижний Новгород
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-5-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-5-mobile.jpg" width="320" height="300" alt="Фото парка ТЦ Сигма")
+              h3.franchising-project__heading.font-h4 ТРК Петровский
+              span.franchising-project__city Казань
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+            li.franchising-project__item.swiper-slide
+              .franchising-project__image
+                picture.franchising-project__picture
+                  source(media="(min-width: 1440px)" srcset="static/images/content/index/parks-6-large.jpg")
+                  img.franchising-project__img(src="static/images/content/index/parks-6-mobile.jpg" width="320" height="300" alt="Фото парка ТРК Стрелка")
+              h3.franchising-project__heading.font-h4 ТРК Стрелка
+              span.franchising-project__city Хабаровск
+              a.franchising-project__shadow-link._popup-link(href="#park-continent")
+          +slider-button("left").franchising-project__slider-left
+          +slider-button("right").franchising-project__slider-right
+          .hero__bullets.franchising-project__bullets
 

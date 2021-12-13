@@ -1,6 +1,201 @@
 .franchising-project {
+  overflow: hidden;
+  padding: 62px 0 0;
+  @media screen and (min-width: $tablet-size) {
+    padding: 132px 0 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 176px 0 0;
+  }
+  @media screen and (min-width: $large-size) {
+    padding: 248px 0 0;
+  }
+  &__inner {
+    background-color: $yellow-color;
+    padding: 30px 0 130px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 0;
+    }
+  }
+  &__clouds {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 132px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 176px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 248px;
+    }
+  }
+  &__decor-bottom {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 100px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 120px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 170px;
+    }
+  }
+  &__icon-left {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      top: 50px;
+      z-index: 3;
+    }
+    @media screen and (min-width: $desktop-size) {
+      right: 18%;
+      top: 160px;
+    }
+  }
+  &__icon-right {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      z-index: 3;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 20%;
+      top: 50px;
+    }
+  }
   &__title {
     font-family: $decor-font;
     margin: 0 0 40px 0;
+    text-align: center;
+  }
+  &__wrapper {
+    overflow: inherit;
+  }
+  &__list {
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      gap: 60px 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__item {
+    position: relative;
+    @media screen and (min-width: $desktop-size) {
+      &:hover {
+        .franchising-project__heading {
+          color: $purple-color;
+        }
+        .franchising-project__img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &__image {
+    margin: 0 0 30px 0;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+  }
+  &__picture {
+    border-radius: 1000px 1000px 0 0;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    @media screen and (min-width: $tablet-size) {
+      width: 330px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 280px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 400px;
+      width: 360px;
+    }
+    &::after {
+      background: linear-gradient(0deg, rgba(254, 201, 38, .1), rgba(254, 201, 38, .1));
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-out .15s;
+    width: 100%;
+  }
+  &__heading {
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+    text-align: center;
+    transition: all ease-out .15s;
+  }
+  &__city {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__slider-left {
+    left: -25px;
+    position: absolute;
+    top: 125px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+  &__slider-right {
+    position: absolute;
+    right: -25px;
+    top: 125px;
+    z-index: 2;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+  &__slider-disabled {
+    opacity: .7;
+  }
+  &__bullets {
+    bottom: -50px;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+  &__shadow-link {
+    &::after {
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }

@@ -547,12 +547,14 @@
     const calculatorSlider = document.querySelector('.calculator-steps__wrapper');
     const tabsSlider = document.querySelector('.service-slider--slide');
     const franchisingConceptSlider = document.querySelector('.franchising-concept__wrapper');
+    const franchisingProjectSlider = document.querySelector('.franchising-project__wrapper');
     let restaurantInitSlider;
     let photoGalleyCategoryInit;
     let birthdayProgramsSliderInit;
     let calculatorSliderInit;
     let tabsSliderInit;
     let franchisingConceptInit;
+    let franchisingProjectInit;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -580,6 +582,9 @@
           }
           if (franchisingConceptInit !== undefined) {
             franchisingConceptInit.destroy(true, true);
+          }
+          if (franchisingProjectInit !== undefined) {
+            franchisingProjectInit.destroy(true, true);
           }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
@@ -666,6 +671,31 @@
             },
             pagination: {
               el: '.franchising-concept__bullets',
+              bulletClass: 'hero__bullet',
+              bulletActiveClass: 'hero__bullet--active',
+              type: 'bullets',
+              clickable: true
+            },
+          });
+        }
+        if (franchisingProjectSlider) {
+          franchisingProjectInit = new Swiper(franchisingProjectSlider, {
+            direction: 'horizontal',
+            grabCursor: false,
+            preventClicks: true,
+            preventClicksPropagation: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            centerInsufficientSlides: true,
+            navigation: {
+              nextEl: '.franchising-project__slider-right',
+              prevEl: '.franchising-project__slider-left',
+              disabledClass: 'franchising-project__slider-disabled',
+            },
+            pagination: {
+              el: '.franchising-project__bullets',
               bulletClass: 'hero__bullet',
               bulletActiveClass: 'hero__bullet--active',
               type: 'bullets',
