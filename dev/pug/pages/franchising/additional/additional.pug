@@ -1,0 +1,34 @@
+mixin franchising-additional-item(text)
+	li.franchising-additional__item.franchising-offer__item
+		p.franchising-additional__text.franchising-offer__text= text
+
+section.franchising-additional
+	+icon("icon-gray-top-shape", "franchising-additional__top-shape")
+	+icon("icon-gray-bottom-shape", "franchising-additional__bottom-shape")
+	.container
+		.franchising-additional__content
+			h2.franchising-additional__title.font-h2 Дополнительные услуги
+			.franchising-offer__inner.franchising-additional__inner
+				.franchising-offer__image.franchising-additional__image
+					picture.franchising-offer__picture
+						source(media="(min-width: 1440px)" srcset="static/images/content/franchising/additional-large.png")
+						source(media="(min-width: 1024px)" srcset="static/images/content/franchising/additional-desktop.png")
+						source(media="(min-width: 768px)" srcset="static/images/content/franchising/additional-tablet.png")
+						img.franchising-offer__img(src="static/images/content/franchising/additional-mobile.png" width="240" height="223" alt="Доп услуги")
+				.franchising-offer__list
+					.franchising-additional__gift
+						+icon("icon-rope-big", "franchising-additional__gift-rope", "140", "44")
+						p.franchising-additional__gift-text Операционное управление действующим парком #[span.franchising-additional__gift-text--bold Роялти 3,5 % от выручки]
+					ul.franchising-additional__list
+						+franchising-additional-item("Исследование и анализ конкурентной среды")
+						+franchising-additional-item("Внедрение кадровой политики")
+						+franchising-additional-item("Внедрение и корректировка стандартов сервиса")
+						+franchising-additional-item("Организация событийного менеджмента")
+						+franchising-additional-item("Работа с поставщиками товаров, услуг и продуктов")
+						+franchising-additional-item("Управление персоналом")
+						+franchising-additional-item("Управление внутренним и внешним маркетингом и PR-продвижением")
+						+franchising-additional-item("Управление закупками")
+						+franchising-additional-item("Ведение административно-хозяйственной деятельности")
+						+franchising-additional-item("Ведение финансово-хозяйственной деятельности")
+						+franchising-additional-item("Ведение отчетности")
+						+franchising-additional-item("Организация работы кухни и бара")

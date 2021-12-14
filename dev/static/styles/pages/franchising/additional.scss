@@ -1,0 +1,106 @@
+.franchising-additional {
+  background-color: $light-gray-color;
+  margin: 0 0 80px 0;
+  padding: 20px 0 20px;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 164px 0;
+    padding: 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 192px 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 258px 0;
+  }
+  &__top-shape {
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    z-index: 1;
+    @media screen and (min-width: $tablet-size) {
+      height: 84px;
+      top: -84px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 112px;
+      top: -112px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 158px;
+      top: -158px;
+    }
+  }
+  &__bottom-shape {
+    bottom: -40px;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    @media screen and (min-width: $tablet-size) {
+      bottom: -84px;
+      height: 84px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      bottom: -112px;
+      height: 112px;
+    }
+    @media screen and (min-width: $large-size) {
+      bottom: -158px;
+      height: 158px;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $large-size) {
+      justify-content: flex-start;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 100px 0;
+      text-align: center;
+    }
+  }
+  &__image {
+    margin: 0 0 85px 0;
+  }
+  &__gift {
+    background-color: $yellow-color;
+    border-radius: 30px;
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
+    margin: 0 0 40px 0;
+    padding: 30px;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      max-width: 290px;
+    }
+    @media screen and (min-width: $large-size) {
+      max-width: 400px;
+    }
+  }
+  &__gift-rope {
+    left: 50%;
+    position: absolute;
+    top: -43px;
+    transform: translateX(-50%);
+  }
+  &__gift-text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    &--bold {
+      font-family: $decor-font;
+    }
+  }
+}

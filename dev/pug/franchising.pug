@@ -1,16 +1,19 @@
 extends layout/main
 
 block variables
-  -var title = 'Франчайзинг'
-  -var pageClass = 'franchising-page'
+	-var title = 'Франчайзинг'
+	-var pageClass = 'franchising-page'
 
 block content
-  main(class=pageClass)
-    include pages/franchising/hero/hero
-    include pages/franchising/achievements/achievements
-    include pages/franchising/concept/concept
-    include pages/franchising/how-it-works/how-it-works
-    include pages/franchising/project/project
-    include pages/franchising/offer/offer
+	main(class=pageClass)
+		include pages/franchising/hero/hero
+		include pages/franchising/achievements/achievements
+		include pages/franchising/concept/concept
+		include pages/franchising/how-it-works/how-it-works
+		include pages/franchising/project/project
+		include pages/franchising/offer/offer
+		include pages/franchising/additional/additional
+		include pages/franchising/getting/getting
+		include pages/franchising/investment/investment
 block modals
-  include modules/popups/parks-gallery/park-continent/park-continent
+	include modules/popups/parks-gallery/park-continent/park-continent

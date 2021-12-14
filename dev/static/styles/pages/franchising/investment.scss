@@ -1,0 +1,141 @@
+.franchising-investment {
+  background-color: $blue-color;
+  padding: 35px 0 80px;
+  @media screen and (min-width: $tablet-size) {
+    padding: 60px 0 175px;
+  }
+  &__decor-top {
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 32px;
+      top: -32px;
+    }
+  }
+  &__decor-bottom {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      height: 84px;
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 75px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 105px 0;
+    }
+  }
+  &__note {
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .1);
+    margin: 0 0 55px 0;
+    padding: 30px;
+    position: relative;
+  }
+  &__note-icon {
+    left: 50%;
+    position: absolute;
+    top: -42px;
+    transform: translateX(-50%);
+  }
+  &__note-text {
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &--bold {
+      font-family: $decor-font;
+    }
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+    }
+  }
+  &__row {
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__col {
+    border: 2px solid rgba(255, 255, 255, .5);
+    padding: 20px 20px 30px;
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      padding: 20px 25px 60px;
+    }
+    &--second {
+      border-top: none;
+      @media screen and (min-width: $tablet-size) {
+        border-top: 2px solid rgba(255, 255, 255, .5);
+        border-left: none;
+      }
+    }
+  }
+  &__sub-heading {
+    color: $white;
+    font-family: $decor-font;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__dot {
+    align-items: center;
+    background-color: $blue-color;
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    position: absolute;
+    width: 36px;
+    z-index: 2;
+    &--1 {
+      left: -18px;
+      top: -18px;
+    }
+    &--2 {
+      right: -18px;
+      top: -18px;
+    }
+    &--3 {
+      bottom: -18px;
+      left: -18px;
+    }
+    &--4 {
+      bottom: -18px;
+      right: -18px;
+    }
+    &--5 {
+      bottom: -18px;
+      left: -18px;
+      @media screen and (min-width: $tablet-size) {
+        bottom: unset;
+        left: unset;
+        right: -18px;
+        top: -18px;
+      }
+    }
+    &--6 {
+      bottom: -18px;
+      right: -18px;
+    }
+  }
+  &__dot-span {
+    background-color: $white;
+    border: 2px solid $purple-color;
+    border-radius: 50%;
+    box-shadow: 0 10px 0 rgba(176, 55, 151, .3);
+    height: 24px;
+    width: 24px;
+  }
+}

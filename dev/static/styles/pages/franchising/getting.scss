@@ -1,0 +1,103 @@
+.franchising-getting {
+  margin: 0 0 55px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 112px 0;
+  }
+  @media screen and (min-width: $decor-font) {
+    margin: 0 0 122px 0;
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 60px 0;
+      text-align: center;
+    }
+  }
+  &__row {
+    display: grid;
+    font-size: 14px;
+    line-height: 18px;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 -20px;
+    padding: 8px 20px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      gap: 30px;
+      line-height: 22px;
+      margin: 0 -40px;
+      padding: 10px 40px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      gap: 40px;
+      margin: 0;
+      padding: 10px 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 15px 30px;
+    }
+    &--head {
+      padding: 0 20px 15px;
+      @media screen and (min-width: $tablet-size) {
+        padding: 0 40px 30px;
+      }
+      @media screen and (min-width: $desktop-size) {
+        padding: 0 0 20px;
+      }
+      @media screen and (min-width: $large-size) {
+        padding: 0 0 30px;
+      }
+    }
+    &:nth-child(even) {
+      background-color: rgba(176, 55, 151, .1);
+      @media screen and (min-width: $desktop-size) {
+        border-radius: 30px;
+      }
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: unset;
+    }
+  }
+  &__logo {
+    @media screen and (min-width: $tablet-size) {
+      height: 50px;
+      width: 155px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 58px;
+      width: 180px;
+    }
+  }
+  &__img {
+    height: 40px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+    width: 44px;
+    @media screen and (min-width: $tablet-size) {
+      height: 60px;
+      width: 65px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 80px;
+      margin: 0 20px 0 0;
+      width: 87px;
+    }
+    @media screen and (min-width: $large-size) {
+      height: 100px;
+      width: 108px;
+    }
+  }
+  &__heading {
+    font-family: $decor-font;
+  }
+}

@@ -1,0 +1,35 @@
+mixin getting-item(title, text1, text2)
+	.franchising-getting__row
+		.franchising-getting__col
+			h3.franchising-getting__heading.font-h5= title
+		.franchising-getting__col
+			span.franchising-getting__text= text1
+		.franchising-getting__col
+			span.franchising-getting__text!= text2
+
+section.franchising-getting
+	.container
+		.franchising-getting__content
+			h2.franchising-getting__title.font-h2 Что вы получаете, работая с нами
+			.franchising-getting__table
+				.franchising-getting__row.franchising-getting__row--head
+					.franchising-getting__col
+						+icon('icon-logo', 'franchising-getting__logo', '78', '25')
+					.franchising-getting__col
+						img.franchising-getting__img(src="static/images/content/franchising/getting-1.png" width="44" height="40" alt="Картинка пакета Классик")
+						h3.franchising-getting__heading.font-h5 Пакет «Классика»
+					.franchising-getting__col
+						img.franchising-getting__img(src="static/images/content/franchising/getting-2.png" width="44" height="40" alt="Картинка пакета Классик")
+						h3.franchising-getting__heading.font-h5 Пакет «Классика»
+				+getting-item("Паушальный взнос", "1 млн. рублей (за 1 000 м2)", "1&nbsp;млн.&nbsp;рублей (за&nbsp;1&nbsp;000&nbsp;м&sup2;) + 5% от&nbsp;суммы инвестиций")
+				+getting-item("Инвестиции", "от 25 млн. рублей", "от 25 млн. рублей")
+				+getting-item("Роялти", "7%", "7%")
+				+getting-item("Заключение договора аренды", "Франчайзинг", "Fun City")
+				+getting-item("Разработка дизайна и архитектурных планов", "Франчайзинг", "Fun City")
+				+getting-item("Закуп оборудования и строительство парка", "Франчайзинг", "Fun City")
+				+getting-item("Подбор персонала", "Франчайзинг", "Fun City")
+				+getting-item("Срок запуска проекта", "3 месяца", "4 месяца")
+				+getting-item("Срок возврата инвестиций", "от 2 лет", "от 2 лет")
+				+getting-item("Выручка в месяц", "3-10 млн. рублей", "3-10 млн. рублей")
+				+getting-item("Плановая рентабельность", "30-35%", "30-35%")
+
