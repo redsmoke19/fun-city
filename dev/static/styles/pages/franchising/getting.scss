@@ -3,8 +3,11 @@
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 112px 0;
   }
-  @media screen and (min-width: $decor-font) {
+  @media screen and (min-width: $desktop-size) {
     margin: 0 0 122px 0;
+  }
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 160px 0;
   }
   &__title {
     font-family: $decor-font;
