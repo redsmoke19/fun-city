@@ -1,9 +1,25 @@
+mixin mall-item(icon, text)
+	li.franchising-mall__item
+		+icon(`${icon}`, "franchising-mall__icon", "48", "48")
+		p.franchising-mall__text= text
+
 section.franchising-mall
 	.container
 		.franchising-mall__content
-			h2.franchising-mall__title.font-h2 Fun City - лучшее решение для торговых центров!
-			ul.franchising-mall__list
-				li.franchising-mall__item
-					+icon("icon-fast-time", "franchising-mall__icon", "48", "48")
-					p.franchising-mall__text Значительно продлеваем время пребывания в ТЦ
+			h2.franchising-mall__title.font-h2(data-da=".franchising-mall__box, 1024, 0") Fun City - лучшее решение для торговых центров!
+			.franchising-mall__inner
+				.franchising-mall__box
+					ul.franchising-mall__list
+						+mall-item("icon-fast-time", "Значительно продлеваем время пребывания в ТЦ")
+						+mall-item("icon-castle", "Умножаем входящий трафик и потребность в аренде")
+						+mall-item("icon-rating", "Увеличиваем количество повторных посещений ТЦ")
+						+mall-item("icon-money", "Приносим больше, чем просто аренда")
+						+mall-item("icon-medal", "Повышаем статус ТЦ")
+						+mall-item("icon-joystick", "Закрываем потребность в развлекательных площадях")
+				.franchising-mall__image
+					picture.franchising-mall__picture
+						source(media="(min-width: 1440px)" srcset="static/images/content/index-family-large.png")
+						source(media="(min-width: 1024px)" srcset="static/images/content/index-family-desktop.png")
+						source(media="(min-width: 768px)" srcset="static/images/content/index-family-tablet.png")
+						img.franchising-mall__img(src="static/images/content/index-family-mobile.png" alt="Картинка Ресторана" width="400" height="400")
 

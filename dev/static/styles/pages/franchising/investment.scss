@@ -1,7 +1,9 @@
 .franchising-investment {
   background-color: $blue-color;
+  margin: 0 0 40px 0;
   padding: 35px 0 80px;
   @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
     padding: 60px 0 175px;
   }
   @media screen and (min-width: $desktop-size) {

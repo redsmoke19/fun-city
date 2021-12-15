@@ -2,7 +2,10 @@ section.quality-control
 	.container
 		.quality-control__content
 			.quality-control__description
-				h2.quality-control__title.section__title Служба контроля качества
+				if pageClass === "franchising-page"
+					h2.quality-control__title.section__title Остались вопросы?
+				else
+					h2.quality-control__title.section__title Служба контроля качества
 				p.quality-control__text Укажите ваши данные и наш специалист перезвонит Вам в течении 15 минут.
 				+icon("icon-blue-mask", "quality-control__blue-mask", "172", "68")
 				+icon("icon-yellow-mask", "quality-control__yellow-mask", "84", "33")
