@@ -1,0 +1,15 @@
+.popup.callback-modal.popup_callback-modal
+	.popup__content
+		.popup__body
+			.popup__close.popup-header-parks__close
+				+icon("icon-close", "popup__close-icon", "11", "11")
+			h2.popup-header-parks__title.font-h4 Обратный звонок
+			p.popup__text Оставьте ваш контактный номер и мы свяжемся с вами в ближайшее время!
+			form.popup__form.quality-control(action="#" method="POST" autocomplete="off" data-validate)
+				.quality-control__box
+					input.quality-control__input(type="text" name="callback-name" required)
+					label.quality-control__label Ваше имя
+				.quality-control__box
+					input.quality-control__input(type="tel" name="callback-phone" required)
+					label.quality-control__label Номер телефона
+				+button-submit("#", "Отправить", true).callback-modal__button

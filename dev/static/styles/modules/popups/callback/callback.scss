@@ -1,0 +1,20 @@
+.callback-modal {
+  .popup__body {
+    border-radius: 30px;
+    max-width: 400px;
+    padding: 40px;
+  }
+  .popup__body--success {
+    @media screen and (min-width: $large-size) {
+      max-width: 500px;
+    }
+  }
+  &__button {
+    margin: 10px 0 0 auto;
+    padding: 0;
+  }
+  .popup__form {
+    display: flex;
+    flex-direction: column;
+  }
+}

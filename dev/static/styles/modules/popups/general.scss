@@ -70,6 +70,7 @@
     background-color: $white;
     border-radius: 10px;
     max-width: 400px;
+    //margin: 0 auto;
     overflow: hidden;
     padding: 30px 20px 40px;
     transform: scale(0);
@@ -114,3 +115,4 @@
 @import 'gallery-slider/gallery-slider-modal';
 @import 'more-slider/more-slider';
 @import 'header-parks/header-parks';
+@import "callback/callback";
