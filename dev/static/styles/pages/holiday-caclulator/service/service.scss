@@ -2,6 +2,17 @@
   &__title {
     font-family: $decor-font;
     margin: 0 0 25px 0;
+    &--mobile-none {
+      display: none;
+      @media screen and (min-width: $large-size) {
+        display: block;
+      }
+    }
+    &--large-none {
+      @media screen and (min-width: $large-size) {
+        display: none;
+      }
+    }
   }
 }
 @import "service-list";

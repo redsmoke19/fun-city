@@ -1,0 +1,8 @@
+form.calculator(action="#" method="POST")
+	.container
+		h2.calculator-service__title.calculator-service__title--large-none.font-h2 Оплата и подтверждение
+		.calculator__row.calculator__row--finish
+			.calculator__info.calculator__info--finish
+				include ../service/pay
+			.calculator__order.calculator__order--finish
+				include ../order/order-finish

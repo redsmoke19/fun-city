@@ -12,11 +12,38 @@
       gap: 40px;
       grid-template-columns: 840px 1fr;
     }
+    &--finish {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: $large-size) {
+        align-items: start;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 840px 1fr;
+        flex-direction: unset;
+      }
+    }
+  }
+  &__info--finish {
+    order: 2;
+    @media screen and (min-width: $large-size) {
+      order: 1;
+    }
   }
   &__order {
     @media screen and (min-width: $large-size) {
       position: sticky;
       top: 158px;
+    }
+    &--finish {
+      order: 0;
+      margin: 0 -20px;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0;
+      }
+      @media screen and (min-width: $large-size) {
+        order: 2;
+      }
     }
   }
 }

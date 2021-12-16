@@ -173,6 +173,9 @@
     font-size: 14px;
     line-height: 18px;
     text-align: center;
+    &--bold {
+      font-family: $decor-font;
+    }
   }
   &__gift-rope {
     left: 50%;
