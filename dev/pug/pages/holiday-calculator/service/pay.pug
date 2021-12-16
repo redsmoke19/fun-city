@@ -1,7 +1,27 @@
 section.calculator-service
 	.calculator-service__content
 		h2.calculator-service__title.calculator-service__title--mobile-none.font-h2 Оплата и подтверждение
-		.calculator-rooms__gift(data-da=".calculator__order, 1440, 1")
-			+icon("icon-rope-big", "calculator-rooms__gift-rope", "140", "44")
-			h3.calculator-rooms__gift-title.font-h4 Уважаемые гости!
-			p.calculator-rooms__gift-text Предупреждаем вас, что при заказе готового предложения, вам необходимо набрать угощений ресторана на сумму #[span.calculator-rooms__gift-text--bold не менее 5000 рублей.]
+		.calculator-pay
+			.calculator-pay__wrapper
+				.calculator-rooms__gift(data-da=".calculator__order, 1440, 1")
+					+icon("icon-rope-big", "calculator-rooms__gift-rope", "140", "44")
+					h3.calculator-rooms__gift-title.font-h4 Обратите внимание!
+					p.calculator-rooms__gift-text Дорогие гости, обратите внимание! Минимальная сумма онлайн-оплаты для бронирования праздника - 5000 рублей.
+				.calculator-pay__contacts
+					h2.calculator-pay__title.font-h3 Контактные данные
+					.calculator-pay__form.quality-control
+						.quality-control__box.calculator-pay__box
+							input.quality-control__input.calculator-pay__input(type="text" name="pay-name" required)
+							label.quality-control__label.calculator-pay__label ФИО
+						.quality-control__box.calculator-pay__box
+							input.quality-control__input.calculator-pay__input(type="tel" name="pay-phone" required)
+							label.quality-control__label.calculator-pay__label Номер телефона
+						.quality-control__box.calculator-pay__box
+							input.quality-control__input.calculator-pay__input(type="email" name="pay-email" required)
+							label.quality-control__label.calculator-pay__label E-mail
+			h2.calculator-pay__title.font-h3 Способы оплаты
+			.calculator-pay__payment
+				.calculator-pay__pay-full
+					+icon("icon-full", "calculator-pay__pay-full-icon", "31", "19")
+					p.calculator-pay__pay-text Оплатить #[span.calculator-pay__pay-text--bold полную стоимость] заказа
+

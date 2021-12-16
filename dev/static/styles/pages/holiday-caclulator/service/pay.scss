@@ -1,0 +1,56 @@
+.calculator-pay {
+  &__wrapper {
+    margin: 0 0 60px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: start;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 240px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-template-columns: 1fr 370px;
+    }
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: 1fr;
+      margin: 60px 0 80px 0;
+    }
+  }
+  .calculator-rooms__gift-title {
+    @media screen and (min-width: $tablet-size) {
+      text-align: left;
+    }
+  }
+  .calculator-rooms__gift-text {
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+    }
+  }
+  &__contacts {
+    margin: 60px 0 0 0;
+    @media screen and (min-width: $tablet-size) {
+      order: -1;
+      margin: 0;
+    }
+  }
+  &__form {
+    @media screen and (min-width: $desktop-size) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__box {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      &:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+  &__title {
+    font-family: $decor-font;
+    margin: 0 0 30px 0;
+  }
+}
