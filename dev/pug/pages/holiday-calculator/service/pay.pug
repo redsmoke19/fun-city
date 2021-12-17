@@ -20,8 +20,21 @@ section.calculator-service
 							input.quality-control__input.calculator-pay__input(type="email" name="pay-email" required)
 							label.quality-control__label.calculator-pay__label E-mail
 			h2.calculator-pay__title.font-h3 Способы оплаты
-			.calculator-pay__payment
-				.calculator-pay__pay-full
-					+icon("icon-full", "calculator-pay__pay-full-icon", "31", "19")
-					p.calculator-pay__pay-text Оплатить #[span.calculator-pay__pay-text--bold полную стоимость] заказа
+			.calculator-pay__payments
+				.calculator-pay__payment
+					input.calculator-pay__pay-radio(type="radio" name="payment-method" id="payment-full" value="full" checked)
+					label.calculator-pay__pay-label(for="payment-full")
+						+icon("icon-full", "calculator-pay__pay-full-icon", "31", "19")
+						p.calculator-pay__pay-text Оплатить #[span.calculator-pay__pay-text--bold полную <br> стоимость] заказа
+				.calculator-pay__payment
+					input.calculator-pay__pay-radio(type="radio" name="payment-method" id="payment-connection" value="connection")
+					label.calculator-pay__pay-label(for="payment-connection")
+						+icon("icon-phone", "calculator-pay__pay-full-icon", "24", "24")
+						p.calculator-pay__pay-text Связаться #[span.calculator-pay__pay-text--bold с менеджером] <br> и уточнить детали
+			.calculator-pay__bottom
+				.calculator-pay__sum
+					p.calculator-pay__sum-text Сумма к оплате:
+					p.calculator-pay__sum-count 18 500 ₽
+				button.button.calculator-pay__sum-button(type="submit") Оформить заказ
+
 
