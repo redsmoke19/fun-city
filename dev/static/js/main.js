@@ -1108,6 +1108,46 @@
     });
   }
 
+  const animationItems = () => {
+    const animItems = document.querySelectorAll('[data-show]');
+    console.log(animItems);
+
+    if (animItems.length > 0) {
+
+      const offset = (el) => {
+        const rect = el.getBoundingClientRect();
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {
+          top: rect.top + scrollTop,
+          left: rect.left + scrollLeft,
+        }
+      };
+
+      const animOnScroll = () => {
+        animItems.forEach(item => {
+          const animItem = item;
+          const animItemHeight = animItem.offsetHeight;
+          const animItemOffset = offset(animItem).top;
+          const animStart = 4;
+
+          let animItemPoint = window.innerHeight - animItemHeight / animStart;
+          if (animItemHeight > window.innerHeight) {
+            animItemPoint = window.innerHeight - window.innerHeight / animStart;
+          }
+
+          if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+            animItem.classList.add('show');
+          }
+        })
+      }
+      setTimeout(() => {
+        animOnScroll();
+      }, 400);
+      window.addEventListener('scroll', animOnScroll);
+    }
+  }
+
   validate.init();
 
   dynamicAdaptive();
@@ -1135,4 +1175,5 @@
   getTabs();
   getCheckboxPair();
   getPageVh();
+  animationItems();
 }());

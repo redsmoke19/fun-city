@@ -1,6 +1,10 @@
 .index-family {
   overflow: hidden;
   padding: 130px 0 170px;
+  opacity: 0;
+  &.show {
+    animation: left-right .5s ease-out forwards .3s;
+  }
   @media screen and (min-width: $tablet-size) {
     display: flex;
     padding: 212px 0 227px;

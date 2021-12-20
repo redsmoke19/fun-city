@@ -1,8 +1,74 @@
+@keyframes top-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes left-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @keyframes wave {
   0% {
     width: 100%;
   }
   100% {
     width: 150%;
+  }
+}
+
+@keyframes purple-ballon-index {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(25deg);
+  }
+}
+
+@keyframes yellow-ballon-index {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translateY(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-10deg) translateY(0);
+  }
+}
+
+@keyframes ballon-purple-move {
+  0% {
+    transform: translate(0, 0) rotate(25deg);
+  }
+  50% {
+    transform: translate(-15px, 15px) rotate(40deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(25deg);
+  }
+}
+
+@keyframes ballon-yellow-move {
+  0% {
+    transform: translate(0px, 0px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(30px, 30px) rotate(-25deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(-10deg);
   }
 }

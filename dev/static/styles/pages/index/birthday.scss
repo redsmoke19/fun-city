@@ -1,8 +1,12 @@
 .index-birthday {
   background-color: $blue-color;
   margin: 0 0 30px 0;
+  opacity: 0;
   padding: 235px 0 80px 0;
   position: relative;
+  &.show {
+    animation: left-right .8s ease-out forwards;
+  }
   @media screen and (min-width: $tablet-size) {
     padding: 433px 0 144px 0;
   }
@@ -150,8 +154,12 @@
     @media screen and (min-width: $large-size) {
       height: 131px;
       right: 62%;
+      opacity: 0;
       top: -245px;
       width: 50px;
+      .show & {
+        animation: purple-ballon-index ease-out 1s forwards .6s, ballon-purple-move ease-out 4s infinite 1.8s;
+      }
     }
   }
   &__balloon-yellow {
@@ -174,9 +182,13 @@
     }
     @media screen and (min-width: $large-size) {
       height: 242px;
+      opacity: 0;
       right: 96%;
       top: -355px;
       width: 108px;
+      .show & {
+        animation: yellow-ballon-index ease-out 1s forwards 1.6s, ballon-yellow-move ease-out 5s infinite 2.8s;
+      }
     }
   }
   &__paragraph {

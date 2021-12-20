@@ -2,9 +2,13 @@
   flex: 0 0 auto;
   &__wrapper {
     background-color: $white;
+    opacity: 0;
     position: relative;
     width: 100%;
     z-index: 20;
+    &.show {
+      animation: top-down ease-out .5s forwards;
+    }
   }
   .container {
     @media screen and (min-width: $large-size) {
