@@ -1,12 +1,8 @@
 .index-birthday {
   background-color: $blue-color;
   margin: 0 0 30px 0;
-  opacity: 0;
   padding: 235px 0 80px 0;
   position: relative;
-  &.show {
-    animation: left-right .8s ease-out forwards;
-  }
   @media screen and (min-width: $tablet-size) {
     padding: 433px 0 144px 0;
   }
@@ -60,6 +56,10 @@
     top: -130px;
     width: 300px;
     z-index: 5;
+    opacity: 0;
+    &.show {
+      animation: left-right 1s ease-out forwards;
+    }
     @media screen and (min-width: 410px) {
       left: 20px;
       right: unset;
@@ -137,6 +137,10 @@
     right: 30px;
     top: -300px;
     z-index: 5;
+    opacity: 0;
+    .show & {
+      animation: purple-ballon-index ease-out 1s forwards 1.5s, ballon-purple-move linear 8s infinite 2.9s;
+    }
     @media screen and (min-width: $tablet-size) {
       height: 131px;
       right: 38px;
@@ -154,20 +158,20 @@
     @media screen and (min-width: $large-size) {
       height: 131px;
       right: 62%;
-      opacity: 0;
       top: -245px;
       width: 50px;
-      .show & {
-        animation: purple-ballon-index ease-out 1s forwards .6s, ballon-purple-move ease-out 4s infinite 1.8s;
-      }
     }
   }
   &__balloon-yellow {
+    opacity: 0;
     position: absolute;
     transform: rotate(-15deg);
     right: 40px;
     top: -200px;
     z-index: 5;
+    .show & {
+      animation: yellow-ballon-index ease-out 1s forwards 2s, ballon-yellow-move linear 5s infinite 3.4s;
+    }
     @media screen and (min-width: $tablet-size) {
       height: 263px;
       right: 92px;
@@ -182,17 +186,23 @@
     }
     @media screen and (min-width: $large-size) {
       height: 242px;
-      opacity: 0;
       right: 96%;
       top: -355px;
       width: 108px;
-      .show & {
-        animation: yellow-ballon-index ease-out 1s forwards 1.6s, ballon-yellow-move ease-out 5s infinite 2.8s;
-      }
+    }
+  }
+  &__title {
+    opacity: 0;
+    &.show {
+      animation: left-right 1s ease-out forwards .4s;
     }
   }
   &__paragraph {
     margin: 0 0 30px 0;
+    opacity: 0;
+    &.show {
+      animation: left-right 1s ease-out forwards .7s;
+    }
     @media screen and (min-width: $large-size) {
       margin: 0 0 40px 0;
     }
@@ -216,6 +226,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 0 80px 0;
+    opacity: 0;
+    &.show {
+      animation: left-right 1s ease-out forwards 1s;
+    }
     @media screen and (min-width: $tablet-size) {
       justify-content: flex-start;
       margin: 0 0 100px 0;
@@ -251,6 +265,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    opacity: 0;
     @media screen and (min-width: $tablet-size) {
       flex: 0 0 33.33%;
       padding: 30px 15px 0;
@@ -263,6 +278,17 @@
       margin: 0 0 40px 0;
       @media screen and (min-width: $tablet-size) {
         margin: 0;
+      }
+    }
+    &.show {
+      &:nth-child(1) {
+        animation: left-right 1s ease-out forwards .2s;
+      }
+      &:nth-child(2) {
+        animation: left-right 1s ease-out forwards .4s;
+      }
+      &:nth-child(3) {
+        animation: left-right 1s ease-out forwards .6s;
       }
     }
   }

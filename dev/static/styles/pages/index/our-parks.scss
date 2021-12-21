@@ -11,12 +11,20 @@
   }
   &__content {
     position: relative;
+    opacity: 0;
+    &.show {
+      animation: left-right 1s ease-in-out forwards .3s;
+    }
   }
   &__icon-left {
     left: 7%;
     position: absolute;
     top: 0;
     transform: rotate(-16deg);
+    opacity: 0;
+    .show & {
+      animation: parks-rocket-small-show ease-out 1s forwards 1.5s, parks-rocket-small linear 4s 3s infinite;
+    }
     @media screen and (min-width: $tablet-size) {
       height: 59px;
       left: unset;
@@ -36,10 +44,14 @@
     }
   }
   &__icon-right {
+    opacity: 0;
     position: absolute;
     right: 10%;
     top: 45px;
     transform: rotate(30deg);
+    .show & {
+      animation: parks-rocket-big-show ease-out 1.5s forwards 1.2s, parks-rocket-big linear 4s 3s infinite;
+    }
     @media screen and (min-width: $tablet-size) {
       height: 112px;
       left: 15%;
@@ -79,6 +91,10 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    &.show {
+      animation: left-right .5s ease-out forwards .3s;
+    }
     @media screen and (min-width: $tablet-size) {
       flex: 0 0 50%;
       padding: 60px 14px 0;

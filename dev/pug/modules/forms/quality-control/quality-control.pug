@@ -1,4 +1,4 @@
-section.quality-control
+section.quality-control(data-show)
 	.container
 		.quality-control__content
 			.quality-control__description
@@ -9,14 +9,14 @@ section.quality-control
 				p.quality-control__text Укажите ваши данные и наш специалист перезвонит Вам в течении 15 минут.
 				+icon("icon-blue-mask", "quality-control__blue-mask", "172", "68")
 				+icon("icon-yellow-mask", "quality-control__yellow-mask", "84", "33")
-			form.quality-control__form(action="#" method="POST" autocomplete="off" data-validate)
-				.quality-control__box
+			form.quality-control__form(action="#" method="POST" autocomplete="off" data-validate data-show)
+				.quality-control__box.quality-control__box-anim(data-show)
 					input.quality-control__input(type="text" name="youName" required)
 					label.quality-control__label Ваше имя
-				.quality-control__box
+				.quality-control__box.quality-control__box-anim(data-show)
 					input.quality-control__input(type="tel" name="youPhone" required)
 					label.quality-control__label Ваш номер телефона
-				.quality-control__box
+				.quality-control__box.quality-control__box-anim(data-show)
 					textarea.quality-control__input.quality-control__input--textarea(name="youText" required)
 					label.quality-control__label Комментарий
-				+button-submit("#", "Отправить", true).quantity-control__button
+				+button-submit("#", "Отправить", true).quality-control__button.quality-control__button-anim

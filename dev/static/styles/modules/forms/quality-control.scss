@@ -1,4 +1,8 @@
 .quality-control {
+  opacity: 0;
+  &.show {
+    animation: left-right 1s ease-out forwards;
+  }
   &__content {
     position: relative;
     @media screen and (min-width: $tablet-size) {
@@ -54,6 +58,13 @@
       flex: 0 0 auto;
     }
   }
+  &__box-anim {
+    opacity: 0;
+    &.show {
+      animation: flipInX 1s forwards .7s;
+      backface-visibility: visible !important;
+    }
+  }
   &__input {
     background: rgba(176, 55, 151, .05);
     border: 2px solid transparent;
@@ -97,11 +108,21 @@
       top: 18px;
     }
   }
+  &__button-anim {
+    opacity: 0;
+    .show & {
+      animation: opacity 1s ease-out forwards 1.5s;
+    }
+  }
   &__blue-mask {
     left: 5px;
     position: absolute;
     top: -130px;
     transform: rotate(30deg);
+    opacity: 0;
+    .show & {
+      animation: index-blue-mask-show 1s ease-out forwards 1s, index-blue-mask-move 6s linear infinite 1.9s;
+    }
     @media screen and (min-width: $tablet-size) {
       bottom: 30px;
       height: 99px;
@@ -123,6 +144,10 @@
     right: 43px;
     top: -153px;
     transform: rotate(30deg);
+    opacity: 0;
+    .show & {
+      animation: index-yellow-mask-show 1s ease-out forwards .5s, index-yellow-mask-move 6s linear infinite 1.5s;
+    }
     @media screen and (min-width: $tablet-size) {
       height: 45px;
       right: 0;

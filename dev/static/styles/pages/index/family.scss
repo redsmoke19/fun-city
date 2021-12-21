@@ -61,9 +61,13 @@
     position: absolute;
     top: 0;
     &--small {
+      opacity: 0;
       left: 22px;
       top: 52px;
       transform: rotate(-30deg);
+      .show & {
+        animation: family-flag-small-show ease-out 1s forwards 1s, family-flag-small 5s infinite linear 2.5s;
+      }
       @media screen and (min-width: $tablet-size) {
         left: 127px;
         top: 112px;
@@ -80,9 +84,13 @@
       }
     }
     &--big {
+      opacity: 0;
       right: -27px;
       top: 90px;
       transform: rotate(49deg);
+      .show & {
+        animation: family-flag-big-show ease-out 1s forwards 1.6s, family-flag-big 5s infinite linear 3s;
+      }
       @media screen and (min-width: $tablet-size) {
         left: 43%;
         top: 116px;
