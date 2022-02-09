@@ -19,7 +19,8 @@
   @media screen and (min-width: $large-size) {
     left: unset;
     bottom: unset;
-    margin: 35px 0 144px 0;
+    //margin: 35px 0 144px 0;
+    margin: 35px 0 80px 0;
     padding: 0;
     position: relative;
     transform: translate(0, 0);
@@ -269,7 +270,7 @@
       width: auto;
     }
     @media screen and (min-width: $large-size) {
-      margin: 0 0 0 auto;
+      margin: 0 0 80px auto;
       position: relative;
       right: unset;
       top: unset;
