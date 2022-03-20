@@ -94,12 +94,23 @@
       height: 820px;
       min-width: 1920px;
     }
+
+    &--no-text {
+      height: auto;
+      @media screen and (min-width: $tablet-size) {
+        min-width: unset;
+      }
+    }
   }
   &__img {
     height: 100%;
     object-fit: cover;
     object-position: center;
     width: 100%;
+
+    &--no-text {
+      object-fit: unset;
+    }
   }
   &__bullets {
     align-items: center;

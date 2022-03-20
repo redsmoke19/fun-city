@@ -430,6 +430,7 @@
     if (heroSlider) {
       const indexHeroSliders = new Swiper(heroSlider, {
         direction: 'horizontal',
+        autoHeight: true,
         loop: true,
         grabCursor: true,
         preventClicks: true,
